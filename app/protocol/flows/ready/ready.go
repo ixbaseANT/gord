@@ -1,13 +1,13 @@
 package ready
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/app/protocol/common"
 	"sync/atomic"
 
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
+	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
+	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

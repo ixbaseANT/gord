@@ -5,9 +5,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/ixbasANT/gord/app/appmessage"
 	"github.com/pkg/errors"
 )
 

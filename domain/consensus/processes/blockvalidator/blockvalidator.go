@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbasANT/gord/util/txmass"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/util/difficulty"
+	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/util/difficulty"
 )
 
 // blockValidator exposes a set of validation classes, after which

@@ -9,17 +9,17 @@ import (
 	"math"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensusreference"
+	"github.com/ixbasANT/gord/domain/consensusreference"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
+	"github.com/ixbasANT/gord/domain/consensus"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbasANT/gord/util"
 	"github.com/pkg/errors"
 )
 

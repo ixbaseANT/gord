@@ -5,7 +5,7 @@
 package config
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/ixbasANT/gord/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("CNFG")

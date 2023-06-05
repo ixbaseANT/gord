@@ -1,11 +1,11 @@
 package blockrelay
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/app/protocol/peer"
+	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbasANT/gord/domain"
+	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
 )
 
 // HandleIBDBlockLocatorContext is the interface for the context needed for the HandleIBDBlockLocator flow.

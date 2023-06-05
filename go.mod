@@ -1,4 +1,4 @@
-module github.com/kaspanet/kaspad
+module github.com/ixbasANT/gord
 
 go 1.18
 

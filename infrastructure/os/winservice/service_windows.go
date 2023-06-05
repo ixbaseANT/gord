@@ -9,9 +9,9 @@ import (
 
 	"github.com/btcsuite/winsvc/eventlog"
 	"github.com/btcsuite/winsvc/svc"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/ixbasANT/gord/infrastructure/config"
+	"github.com/ixbasANT/gord/infrastructure/os/signal"
+	"github.com/ixbasANT/gord/version"
 )
 
 // Service houses the main service handler which handles all service

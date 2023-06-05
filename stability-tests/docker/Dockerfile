@@ -6,9 +6,9 @@ FROM ${KASPAMINER_IMAGE} as kaspaminer
 
 FROM golang:1.19-alpine
 
-RUN mkdir -p /go/src/github.com/kaspanet/kaspad
+RUN mkdir -p /go/src/github.com/ixbasANT/gord
 
-WORKDIR /go/src/github.com/kaspanet/kaspad
+WORKDIR /go/src/github.com/ixbasANT/gord
 
 RUN apk add bash build-base git
 
@@ -23,7 +23,7 @@ COPY --from=kaspad /app/ /app/
 COPY --from=kaspaminer /app/ /app/
 ENV PATH="/app:${PATH}"
 
-WORKDIR /go/src/github.com/kaspanet/kaspad/stability-tests
+WORKDIR /go/src/github.com/ixbasANT/gord/stability-tests
 
 RUN go install ./...
 

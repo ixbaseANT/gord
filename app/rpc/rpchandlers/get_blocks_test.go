@@ -5,18 +5,18 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/ixbasANT/gord/domain/consensus/model"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/app/rpc/rpchandlers"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/miningmanager"
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/app/rpc/rpccontext"
+	"github.com/ixbasANT/gord/app/rpc/rpchandlers"
+	"github.com/ixbasANT/gord/domain/consensus"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/hashes"
+	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbasANT/gord/domain/miningmanager"
+	"github.com/ixbasANT/gord/infrastructure/config"
 )
 
 type fakeDomain struct {

@@ -4,14 +4,14 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/ixbasANT/gord/domain/dagconfig"
 
-	"github.com/kaspanet/kaspad/infrastructure/db/database/ldb"
+	"github.com/ixbasANT/gord/infrastructure/db/database/ldb"
 
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/ixbasANT/gord/infrastructure/db/database"
 
-	"github.com/kaspanet/kaspad/app"
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/ixbasANT/gord/app"
+	"github.com/ixbasANT/gord/infrastructure/config"
 )
 
 type appHarness struct {

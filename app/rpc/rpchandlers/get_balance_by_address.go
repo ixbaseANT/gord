@@ -1,11 +1,11 @@
 package rpchandlers
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/app/rpc/rpccontext"
+	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbasANT/gord/util"
 	"github.com/pkg/errors"
 )
 

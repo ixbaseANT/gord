@@ -1,10 +1,10 @@
 package utxoindex
 
 import (
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/ixbasANT/gord/domain"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/infrastructure/db/database"
+	"github.com/ixbasANT/gord/infrastructure/logger"
 	"sync"
 )
 

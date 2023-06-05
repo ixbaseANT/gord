@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/utils"
+	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/ixbasANT/gord/cmd/kaspawallet/utils"
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/keys"
+	"github.com/ixbasANT/gord/cmd/kaspawallet/keys"
 )
 
 func create(conf *createConfig) error {

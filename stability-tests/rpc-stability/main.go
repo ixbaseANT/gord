@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient/grpcclient"
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/ixbasANT/gord/infrastructure/network/rpcclient/grpcclient"
+	"github.com/ixbasANT/gord/stability-tests/common"
+	"github.com/ixbasANT/gord/util/panics"
+	"github.com/ixbasANT/gord/util/profiling"
 	"github.com/pkg/errors"
 )
 

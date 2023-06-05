@@ -3,13 +3,13 @@ package mempool
 import (
 	"fmt"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool/model"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbasANT/gord/domain/miningmanager/mempool/model"
 )
 
 type mempoolUTXOSet struct {

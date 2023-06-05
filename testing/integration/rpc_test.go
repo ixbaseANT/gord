@@ -1,12 +1,12 @@
 package integration
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/ixbasANT/gord/infrastructure/config"
 	"runtime"
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/ixbasANT/gord/infrastructure/network/rpcclient"
 )
 
 const rpcTimeout = 10 * time.Second

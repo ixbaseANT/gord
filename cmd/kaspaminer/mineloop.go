@@ -2,18 +2,18 @@ package main
 
 import (
 	nativeerrors "errors"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/ixbasANT/gord/version"
 	"math/rand"
 	"sync/atomic"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/cmd/kaspaminer/templatemanager"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/pow"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/cmd/kaspaminer/templatemanager"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/pow"
+	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbasANT/gord/util"
 	"github.com/pkg/errors"
 )
 

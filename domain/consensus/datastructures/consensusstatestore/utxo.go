@@ -1,9 +1,9 @@
 package consensusstatestore
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
 	"github.com/pkg/errors"
 )
 

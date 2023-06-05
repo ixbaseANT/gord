@@ -18,12 +18,12 @@ import (
 
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util"
-	"github.com/kaspanet/kaspad/util/network"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbasANT/gord/util"
+	"github.com/ixbasANT/gord/util/network"
+	"github.com/ixbasANT/gord/version"
 	"github.com/pkg/errors"
 )
 

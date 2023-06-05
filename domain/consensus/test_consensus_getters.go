@@ -1,10 +1,10 @@
 package consensus
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbasANT/gord/infrastructure/db/database"
 )
 
 func (tc *testConsensus) DatabaseContext() model.DBManager {

@@ -3,9 +3,9 @@ package utxo
 import (
 	"fmt"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/transactionhelper"
 	"github.com/pkg/errors"
 )
 

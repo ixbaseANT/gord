@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
 )
 
 type utxoCollection map[externalapi.DomainOutpoint]externalapi.UTXOEntry

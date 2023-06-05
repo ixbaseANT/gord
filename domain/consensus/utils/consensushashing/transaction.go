@@ -3,12 +3,12 @@ package consensushashing
 import (
 	"io"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/serialization"
+	"github.com/ixbasANT/gord/domain/consensus/utils/serialization"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/util/binaryserializer"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/hashes"
+	"github.com/ixbasANT/gord/domain/consensus/utils/transactionhelper"
+	"github.com/ixbasANT/gord/util/binaryserializer"
 	"github.com/pkg/errors"
 )
 

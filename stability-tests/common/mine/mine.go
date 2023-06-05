@@ -6,13 +6,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/mining"
-	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/domain/consensus"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/mining"
+	"github.com/ixbasANT/gord/stability-tests/common/rpc"
 	"github.com/pkg/errors"
 )
 

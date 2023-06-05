@@ -3,12 +3,12 @@ package consensusstatemanager
 import (
 	"fmt"
 
-	"github.com/kaspanet/kaspad/util/staging"
+	"github.com/ixbasANT/gord/util/staging"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/ruleerrors"
+	"github.com/ixbasANT/gord/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

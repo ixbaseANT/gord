@@ -3,13 +3,13 @@ package mempool
 import (
 	"fmt"
 
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbasANT/gord/util/txmass"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
 )
 
 const (

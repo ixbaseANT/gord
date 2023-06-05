@@ -7,13 +7,13 @@ import (
 	"os"
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/ixbasANT/gord/domain/consensus/model"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/ixbasANT/gord/domain/consensus"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/dagconfig"
 )
 
 func testReorg(cfg *configFlags) {

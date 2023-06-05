@@ -4,10 +4,10 @@ import (
 	"time"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/stability-tests/common"
+	"github.com/ixbasANT/gord/stability-tests/common/rpc"
+	"github.com/ixbasANT/gord/util"
 	"github.com/pkg/errors"
 )
 

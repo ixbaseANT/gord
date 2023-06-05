@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbasANT/gord/util"
 
-	"github.com/kaspanet/kaspad/version"
+	"github.com/ixbasANT/gord/version"
 
 	"github.com/pkg/errors"
 
 	_ "net/http/pprof"
 
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/ixbasANT/gord/infrastructure/os/signal"
+	"github.com/ixbasANT/gord/util/panics"
+	"github.com/ixbasANT/gord/util/profiling"
 )
 
 func main() {

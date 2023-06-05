@@ -1,8 +1,8 @@
 package serialization
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/multiset"
+	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbasANT/gord/domain/consensus/utils/multiset"
 )
 
 // MultisetToDBMultiset converts Multiset to DbMultiset

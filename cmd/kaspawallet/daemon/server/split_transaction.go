@@ -4,14 +4,14 @@ import (
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbasANT/gord/domain/miningmanager/mempool"
+	"github.com/ixbasANT/gord/util"
 )
 
 // maybeAutoCompoundTransaction checks if a transaction's mass is higher that what is allowed for a standard

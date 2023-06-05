@@ -1,7 +1,7 @@
 package appmessage
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
 )
 
 // MsgRequestPruningPointUTXOSet represents a kaspa RequestPruningPointUTXOSet message

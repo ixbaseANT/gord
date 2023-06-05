@@ -1,8 +1,8 @@
 package ping
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
 )
 
 // ReceivePingsContext is the interface for the context needed for the ReceivePings flow.
