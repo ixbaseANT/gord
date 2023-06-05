@@ -5,14 +5,14 @@ import (
 	"github.com/pkg/errors"
 	"math/big"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/blockheader"
-	"github.com/ixbasANT/gord/domain/consensus/utils/hashes"
-	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/blockheader"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
-	"github.com/ixbasANT/gord/domain/consensus/utils/transactionid"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionid"
+	"github.com/ixbaseANT/gord/util/mstime"
 )
 
 // DomainBlockToMsgBlock converts an externalapi.DomainBlock to MsgBlock

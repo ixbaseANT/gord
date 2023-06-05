@@ -3,9 +3,9 @@ package serialization
 import (
 	"math"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/serialization/protoserialization"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet/serialization/protoserialization"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/proto"
 )

@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ixbasANT/gord/cmd/kaspawallet/keys"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/keys"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet"
 	"github.com/pkg/errors"
 )
 

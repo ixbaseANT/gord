@@ -6,9 +6,9 @@ import (
 	"strings"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/bip32"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet/bip32"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 )
 

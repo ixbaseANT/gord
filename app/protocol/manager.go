@@ -5,20 +5,20 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ixbasANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/app/protocol/common"
 
 	"github.com/pkg/errors"
 
-	"github.com/ixbasANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
-	"github.com/ixbasANT/gord/app/protocol/flowcontext"
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/infrastructure/network/addressmanager"
-	"github.com/ixbasANT/gord/infrastructure/network/connmanager"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/app/protocol/flowcontext"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/connmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
 )
 
 // Manager manages the p2p protocol

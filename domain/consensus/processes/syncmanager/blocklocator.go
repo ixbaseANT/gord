@@ -1,9 +1,9 @@
 package syncmanager
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/database"
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/database"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 

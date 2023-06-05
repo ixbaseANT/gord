@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 // GHOSTDAGManager resolves and manages GHOSTDAG block data
 type GHOSTDAGManager interface {

@@ -4,16 +4,16 @@ import (
 	// we need to embed the utxoset of mainnet genesis here
 	_ "embed"
 	"fmt"
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/ruleerrors"
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbasANT/gord/domain/consensus/utils/multiset"
-	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
-	"github.com/ixbasANT/gord/infrastructure/db/database"
-	"github.com/ixbasANT/gord/infrastructure/logger"
-	"github.com/ixbasANT/gord/util/difficulty"
-	"github.com/ixbasANT/gord/util/staging"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/multiset"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/util/difficulty"
+	"github.com/ixbaseANT/gord/util/staging"
 	"github.com/pkg/errors"
 )
 
@@ -232,7 +232,7 @@ func (bp *blockProcessor) loadUTXODataForGenesis(stagingArea *model.StagingArea,
 	// pruning point.
 	// The actual UTXO set that fits Mainnet's genesis' UTXO commitment was removed from the codebase in order
 	// to make reduce the consensus initialization time and the compiled binary size, but can be still
-	// found here for anyone to verify: https://github.com/ixbasANT/gord/blob/dbf18d8052f000ba0079be9e79b2d6f5a98b74ca/domain/consensus/processes/blockprocessor/resources/utxos.gz
+	// found here for anyone to verify: https://github.com/ixbaseANT/gord/blob/dbf18d8052f000ba0079be9e79b2d6f5a98b74ca/domain/consensus/processes/blockprocessor/resources/utxos.gz
 	bp.consensusStateStore.StageVirtualUTXODiff(stagingArea, utxo.NewUTXODiff())
 	bp.utxoDiffStore.Stage(stagingArea, blockHash, utxo.NewUTXODiff(), nil)
 	bp.multisetStore.Stage(stagingArea, blockHash, multiset.New())

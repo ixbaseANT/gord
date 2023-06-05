@@ -2,19 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/ixbasANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus"
 	"os/exec"
 	"strings"
 	"sync/atomic"
 	"syscall"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/stability-tests/common/mine"
-	"github.com/ixbasANT/gord/stability-tests/common/rpc"
-	"github.com/ixbasANT/gord/util"
-	"github.com/ixbasANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/stability-tests/common/mine"
+	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
+	"github.com/ixbaseANT/gord/util"
+	"github.com/ixbaseANT/gord/util/panics"
 	"github.com/pkg/errors"
 )
 

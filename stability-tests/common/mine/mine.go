@@ -6,13 +6,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/model/testapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbasANT/gord/domain/consensus/utils/mining"
-	"github.com/ixbasANT/gord/stability-tests/common/rpc"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/mining"
+	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
 	"github.com/pkg/errors"
 )
 

@@ -1,9 +1,9 @@
 package mempool
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbasANT/gord/domain/consensus/utils/transactionhelper"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
 )
 
 func (mp *mempool) handleNewBlockTransactions(blockTransactions []*externalapi.DomainTransaction) (

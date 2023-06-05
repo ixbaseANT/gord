@@ -3,11 +3,11 @@ package mempool
 import (
 	"time"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/util"
 
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 )
 
 const (

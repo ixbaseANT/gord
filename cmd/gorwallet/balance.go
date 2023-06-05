@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/client"
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/gorwallet/utils"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/client"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/utils"
 )
 
 func balance(conf *balanceConfig) error {

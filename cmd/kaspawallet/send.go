@@ -6,11 +6,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/client"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/keys"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
-	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/client"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/keys"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 )
 

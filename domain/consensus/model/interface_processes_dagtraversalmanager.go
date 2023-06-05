@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 // DAGTraversalManager exposes methods for traversing blocks
 // in the DAG

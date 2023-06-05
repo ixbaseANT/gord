@@ -1,8 +1,8 @@
 package grpcclient
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 )

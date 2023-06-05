@@ -2,7 +2,7 @@ package profiling
 
 import (
 	"fmt"
-	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"net"
 	"net/http"
 	"os"
@@ -12,7 +12,7 @@ import (
 	// Required for profiling
 	_ "net/http/pprof"
 
-	"github.com/ixbasANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/util/panics"
 	"runtime"
 	"runtime/pprof"
 )

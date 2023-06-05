@@ -2,9 +2,9 @@ package grpcserver
 
 import (
 	"context"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/server"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
-	"github.com/ixbasANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/ixbaseANT/gord/util/panics"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding/gzip"

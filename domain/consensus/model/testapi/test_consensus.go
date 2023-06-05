@@ -3,10 +3,10 @@ package testapi
 import (
 	"io"
 
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
 )
 
 // MineJSONBlockType indicates which type of blocks MineJSON mines

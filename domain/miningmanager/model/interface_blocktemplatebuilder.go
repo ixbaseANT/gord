@@ -1,7 +1,7 @@
 package model
 
 import (
-	consensusexternalapi "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	consensusexternalapi "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 // BlockTemplateBuilder builds block templates for miners to consume

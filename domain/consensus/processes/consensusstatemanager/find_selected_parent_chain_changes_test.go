@@ -3,10 +3,10 @@ package consensusstatemanager_test
 import (
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
 )
 
 func TestCalculateChainPath(t *testing.T) {

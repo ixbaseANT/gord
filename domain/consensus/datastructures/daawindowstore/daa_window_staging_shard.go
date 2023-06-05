@@ -2,9 +2,9 @@ package daawindowstore
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/ixbasANT/gord/domain/consensus/database/serialization"
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/database/serialization"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 type dbKey struct {

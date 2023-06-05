@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/infrastructure/logger"
-	"github.com/ixbasANT/gord/infrastructure/network/rpcclient"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
 	"github.com/pkg/errors"
 	"time"
 )

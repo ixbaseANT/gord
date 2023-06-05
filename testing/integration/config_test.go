@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 )
 
 const (

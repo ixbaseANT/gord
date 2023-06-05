@@ -7,18 +7,18 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
-	"github.com/ixbasANT/gord/util/txmass"
+	"github.com/ixbaseANT/gord/util/txmass"
 
-	"github.com/ixbasANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/util/profiling"
 
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/keys"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/infrastructure/network/rpcclient"
-	"github.com/ixbasANT/gord/infrastructure/os/signal"
-	"github.com/ixbasANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/keys"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
+	"github.com/ixbaseANT/gord/infrastructure/os/signal"
+	"github.com/ixbaseANT/gord/util/panics"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc"

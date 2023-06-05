@@ -3,12 +3,12 @@ package protowire
 import (
 	"math"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
-	"github.com/ixbasANT/gord/domain/consensus/utils/transactionid"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionid"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/util/mstime"
 	"github.com/pkg/errors"
 )
 

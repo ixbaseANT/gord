@@ -1,7 +1,7 @@
 package math_test
 
 import (
-	utilMath "github.com/ixbasANT/gord/util/math"
+	utilMath "github.com/ixbaseANT/gord/util/math"
 	"math"
 	"testing"
 )

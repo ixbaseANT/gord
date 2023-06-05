@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 )
 
 // AddressRandomize implement addressRandomizer interface

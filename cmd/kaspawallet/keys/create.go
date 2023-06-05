@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/utils"
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/utils"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

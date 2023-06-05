@@ -3,7 +3,7 @@ package addressmanager
 import (
 	"net"
 
-	"github.com/ixbasANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 )
 
 // Config is a descriptor which specifies the AddressManager instance configuration.

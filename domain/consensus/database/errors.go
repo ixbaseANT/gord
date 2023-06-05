@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
 )
 
 // ErrNotFound denotes that the requested item was not

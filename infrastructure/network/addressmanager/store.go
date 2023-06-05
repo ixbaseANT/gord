@@ -2,9 +2,9 @@ package addressmanager
 
 import (
 	"encoding/binary"
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/infrastructure/db/database"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/util/mstime"
 	"github.com/pkg/errors"
 	"net"
 )

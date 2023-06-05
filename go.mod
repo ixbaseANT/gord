@@ -1,4 +1,4 @@
-module github.com/ixbasANT/gord
+module github.com/ixbaseANT/gord
 
 go 1.18
 

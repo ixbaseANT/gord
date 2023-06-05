@@ -2,13 +2,13 @@ package netadapter
 
 import (
 	"fmt"
-	"github.com/ixbasANT/gord/app/appmessage"
-	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 	"sync/atomic"
 
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/id"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/server"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/id"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server"
 )
 
 // NetConnection is a wrapper to a server connection for use by services external to NetAdapter

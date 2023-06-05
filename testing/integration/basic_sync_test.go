@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
 
-	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 )
 
 func TestIntegrationBasicSync(t *testing.T) {

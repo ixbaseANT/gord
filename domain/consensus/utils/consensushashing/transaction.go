@@ -3,12 +3,12 @@ package consensushashing
 import (
 	"io"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/serialization"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/serialization"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/hashes"
-	"github.com/ixbasANT/gord/domain/consensus/utils/transactionhelper"
-	"github.com/ixbasANT/gord/util/binaryserializer"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
+	"github.com/ixbaseANT/gord/util/binaryserializer"
 	"github.com/pkg/errors"
 )
 

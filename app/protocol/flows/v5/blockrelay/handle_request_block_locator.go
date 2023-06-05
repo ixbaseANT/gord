@@ -1,11 +1,11 @@
 package blockrelay
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
-	"github.com/ixbasANT/gord/domain"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 )
 
 // RequestBlockLocatorContext is the interface for the context needed for the HandleRequestBlockLocator flow.

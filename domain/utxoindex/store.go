@@ -3,10 +3,10 @@ package utxoindex
 import (
 	"encoding/binary"
 
-	"github.com/ixbasANT/gord/domain/consensus/database/binaryserialization"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/infrastructure/db/database"
-	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/domain/consensus/database/binaryserialization"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

@@ -2,7 +2,7 @@ package server
 
 import (
 	"context"
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 )
 
 func (s *server) Shutdown(ctx context.Context, request *pb.ShutdownRequest) (*pb.ShutdownResponse, error) {

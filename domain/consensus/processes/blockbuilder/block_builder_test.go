@@ -4,12 +4,12 @@ import (
 	"github.com/pkg/errors"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/ruleerrors"
-	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
-	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
 )
 
 func TestBuildBlockErrorCases(t *testing.T) {

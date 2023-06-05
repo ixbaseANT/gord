@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/reachabilitydata"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/reachabilitydata"
 
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 	"github.com/pkg/errors"
 )

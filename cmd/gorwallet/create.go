@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/bip32"
-	"github.com/ixbasANT/gord/cmd/gorwallet/utils"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet/bip32"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/utils"
 	"github.com/pkg/errors"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/keys"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/keys"
 )
 
 func create(conf *createConfig) error {

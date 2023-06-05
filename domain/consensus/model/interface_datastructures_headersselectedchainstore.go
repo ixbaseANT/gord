@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 // HeadersSelectedChainStore represents a store of the headers selected chain
 type HeadersSelectedChainStore interface {

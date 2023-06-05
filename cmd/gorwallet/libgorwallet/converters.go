@@ -3,11 +3,11 @@ package libgorwallet
 import (
 	"encoding/hex"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/transactionid"
-	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionid"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 )
 
 // KaspawalletdUTXOsTolibgorwalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libgorwallet.UTXO

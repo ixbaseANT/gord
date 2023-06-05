@@ -1,8 +1,8 @@
 package testapi
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
 )
 
 // TestTransactionValidator adds to the main TransactionValidator methods required by tests

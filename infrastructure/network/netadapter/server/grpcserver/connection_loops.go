@@ -2,18 +2,18 @@ package grpcserver
 
 import (
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"io"
 	"os"
 	"strconv"
 	"sync"
 	"time"
 
-	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 func (c *gRPCConnection) connectionLoops() error {

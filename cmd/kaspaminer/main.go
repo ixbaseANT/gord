@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/util"
 
-	"github.com/ixbasANT/gord/version"
+	"github.com/ixbaseANT/gord/version"
 
 	"github.com/pkg/errors"
 
 	_ "net/http/pprof"
 
-	"github.com/ixbasANT/gord/infrastructure/os/signal"
-	"github.com/ixbasANT/gord/util/panics"
-	"github.com/ixbasANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/infrastructure/os/signal"
+	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/util/profiling"
 )
 
 func main() {

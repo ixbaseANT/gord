@@ -4,10 +4,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/infrastructure/logger"
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/stability-tests/common/rpc"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
 
 	"github.com/jessevdk/go-flags"
 )

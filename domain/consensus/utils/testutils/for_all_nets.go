@@ -3,8 +3,8 @@ package testutils
 import (
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 )
 
 // ForAllNets runs the passed testFunc with all available networks

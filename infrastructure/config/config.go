@@ -18,12 +18,12 @@ import (
 
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/jessevdk/go-flags"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/infrastructure/logger"
-	"github.com/ixbasANT/gord/util"
-	"github.com/ixbasANT/gord/util/network"
-	"github.com/ixbasANT/gord/version"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/util"
+	"github.com/ixbaseANT/gord/util/network"
+	"github.com/ixbaseANT/gord/version"
 	"github.com/pkg/errors"
 )
 

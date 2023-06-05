@@ -1,13 +1,13 @@
 package blockrelay
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
-	"github.com/ixbasANT/gord/domain"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"sync/atomic"
 )
 

@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/domain/consensus/utils/mining"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/mining"
+	"github.com/ixbaseANT/gord/util"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -15,10 +15,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/stability-tests/common/rpc"
-	"github.com/ixbasANT/gord/util/panics"
-	"github.com/ixbasANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
+	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/util/profiling"
 	"github.com/pkg/errors"
 )
 

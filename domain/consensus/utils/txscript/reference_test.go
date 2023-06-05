@@ -13,12 +13,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

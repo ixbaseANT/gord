@@ -9,17 +9,17 @@ import (
 	"math"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensusreference"
+	"github.com/ixbaseANT/gord/domain/consensusreference"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
 
-	"github.com/ixbasANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 )
 

@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 // BlockRelations represents a block's parent/child relations
 type BlockRelations struct {

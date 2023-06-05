@@ -1,16 +1,16 @@
 package v5
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/app/protocol/common"
-	"github.com/ixbasANT/gord/app/protocol/flowcontext"
-	"github.com/ixbasANT/gord/app/protocol/flows/v5/addressexchange"
-	"github.com/ixbasANT/gord/app/protocol/flows/v5/blockrelay"
-	"github.com/ixbasANT/gord/app/protocol/flows/v5/ping"
-	"github.com/ixbasANT/gord/app/protocol/flows/v5/rejects"
-	"github.com/ixbasANT/gord/app/protocol/flows/v5/transactionrelay"
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/app/protocol/flowcontext"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5/addressexchange"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5/blockrelay"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5/ping"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5/rejects"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5/transactionrelay"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 )
 
 type protocolManager interface {

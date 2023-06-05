@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbasANT/gord/stability-tests/common/rpc"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
 	"github.com/pkg/errors"
 )
 

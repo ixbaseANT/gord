@@ -2,12 +2,12 @@ package server
 
 import (
 	"context"
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet/serialization"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/infrastructure/network/rpcclient"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
 	"github.com/pkg/errors"
 	"time"
 )

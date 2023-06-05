@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
-	"github.com/ixbasANT/gord/cmd/gorwallet/utils"
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/utils"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

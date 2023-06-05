@@ -3,8 +3,8 @@ package libgorwallet
 import (
 	"fmt"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/bip32"
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet/bip32"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/app/protocol/common"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/standalone"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/standalone"
 	"github.com/pkg/errors"
 )
 

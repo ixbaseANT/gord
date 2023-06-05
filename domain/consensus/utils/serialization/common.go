@@ -3,8 +3,8 @@ package serialization
 import (
 	"io"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/util/binaryserializer"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/util/binaryserializer"
 	"github.com/pkg/errors"
 )
 

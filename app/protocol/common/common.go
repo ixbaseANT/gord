@@ -1,8 +1,8 @@
 package common
 
 import (
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"time"
 
 	"github.com/pkg/errors"

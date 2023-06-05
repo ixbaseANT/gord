@@ -6,12 +6,12 @@ package txscript
 
 import (
 	"bytes"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"reflect"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/util"
 )
 
 // mustParseShortForm parses the passed short form script and returns the

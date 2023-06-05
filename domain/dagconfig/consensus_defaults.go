@@ -1,7 +1,7 @@
 package dagconfig
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 	"time"
 )
 

@@ -7,7 +7,7 @@ package appmessage
 import (
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 // TestRequstIBDBlocks tests the MsgRequestIBDBlocks API.

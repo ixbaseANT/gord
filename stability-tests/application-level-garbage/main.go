@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/standalone"
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/util/panics"
-	"github.com/ixbasANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/standalone"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/util/profiling"
 )
 
 func main() {

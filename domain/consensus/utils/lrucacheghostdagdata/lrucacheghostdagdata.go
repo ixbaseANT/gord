@@ -1,6 +1,6 @@
 package lrucacheghostdagdata
 
-import "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 type lruKey struct {
 	blockHash     externalapi.DomainHash

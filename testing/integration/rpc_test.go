@@ -1,12 +1,12 @@
 package integration
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 	"runtime"
 	"testing"
 	"time"
 
-	"github.com/ixbasANT/gord/infrastructure/network/rpcclient"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
 )
 
 const rpcTimeout = 10 * time.Second

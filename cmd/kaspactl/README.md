@@ -22,7 +22,7 @@ $ go version
 - Run the following commands to obtain and install kaspad including all dependencies:
 
 ```bash
-$ git clone https://github.com/ixbasANT/gord
+$ git clone https://github.com/ixbaseANT/gord
 $ cd kaspad/cmd/kaspactl
 $ go install .
 ```

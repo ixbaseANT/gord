@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 var commandTypes = []reflect.Type{

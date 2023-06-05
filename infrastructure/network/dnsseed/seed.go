@@ -12,15 +12,15 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	pb2 "github.com/ixbasANT/gord/infrastructure/network/dnsseed/pb"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	pb2 "github.com/ixbaseANT/gord/infrastructure/network/dnsseed/pb"
 	"google.golang.org/grpc"
 
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/util/mstime"
 
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 )
 
 const (

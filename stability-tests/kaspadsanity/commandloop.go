@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ixbasANT/gord/infrastructure/logger"
-	"github.com/ixbasANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/stability-tests/common"
 	"github.com/pkg/errors"
 )
 

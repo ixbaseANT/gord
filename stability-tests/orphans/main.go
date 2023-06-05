@@ -7,9 +7,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/stability-tests/common/rpc"
-	"github.com/ixbasANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
+	"github.com/ixbaseANT/gord/util/profiling"
 )
 
 var timeout = 30 * time.Second

@@ -4,14 +4,14 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 
-	"github.com/ixbasANT/gord/infrastructure/db/database/ldb"
+	"github.com/ixbaseANT/gord/infrastructure/db/database/ldb"
 
-	"github.com/ixbasANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
 
-	"github.com/ixbasANT/gord/app"
-	"github.com/ixbasANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/app"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 )
 
 type appHarness struct {

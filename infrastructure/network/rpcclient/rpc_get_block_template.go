@@ -1,6 +1,6 @@
 package rpcclient
 
-import "github.com/ixbasANT/gord/app/appmessage"
+import "github.com/ixbaseANT/gord/app/appmessage"
 
 // GetBlockTemplate sends an RPC request respective to the function's name and returns the RPC server's response
 func (c *RPCClient) GetBlockTemplate(miningAddress, extraData string) (*appmessage.GetBlockTemplateResponseMessage, error) {

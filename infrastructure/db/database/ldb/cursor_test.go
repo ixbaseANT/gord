@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ixbasANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
 )
 
 func validateCurrentCursorKeyAndValue(t *testing.T, testName string, cursor database.Cursor,

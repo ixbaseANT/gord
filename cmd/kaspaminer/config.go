@@ -7,13 +7,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ixbasANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/ixbasANT/gord/version"
+	"github.com/ixbaseANT/gord/version"
 )
 
 const (

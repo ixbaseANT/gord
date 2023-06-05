@@ -1,20 +1,20 @@
 package blocktemplatebuilder
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/processes/coinbasemanager"
-	"github.com/ixbasANT/gord/domain/consensus/utils/merkle"
-	"github.com/ixbasANT/gord/domain/consensus/utils/transactionhelper"
-	"github.com/ixbasANT/gord/domain/consensusreference"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/domain/consensus/processes/coinbasemanager"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/merkle"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
+	"github.com/ixbaseANT/gord/domain/consensusreference"
+	"github.com/ixbaseANT/gord/util/mstime"
 	"math"
 	"sort"
 
-	"github.com/ixbasANT/gord/util/difficulty"
+	"github.com/ixbaseANT/gord/util/difficulty"
 
-	consensusexternalapi "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/ruleerrors"
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
-	miningmanagerapi "github.com/ixbasANT/gord/domain/miningmanager/model"
+	consensusexternalapi "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	miningmanagerapi "github.com/ixbaseANT/gord/domain/miningmanager/model"
 	"github.com/pkg/errors"
 )
 
@@ -155,7 +155,7 @@ func (btb *blockTemplateBuilder) BuildBlockTemplate(
 		if err != nil {
 			// mempool.RemoveTransactions might return errors in situations that are perfectly fine in this context.
 			// TODO: Once the mempool invariants are clear, this should be converted back `return nil, err`:
-			// https://github.com/ixbasANT/gord/issues/1553
+			// https://github.com/ixbaseANT/gord/issues/1553
 			log.Criticalf("Error from mempool.RemoveTransactions: %+v", err)
 		}
 		// We can call this recursively without worry because this should almost never happen

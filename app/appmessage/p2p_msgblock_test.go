@@ -6,14 +6,14 @@ package appmessage
 
 import (
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/util/mstime"
 	"math"
 	"reflect"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 // TestBlock tests the MsgBlock API.

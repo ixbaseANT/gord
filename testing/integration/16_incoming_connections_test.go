@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 )
 
 func Test16IncomingConnections(t *testing.T) {

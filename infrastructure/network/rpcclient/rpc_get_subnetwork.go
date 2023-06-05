@@ -1,6 +1,6 @@
 package rpcclient
 
-import "github.com/ixbasANT/gord/app/appmessage"
+import "github.com/ixbaseANT/gord/app/appmessage"
 
 // GetSubnetwork sends an RPC request respective to the function's name and returns the RPC server's response
 func (c *RPCClient) GetSubnetwork(subnetworkID string) (*appmessage.GetSubnetworkResponseMessage, error) {

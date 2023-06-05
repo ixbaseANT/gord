@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/network/rpcclient/grpcclient"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient/grpcclient"
 	"github.com/pkg/errors"
 )
 

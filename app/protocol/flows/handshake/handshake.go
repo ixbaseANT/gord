@@ -3,18 +3,18 @@ package handshake
 import (
 	"sync/atomic"
 
-	"github.com/ixbasANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain"
 
-	"github.com/ixbasANT/gord/app/protocol/common"
-	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
-	"github.com/ixbasANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
 
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

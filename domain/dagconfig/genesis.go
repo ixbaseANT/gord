@@ -6,10 +6,10 @@ package dagconfig
 
 import (
 	"github.com/kaspanet/go-muhash"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/blockheader"
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
-	"github.com/ixbasANT/gord/domain/consensus/utils/transactionhelper"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/blockheader"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
 	"math/big"
 )
 

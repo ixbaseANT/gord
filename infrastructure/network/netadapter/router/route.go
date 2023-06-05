@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
 
-	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/pkg/errors"
 )
 

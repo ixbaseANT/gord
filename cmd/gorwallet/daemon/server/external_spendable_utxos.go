@@ -3,10 +3,10 @@ package server
 import (
 	"context"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbaseANT/gord/util"
 )
 
 func (s *server) GetExternalSpendableUTXOs(_ context.Context, request *pb.GetExternalSpendableUTXOsRequest) (*pb.GetExternalSpendableUTXOsResponse, error) {

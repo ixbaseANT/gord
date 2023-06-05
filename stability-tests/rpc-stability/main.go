@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/network/rpcclient/grpcclient"
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/util/panics"
-	"github.com/ixbasANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient/grpcclient"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/util/profiling"
 	"github.com/pkg/errors"
 )
 

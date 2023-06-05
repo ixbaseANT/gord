@@ -3,8 +3,8 @@ package server
 import (
 	"context"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
 )
 
 type balancesType struct{ available, pending uint64 }

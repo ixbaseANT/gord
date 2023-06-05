@@ -1,7 +1,7 @@
 package serialization
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
 )
 
 // DomainBlockRelationsToDbBlockRelations converts model.BlockRelations to DbBlockRelations

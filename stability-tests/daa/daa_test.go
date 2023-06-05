@@ -1,12 +1,12 @@
 package daa
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/pow"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/infrastructure/network/rpcclient"
-	"github.com/ixbasANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/pow"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
+	"github.com/ixbaseANT/gord/stability-tests/common"
 	"math"
 	"math/rand"
 	"os"

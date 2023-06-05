@@ -1,9 +1,9 @@
 package transactionvalidator
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/testapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
 )
 
 type testTransactionValidator struct {

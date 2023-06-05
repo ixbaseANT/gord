@@ -1,9 +1,9 @@
 package protowire
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/id"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/id"
+	"github.com/ixbaseANT/gord/util/mstime"
 	"github.com/pkg/errors"
 )
 

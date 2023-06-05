@@ -2,7 +2,7 @@ package utxoindex
 
 import (
 	"encoding/binary"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 	"io"
 	"math/rand"

@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbasANT/gord/infrastructure/db/database/ldb"
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/stability-tests/common/mine"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/infrastructure/db/database/ldb"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

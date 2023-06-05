@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
 	"testing"
 )
 

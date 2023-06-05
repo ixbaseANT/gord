@@ -12,7 +12,7 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/util"
 )
 
 // TestAppDataDir tests the API for AppDir to ensure it gives expected

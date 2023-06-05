@@ -2,14 +2,14 @@ package difficulty_test
 
 import (
 	"fmt"
-	"github.com/ixbasANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus"
 	"math"
 	"math/big"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/util/difficulty"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/util/difficulty"
 )
 
 func TestGetHashrateString(t *testing.T) {

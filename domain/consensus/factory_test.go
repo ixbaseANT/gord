@@ -4,10 +4,10 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/prefixmanager/prefix"
+	"github.com/ixbaseANT/gord/domain/prefixmanager/prefix"
 
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/infrastructure/db/database/ldb"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/db/database/ldb"
 )
 
 func TestNewConsensus(t *testing.T) {

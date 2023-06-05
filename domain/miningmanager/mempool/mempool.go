@@ -3,10 +3,10 @@ package mempool
 import (
 	"sync"
 
-	"github.com/ixbasANT/gord/domain/consensusreference"
+	"github.com/ixbaseANT/gord/domain/consensusreference"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	miningmanagermodel "github.com/ixbasANT/gord/domain/miningmanager/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	miningmanagermodel "github.com/ixbaseANT/gord/domain/miningmanager/model"
 )
 
 type mempool struct {

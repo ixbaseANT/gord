@@ -2,7 +2,7 @@ package subnetworks
 
 import (
 	"bytes"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 // Less returns true iff id a is less than id b

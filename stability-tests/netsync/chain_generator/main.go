@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/stability-tests/common/mine"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

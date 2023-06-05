@@ -8,11 +8,11 @@ import (
 	"encoding/binary"
 	"strconv"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 const (

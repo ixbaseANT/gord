@@ -1,10 +1,10 @@
 package finalitystore
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/lrucache"
-	"github.com/ixbasANT/gord/util/staging"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/lrucache"
+	"github.com/ixbaseANT/gord/util/staging"
 )
 
 var bucketName = []byte("finality-points")

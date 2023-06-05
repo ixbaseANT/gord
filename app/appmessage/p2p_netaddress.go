@@ -7,7 +7,7 @@ package appmessage
 import (
 	"net"
 
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/util/mstime"
 )
 
 // NetAddress defines information about a peer on the network including the time

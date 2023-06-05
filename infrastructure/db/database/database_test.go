@@ -9,7 +9,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/ixbasANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
 )
 
 func TestDatabasePut(t *testing.T) {

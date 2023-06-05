@@ -2,7 +2,7 @@ package panics
 
 import (
 	"fmt"
-	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"os"
 	"runtime/debug"
 	"sync/atomic"

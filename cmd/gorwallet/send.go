@@ -6,11 +6,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/client"
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/gorwallet/keys"
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
-	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/client"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/keys"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 )
 

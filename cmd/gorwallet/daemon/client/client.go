@@ -2,12 +2,12 @@ package client
 
 import (
 	"context"
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/server"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/server"
 	"time"
 
 	"github.com/pkg/errors"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"google.golang.org/grpc"
 )
 

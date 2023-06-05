@@ -7,11 +7,11 @@ package txscript_test
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/util"
 )
 
 // This example demonstrates creating a script which pays to a kaspa address.

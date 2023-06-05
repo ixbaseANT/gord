@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 	"testing"
 )
 

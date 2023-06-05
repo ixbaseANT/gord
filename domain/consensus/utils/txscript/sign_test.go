@@ -8,16 +8,16 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/util"
 )
 
 func mkGetKey(keys map[string]*secp256k1.SchnorrKeyPair) KeyDB {

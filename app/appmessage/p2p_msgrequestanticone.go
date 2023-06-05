@@ -5,7 +5,7 @@
 package appmessage
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 // MsgRequestAnticone implements the Message interface and represents a kaspa

@@ -1,10 +1,10 @@
 package miningmanager
 
 import (
-	"github.com/ixbasANT/gord/domain/consensusreference"
-	"github.com/ixbasANT/gord/domain/dagconfig"
-	"github.com/ixbasANT/gord/domain/miningmanager/blocktemplatebuilder"
-	mempoolpkg "github.com/ixbasANT/gord/domain/miningmanager/mempool"
+	"github.com/ixbaseANT/gord/domain/consensusreference"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/miningmanager/blocktemplatebuilder"
+	mempoolpkg "github.com/ixbaseANT/gord/domain/miningmanager/mempool"
 	"sync"
 	"time"
 )

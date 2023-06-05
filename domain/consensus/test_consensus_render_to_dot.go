@@ -8,7 +8,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
 )
 
 // RenderDAGToDot is a helper function for debugging tests.

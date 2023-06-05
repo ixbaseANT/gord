@@ -3,8 +3,8 @@ package libkaspawallet
 import (
 	"fmt"
 
-	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

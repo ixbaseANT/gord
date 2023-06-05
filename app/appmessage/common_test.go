@@ -1,6 +1,6 @@
 package appmessage
 
-import "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 // mainnetGenesisHash is the hash of the first block in the block DAG for the
 // main network (genesis block).

@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 // PastMedianTimeManager provides a method to resolve the
 // past median time of a block

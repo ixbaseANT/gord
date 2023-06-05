@@ -3,9 +3,9 @@ package ghostdagmanager
 import (
 	"sort"
 
-	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 func (gm *ghostdagManager) mergeSetWithoutSelectedParent(stagingArea *model.StagingArea,

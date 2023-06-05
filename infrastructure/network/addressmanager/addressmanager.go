@@ -5,13 +5,13 @@
 package addressmanager
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/db/database"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/util/mstime"
 	"net"
 	"sync"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/pkg/errors"
 )
 

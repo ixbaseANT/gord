@@ -2,11 +2,11 @@ package ghostdagdatastore
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/ixbasANT/gord/domain/consensus/database/serialization"
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/lrucacheghostdagdata"
-	"github.com/ixbasANT/gord/util/staging"
+	"github.com/ixbaseANT/gord/domain/consensus/database/serialization"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/lrucacheghostdagdata"
+	"github.com/ixbaseANT/gord/util/staging"
 )
 
 var ghostdagDataBucketName = []byte("block-ghostdag-data")

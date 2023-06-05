@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/client"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/pb"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/utils"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/client"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/utils"
 )
 
 func balance(conf *balanceConfig) error {

@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/stability-tests/common/rpc"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
 	"github.com/pkg/errors"
 	"time"
 )

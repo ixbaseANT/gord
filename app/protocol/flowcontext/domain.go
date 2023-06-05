@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/ixbasANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain"
 )
 
 // Domain returns the Domain object associated to the flow context.

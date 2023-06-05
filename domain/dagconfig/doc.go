@@ -27,8 +27,8 @@ variable (either directly, or hidden in a library call).
 		"fmt"
 		"log"
 
-		"github.com/ixbasANT/gord/util"
-		"github.com/ixbasANT/gord/domain/dagconfig"
+		"github.com/ixbaseANT/gord/util"
+		"github.com/ixbaseANT/gord/domain/dagconfig"
 	)
 
 	var testnet = flag.Bool("testnet", false, "operate on the testnet Kaspa network")

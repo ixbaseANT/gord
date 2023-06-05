@@ -5,15 +5,15 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/ixbasANT/gord/domain/consensusreference"
+	"github.com/ixbaseANT/gord/domain/consensusreference"
 
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/miningmanager"
-	"github.com/ixbasANT/gord/domain/miningmanager/mempool"
-	"github.com/ixbasANT/gord/domain/prefixmanager"
-	"github.com/ixbasANT/gord/domain/prefixmanager/prefix"
-	infrastructuredatabase "github.com/ixbasANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/miningmanager"
+	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
+	"github.com/ixbaseANT/gord/domain/prefixmanager"
+	"github.com/ixbaseANT/gord/domain/prefixmanager/prefix"
+	infrastructuredatabase "github.com/ixbaseANT/gord/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

@@ -1,8 +1,8 @@
 package rpcclient
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 )
 
 type rpcRouter struct {

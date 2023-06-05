@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/client"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/daemon/pb"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/client"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/daemon/pb"
 )
 
 func newAddress(conf *newAddressConfig) error {

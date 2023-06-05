@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 )
 
 // OnConnectedHandler is a function that is to be called

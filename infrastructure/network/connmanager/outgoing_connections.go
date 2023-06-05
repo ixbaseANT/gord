@@ -1,6 +1,6 @@
 package connmanager
 
-import "github.com/ixbasANT/gord/app/appmessage"
+import "github.com/ixbaseANT/gord/app/appmessage"
 
 // checkOutgoingConnections goes over all activeOutgoing and makes sure they are still active.
 // Then it opens connections so that we have targetOutgoing active connections

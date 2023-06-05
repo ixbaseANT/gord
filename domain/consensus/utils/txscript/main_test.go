@@ -1,7 +1,7 @@
 package txscript
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"os"
 	"testing"
 )

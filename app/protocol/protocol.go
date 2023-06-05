@@ -1,20 +1,20 @@
 package protocol
 
 import (
-	"github.com/ixbasANT/gord/app/protocol/common"
-	"github.com/ixbasANT/gord/app/protocol/flows/ready"
-	"github.com/ixbasANT/gord/app/protocol/flows/v5"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/app/protocol/flows/ready"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5"
 	"sync"
 	"sync/atomic"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/app/protocol/flows/handshake"
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
-	"github.com/ixbasANT/gord/infrastructure/network/addressmanager"
-	"github.com/ixbasANT/gord/infrastructure/network/connmanager"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter"
-	routerpkg "github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol/flows/handshake"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/connmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
+	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

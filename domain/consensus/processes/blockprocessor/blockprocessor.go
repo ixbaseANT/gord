@@ -3,10 +3,10 @@ package blockprocessor
 import (
 	"time"
 
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/processes/blockprocessor/blocklogger"
-	"github.com/ixbasANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/processes/blockprocessor/blocklogger"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 )
 
 // blockProcessor is responsible for processing incoming blocks

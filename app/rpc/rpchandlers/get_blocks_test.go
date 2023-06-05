@@ -5,18 +5,18 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/ixbasANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/app/rpc/rpccontext"
-	"github.com/ixbasANT/gord/app/rpc/rpchandlers"
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/model/testapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/hashes"
-	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbasANT/gord/domain/miningmanager"
-	"github.com/ixbasANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
+	"github.com/ixbaseANT/gord/app/rpc/rpchandlers"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/miningmanager"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 )
 
 type fakeDomain struct {

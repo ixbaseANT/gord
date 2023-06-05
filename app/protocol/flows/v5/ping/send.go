@@ -1,16 +1,16 @@
 package ping
 
 import (
-	"github.com/ixbasANT/gord/app/protocol/common"
-	"github.com/ixbasANT/gord/app/protocol/flowcontext"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/app/protocol/flowcontext"
 	"github.com/pkg/errors"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	"github.com/ixbasANT/gord/app/protocol/protocolerrors"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
-	"github.com/ixbasANT/gord/util/random"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/util/random"
 )
 
 // SendPingsContext is the interface for the context needed for the SendPings flow.

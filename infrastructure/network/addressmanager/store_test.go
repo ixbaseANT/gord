@@ -1,8 +1,8 @@
 package addressmanager
 
 import (
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/util/mstime"
 	"net"
 	"reflect"
 	"testing"

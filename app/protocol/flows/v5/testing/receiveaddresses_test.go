@@ -1,16 +1,16 @@
 package testing
 
 import (
-	"github.com/ixbasANT/gord/app/protocol/flows/v5/addressexchange"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5/addressexchange"
 	"testing"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	peerpkg "github.com/ixbasANT/gord/app/protocol/peer"
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbasANT/gord/infrastructure/network/addressmanager"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 )
 
 type fakeReceiveAddressesContext struct{}

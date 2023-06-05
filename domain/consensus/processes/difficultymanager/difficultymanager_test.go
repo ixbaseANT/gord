@@ -4,17 +4,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ixbasANT/gord/util/difficulty"
+	"github.com/ixbaseANT/gord/util/difficulty"
 
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/util/mstime"
 
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
 
-	"github.com/ixbasANT/gord/domain/consensus"
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 )
 
 func TestDifficulty(t *testing.T) {

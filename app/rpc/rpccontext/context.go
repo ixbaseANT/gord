@@ -1,13 +1,13 @@
 package rpccontext
 
 import (
-	"github.com/ixbasANT/gord/app/protocol"
-	"github.com/ixbasANT/gord/domain"
-	"github.com/ixbasANT/gord/domain/utxoindex"
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/infrastructure/network/addressmanager"
-	"github.com/ixbasANT/gord/infrastructure/network/connmanager"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/app/protocol"
+	"github.com/ixbaseANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain/utxoindex"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/connmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
 )
 
 // Context represents the RPC context

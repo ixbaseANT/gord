@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbasANT/gord/cmd/kaspawallet/keys"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/libkaspawallet"
-	"github.com/ixbasANT/gord/cmd/kaspawallet/utils"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/keys"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbaseANT/gord/cmd/kaspawallet/utils"
 
 	"github.com/pkg/errors"
 )

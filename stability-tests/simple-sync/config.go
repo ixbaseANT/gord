@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/stability-tests/common"
 )
 
 const (

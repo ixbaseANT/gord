@@ -7,7 +7,7 @@ package addressmanager
 import (
 	"net"
 
-	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 )
 
 var (

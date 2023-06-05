@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/ixbasANT/gord/stability-tests/common"
-	"github.com/ixbasANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/ixbaseANT/gord/util/profiling"
 )
 
 const timeout = 5 * time.Second

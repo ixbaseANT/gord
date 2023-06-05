@@ -1,7 +1,7 @@
 package appmessage
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 // MsgIBDBlockLocatorHighestHash represents a kaspa BlockLocatorHighestHash message

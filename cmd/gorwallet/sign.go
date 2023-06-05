@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ixbasANT/gord/cmd/gorwallet/keys"
-	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/keys"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
 	"github.com/pkg/errors"
 )
 

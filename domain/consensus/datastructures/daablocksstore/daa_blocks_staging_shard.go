@@ -1,9 +1,9 @@
 package daablocksstore
 
 import (
-	"github.com/ixbasANT/gord/domain/consensus/database/binaryserialization"
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/database/binaryserialization"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 type daaBlocksStagingShard struct {

@@ -1,8 +1,8 @@
 package mine
 
 import (
-	"github.com/ixbasANT/gord/infrastructure/logger"
-	"github.com/ixbasANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

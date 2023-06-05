@@ -2,18 +2,18 @@ package main
 
 import (
 	nativeerrors "errors"
-	"github.com/ixbasANT/gord/version"
+	"github.com/ixbaseANT/gord/version"
 	"math/rand"
 	"sync/atomic"
 	"time"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/cmd/kaspaminer/templatemanager"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbasANT/gord/domain/consensus/utils/pow"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/router"
-	"github.com/ixbasANT/gord/util"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/cmd/kaspaminer/templatemanager"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/pow"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 )
 

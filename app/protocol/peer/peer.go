@@ -4,13 +4,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
 
-	"github.com/ixbasANT/gord/app/appmessage"
-	"github.com/ixbasANT/gord/infrastructure/network/netadapter/id"
-	mathUtil "github.com/ixbasANT/gord/util/math"
-	"github.com/ixbasANT/gord/util/mstime"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/id"
+	mathUtil "github.com/ixbaseANT/gord/util/math"
+	"github.com/ixbaseANT/gord/util/mstime"
 )
 
 // Peer holds data about a peer.

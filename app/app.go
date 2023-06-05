@@ -7,17 +7,17 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/ixbasANT/gord/infrastructure/config"
-	"github.com/ixbasANT/gord/infrastructure/db/database"
-	"github.com/ixbasANT/gord/infrastructure/db/database/ldb"
-	"github.com/ixbasANT/gord/infrastructure/logger"
-	"github.com/ixbasANT/gord/infrastructure/os/execenv"
-	"github.com/ixbasANT/gord/infrastructure/os/limits"
-	"github.com/ixbasANT/gord/infrastructure/os/signal"
-	"github.com/ixbasANT/gord/infrastructure/os/winservice"
-	"github.com/ixbasANT/gord/util/panics"
-	"github.com/ixbasANT/gord/util/profiling"
-	"github.com/ixbasANT/gord/version"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/db/database/ldb"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/infrastructure/os/execenv"
+	"github.com/ixbaseANT/gord/infrastructure/os/limits"
+	"github.com/ixbaseANT/gord/infrastructure/os/signal"
+	"github.com/ixbaseANT/gord/infrastructure/os/winservice"
+	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/ixbaseANT/gord/util/profiling"
+	"github.com/ixbaseANT/gord/version"
 )
 
 const (

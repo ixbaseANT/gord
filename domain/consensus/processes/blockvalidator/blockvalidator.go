@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ixbasANT/gord/util/txmass"
+	"github.com/ixbaseANT/gord/util/txmass"
 
-	"github.com/ixbasANT/gord/domain/consensus/model"
-	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbasANT/gord/util/difficulty"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/util/difficulty"
 )
 
 // blockValidator exposes a set of validation classes, after which

@@ -2,7 +2,7 @@ package common
 
 import (
 	"fmt"
-	"github.com/ixbasANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"os"
 	"sync/atomic"
 	"syscall"
