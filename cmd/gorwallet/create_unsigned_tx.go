@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/client"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
 )
 
 func createUnsignedTransaction(conf *createUnsignedTransactionConfig) error {

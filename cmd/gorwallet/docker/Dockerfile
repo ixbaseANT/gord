@@ -1,9 +1,9 @@
 # -- multistage docker build: stage #1: build stage
 FROM golang:1.18-alpine AS build
 
-RUN mkdir -p /go/src/github.com/kaspanet/kaspad
+RUN mkdir -p /go/src/github.com/ixbasANT/gord
 
-WORKDIR /go/src/github.com/kaspanet/kaspad
+WORKDIR /go/src/github.com/ixbasANT/gord
 
 RUN apk add --no-cache curl git openssh binutils gcc musl-dev
 
@@ -14,7 +14,7 @@ RUN go mod download
 
 COPY . .
 
-WORKDIR /go/src/github.com/kaspanet/kaspad/cmd/gorwallet
+WORKDIR /go/src/github.com/ixbasANT/gord/cmd/gorwallet
 RUN GOOS=linux go build -a -installsuffix cgo -o gorwallet .
 
 # --- multistage docker build: stage #2: runtime image
@@ -23,7 +23,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/kaspanet/kaspad/cmd/gorwallet/gorwallet /app/
+COPY --from=build /go/src/github.com/ixbasANT/gord/cmd/gorwallet/gorwallet /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

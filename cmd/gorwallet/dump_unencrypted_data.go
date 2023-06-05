@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/keys"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/utils"
+	"github.com/ixbasANT/gord/cmd/gorwallet/keys"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbasANT/gord/cmd/gorwallet/utils"
 
 	"github.com/pkg/errors"
 )

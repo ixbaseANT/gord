@@ -7,8 +7,8 @@ import (
 	"log"
 //	"strings"
 	"net/http"
-//	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/client"
-//	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
+//	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/client"
+//	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
 )
 
 func newAddress(conf *newAddressConfig) error {

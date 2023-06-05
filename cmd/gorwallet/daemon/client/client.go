@@ -2,12 +2,12 @@ package client
 
 import (
 	"context"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/server"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/server"
 	"time"
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
 	"google.golang.org/grpc"
 )
 

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbasANT/gord/util"
 	"github.com/pkg/errors"
 )
 

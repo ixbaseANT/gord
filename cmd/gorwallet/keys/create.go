@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/utils"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbasANT/gord/cmd/gorwallet/utils"
+	"github.com/ixbasANT/gord/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

@@ -1,13 +1,13 @@
 package libgorwallet
 
 import (
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet/bip32"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/bip32"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/serialization"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbasANT/gord/domain/dagconfig"
 	"github.com/pkg/errors"
 )
 

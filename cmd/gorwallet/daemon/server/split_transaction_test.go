@@ -3,21 +3,21 @@ package server
 import (
 	"testing"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet/serialization"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/serialization"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/keys"
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbasANT/gord/cmd/gorwallet/keys"
+	"github.com/ixbasANT/gord/util/txmass"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/ixbasANT/gord/domain/dagconfig"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbasANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbasANT/gord/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbasANT/gord/domain/consensus"
+	"github.com/ixbasANT/gord/domain/consensus/utils/testutils"
 )
 
 func TestEstimateMassAfterSignatures(t *testing.T) {

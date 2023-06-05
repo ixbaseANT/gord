@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/client"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/pkg/errors"
 )
 

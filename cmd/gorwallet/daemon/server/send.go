@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
 )
 
 func (s *server) Send(_ context.Context, request *pb.SendRequest) (*pb.SendResponse, error) {

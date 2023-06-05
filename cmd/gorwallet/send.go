@@ -6,11 +6,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/keys"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/client"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbasANT/gord/cmd/gorwallet/keys"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbasANT/gord/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 )
 

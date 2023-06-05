@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kaspanet/kaspad/cmd/gorwallet/keys"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet"
+	"github.com/ixbasANT/gord/cmd/gorwallet/keys"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
 	"github.com/pkg/errors"
 )
 

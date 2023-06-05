@@ -2,12 +2,12 @@ package server
 
 import (
 	"context"
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet"
-	"github.com/kaspanet/kaspad/cmd/gorwallet/libgorwallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/ixbasANT/gord/app/appmessage"
+	"github.com/ixbasANT/gord/cmd/gorwallet/daemon/pb"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbasANT/gord/cmd/gorwallet/libgorwallet/serialization"
+	"github.com/ixbasANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbasANT/gord/infrastructure/network/rpcclient"
 	"github.com/pkg/errors"
 	"time"
 )
