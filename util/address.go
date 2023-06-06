@@ -9,6 +9,8 @@ import (
 	"golang.org/x/crypto/blake2b"
 
 	"github.com/ixbaseANT/gord/util/bech32"
+	"github.com/zeebo/blake3"
+	"fmt"
 )
 
 var (
@@ -288,7 +290,11 @@ type AddressScriptHash struct {
 
 // NewAddressScriptHash returns a new AddressScriptHash.
 func NewAddressScriptHash(serializedScript []byte, prefix Bech32Prefix) (*AddressScriptHash, error) {
-	scriptHash := HashBlake2b(serializedScript)
+//	scriptHash := HashBlake2b(serializedScript)
+	hasher := blake3.New()
+	hasher.Write(serializedScript)
+	scriptHash := hasher.Sum(nil)
+	fmt.Println("=scriptHash={}",scriptHash)
 	return newAddressScriptHashFromHash(prefix, scriptHash)
 }
 
