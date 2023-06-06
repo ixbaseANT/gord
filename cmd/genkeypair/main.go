@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
 	"github.com/ixbaseANT/gord/util"
 )
 
@@ -12,7 +12,7 @@ func main() {
 		panic(err)
 	}
 
-	privateKey, publicKey, err := libkaspawallet.CreateKeyPair(false)
+	privateKey, publicKey, err := libgorwallet.CreateKeyPair(false)
 	if err != nil {
 		panic(err)
 	}

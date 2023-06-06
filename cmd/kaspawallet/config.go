@@ -34,7 +34,7 @@ type configFlags struct {
 }
 
 type createConfig struct {
-	KeysFile          string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.kaspawallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Kaspawallet\\key.json (Windows))"`
+	KeysFile          string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.gorwallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Gorwallet\\key.json (Windows))"`
 	Password          string `long:"password" short:"p" description:"Wallet password"`
 	Yes               bool   `long:"yes" short:"y" description:"Assume \"yes\" to all questions"`
 	MinimumSignatures uint32 `long:"min-signatures" short:"m" description:"Minimum required signatures" default:"1"`
@@ -52,7 +52,7 @@ type balanceConfig struct {
 }
 
 type sendConfig struct {
-	KeysFile                 string   `long:"keys-file" short:"f" description:"Keys file location (default: ~/.kaspawallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Kaspawallet\\key.json (Windows))"`
+	KeysFile                 string   `long:"keys-file" short:"f" description:"Keys file location (default: ~/.gorwallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Gorwallet\\key.json (Windows))"`
 	Password                 string   `long:"password" short:"p" description:"Wallet password"`
 	DaemonAddress            string   `long:"daemonaddress" short:"d" description:"Wallet daemon server to connect to"`
 	ToAddress                string   `long:"to-address" short:"t" description:"The public address to send Kaspa to" required:"true"`
@@ -81,7 +81,7 @@ type createUnsignedTransactionConfig struct {
 }
 
 type signConfig struct {
-	KeysFile        string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.kaspawallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Kaspawallet\\key.json (Windows))"`
+	KeysFile        string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.gorwallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Gorwallet\\key.json (Windows))"`
 	Password        string `long:"password" short:"p" description:"Wallet password"`
 	Transaction     string `long:"transaction" short:"t" description:"The unsigned transaction(s) to sign on (encoded in hex)"`
 	TransactionFile string `long:"transaction-file" short:"F" description:"The file containing the unsigned transaction(s) to sign on (encoded in hex)"`
@@ -113,7 +113,7 @@ type newAddressConfig struct {
 }
 
 type startDaemonConfig struct {
-	KeysFile  string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.kaspawallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Kaspawallet\\key.json (Windows))"`
+	KeysFile  string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.gorwallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Gorwallet\\key.json (Windows))"`
 	Password  string `long:"password" short:"p" description:"Wallet password"`
 	RPCServer string `long:"rpcserver" short:"s" description:"RPC server to connect to"`
 	Listen    string `long:"listen" short:"l" description:"Address to listen on (default: 0.0.0.0:8082)"`
@@ -123,7 +123,7 @@ type startDaemonConfig struct {
 }
 
 type dumpUnencryptedDataConfig struct {
-	KeysFile string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.kaspawallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Kaspawallet\\key.json (Windows))"`
+	KeysFile string `long:"keys-file" short:"f" description:"Keys file location (default: ~/.gorwallet/keys.json (*nix), %USERPROFILE%\\AppData\\Local\\Gorwallet\\key.json (Windows))"`
 	Password string `long:"password" short:"p" description:"Wallet password"`
 	Yes      bool   `long:"yes" short:"y" description:"Assume \"yes\" to all questions"`
 	config.NetworkFlags

@@ -54,17 +54,17 @@ const (
 
 // Map from strings to Bech32 address prefix constants for parsing purposes.
 var stringsToBech32Prefixes = map[string]Bech32Prefix{
-	"gor":     Bech32PrefixKaspa,
-	"gordev":  Bech32PrefixKaspaDev,
-	"gortest": Bech32PrefixKaspaTest,
-	"gorsim":  Bech32PrefixKaspaSim,
+	"kaspa":     Bech32PrefixKaspa,
+	"kaspadev":  Bech32PrefixKaspaDev,
+	"kaspatest": Bech32PrefixKaspaTest,
+	"kaspasim":  Bech32PrefixKaspaSim,
 }
 
 // ParsePrefix attempts to parse a Bech32 address prefix.
 func ParsePrefix(prefixString string) (Bech32Prefix, error) {
 	prefix, ok := stringsToBech32Prefixes[prefixString]
 	if !ok {
-//		return Bech32PrefixUnknown, errors.Errorf("could not parse prefix %s", prefixString)
+		return Bech32PrefixUnknown, errors.Errorf("could not parse prefix %s", prefixString)
 	}
 
 	return prefix, nil
@@ -82,7 +82,7 @@ func (prefix Bech32Prefix) String() string {
 }
 
 // encodeAddress returns a human-readable payment address given a network prefix
-// and a payload which encodes the gor network and address type. It is used
+// and a payload which encodes the kaspa network and address type. It is used
 // in both pay-to-pubkey (P2PK) and pay-to-script-hash (P2SH) address
 // encoding.
 func encodeAddress(prefix Bech32Prefix, payload []byte, version byte) string {
@@ -118,7 +118,7 @@ type Address interface {
 	Prefix() Bech32Prefix
 
 	// IsForPrefix returns whether or not the address is associated with the
-	// passed gor network.
+	// passed kaspa network.
 	IsForPrefix(prefix Bech32Prefix) bool
 }
 
@@ -150,8 +150,7 @@ func DecodeAddress(addr string, expectedPrefix Bech32Prefix) (Address, error) {
 	case scriptHashAddrID:
 		return newAddressScriptHashFromHash(prefix, decoded)
 	default:
-		return newAddressPubKey(prefix, decoded)
-//		return nil, ErrUnknownAddressType
+		return nil, ErrUnknownAddressType
 	}
 }
 
@@ -179,7 +178,7 @@ func NewAddressPublicKey(publicKey []byte, prefix Bech32Prefix) (*AddressPublicK
 func newAddressPubKey(prefix Bech32Prefix, publicKey []byte) (*AddressPublicKey, error) {
 	// Check for a valid pubkey length.
 	if len(publicKey) != PublicKeySize {
-//		return nil, errors.Errorf("publicKey must be %d bytes", PublicKeySize)
+		return nil, errors.Errorf("publicKey must be %d bytes", PublicKeySize)
 	}
 
 	addr := &AddressPublicKey{prefix: prefix}
@@ -200,7 +199,7 @@ func (a *AddressPublicKey) ScriptAddress() []byte {
 }
 
 // IsForPrefix returns whether or not the pay-to-pubkey address is associated
-// with the passed gor network.
+// with the passed kaspa network.
 func (a *AddressPublicKey) IsForPrefix(prefix Bech32Prefix) bool {
 	return a.prefix == prefix
 }
@@ -262,7 +261,7 @@ func (a *AddressPublicKeyECDSA) ScriptAddress() []byte {
 }
 
 // IsForPrefix returns whether or not the pay-to-pubkey address is associated
-// with the passed gor network.
+// with the passed kaspa network.
 func (a *AddressPublicKeyECDSA) IsForPrefix(prefix Bech32Prefix) bool {
 	return a.prefix == prefix
 }
@@ -327,7 +326,7 @@ func (a *AddressScriptHash) ScriptAddress() []byte {
 }
 
 // IsForPrefix returns whether or not the pay-to-script-hash address is associated
-// with the passed gor network.
+// with the passed kaspa network.
 func (a *AddressScriptHash) IsForPrefix(prefix Bech32Prefix) bool {
 	return a.prefix == prefix
 }

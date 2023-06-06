@@ -112,9 +112,9 @@ func (flow *handleIBDFlow) runIBDIfNotRunning(block *externalapi.DomainBlock) er
 			}
 
 			if isGenesisVirtualSelectedParent {
-				log.Infof("Cannot IBD to %s because it won't change the pruning point. The node needs to IBD "+
-					"to the recent pruning point before normal operation can resume.", relayBlockHash)
-				return nil
+//				log.Infof("Cannot IBD to %s because it won't change the pruning point. The node needs to IBD "+
+//					"to the recent pruning point before normal operation can resume.", relayBlockHash)
+//				return nil
 			}
 		}
 

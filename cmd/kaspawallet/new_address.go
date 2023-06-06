@@ -16,7 +16,7 @@ func newAddress(conf *newAddressConfig) error {
 
 	ctx, cancel := context.WithTimeout(context.Background(), daemonTimeout)
 	defer cancel()
-
+	fmt.Print("ctx = %s",ctx)
 	response, err := daemonClient.NewAddress(ctx, &pb.NewAddressRequest{})
 	if err != nil {
 		return err

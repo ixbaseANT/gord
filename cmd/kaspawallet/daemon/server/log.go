@@ -16,9 +16,9 @@ var (
 	log        = backendLog.Logger("KSWD")
 	spawn      = panics.GoroutineWrapperFunc(log)
 
-	defaultAppDir     = util.AppDir("kaspawallet", false)
-	defaultLogFile    = filepath.Join(defaultAppDir, "daemon.log")
-	defaultErrLogFile = filepath.Join(defaultAppDir, "daemon_err.log")
+	defaultAppDir     = util.AppDir("gorwallet", false)
+	defaultLogFile    = filepath.Join(defaultAppDir, "gdaemon.log")
+	defaultErrLogFile = filepath.Join(defaultAppDir, "gdaemon_err.log")
 )
 
 func initLog(logFile, errLogFile string) {
