@@ -74,7 +74,7 @@ func (s *server) ShowAddresses(_ context.Context, request *pb.ShowAddressesReque
 func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*pb.NewAddressResponse, error) {
 	s.lock.Lock()
 	defer s.lock.Unlock()
-
+	fmt.Println("=NewAddrss{}")
 	if !s.isSynced() {
 		return nil, errors.Errorf("wallet daemon is not synced yet, %s", s.formatSyncStateReport())
 	}
