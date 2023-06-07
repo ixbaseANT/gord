@@ -145,7 +145,7 @@ fmt.Println("=utxo.address=",utxo.address)
 		totalReceived = spendAmount
 	}
 	if totalValue < totalSpend {
-		return nil, 0, 0, errors.Errorf("Insufficient funds for=1 send: %f required, while only %f available",
+		return nil, 0, 0, errors.Errorf("Insufficient funds for1 send: %f required, while only %f available",
 			float64(totalSpend)/constants.SompiPerKaspa, float64(totalValue)/constants.SompiPerKaspa)
 	}
 
