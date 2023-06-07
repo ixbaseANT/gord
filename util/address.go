@@ -354,5 +354,6 @@ func (a *AddressScriptHash) String() string {
 // when an array is more appropiate than a slice (for example, when used as map
 // keys).
 func (a *AddressScriptHash) HashBlake2b() *[blake2b.Size256]byte {
+	fmt.Println("=HashBlake2b{}=")
 	return &a.hash
 }
