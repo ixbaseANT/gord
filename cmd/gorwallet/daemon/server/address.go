@@ -74,7 +74,6 @@ func (s *server) ShowAddresses(_ context.Context, request *pb.ShowAddressesReque
 func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*pb.NewAddressResponse, error) {
 	s.lock.Lock()
 	defer s.lock.Unlock()
-	fmt.Println("=NewAddrss{}")
 	if !s.isSynced() {
 		return nil, errors.Errorf("wallet daemon is not synced yet, %s", s.formatSyncStateReport())
 	}
@@ -95,11 +94,12 @@ func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*
 		keyChain:      libgorwallet.ExternalKeychain,
 	}
 	path := s.walletAddressPath(walletAddr)
+	fmt.Println("||||=-NewAddrss{}")
 	address, err := libgorwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 	if err != nil {
 		return nil, err
 	}
-
+	fmt.Println("address==",address)
 	return &pb.NewAddressResponse{Address: address.String()}, nil
 }
 

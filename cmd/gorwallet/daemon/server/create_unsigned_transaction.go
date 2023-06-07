@@ -125,7 +125,7 @@ func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uin
 			UTXOEntry:      utxo.UTXOEntry,
 			DerivationPath: s.walletAddressPath(utxo.address),
 		})
-
+fmt.Println("=utxo.address=",utxo.address)
 		totalValue += utxo.UTXOEntry.Amount()
 
 		fee := feePerInput * uint64(len(selectedUTXOs))
@@ -145,7 +145,7 @@ func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uin
 		totalReceived = spendAmount
 	}
 	if totalValue < totalSpend {
-		return nil, 0, 0, errors.Errorf("Insufficient funds for send: %f required, while only %f available",
+		return nil, 0, 0, errors.Errorf("Insufficient funds for=1 send: %f required, while only %f available",
 			float64(totalSpend)/constants.SompiPerKaspa, float64(totalValue)/constants.SompiPerKaspa)
 	}
 

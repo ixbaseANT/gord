@@ -10,6 +10,7 @@ import (
 	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
+	"fmt"
 )
 
 // CreateKeyPair generates a private-public key pair
@@ -86,12 +87,13 @@ func Address(params *dagconfig.Params, extendedPublicKeys []string, minimumSigna
 	if len(extendedPublicKeys) == 1 {
 		return p2pkAddress(params, extendedPublicKeys[0], path, ecdsa)
 	}
+	fmt.Println("======11=11=")
 
 	redeemScript, err := multiSigRedeemScript(extendedPublicKeys, minimumSignatures, path, ecdsa)
 	if err != nil {
 		return nil, err
 	}
-
+	fmt.Println("======11=11=",redeemScript)
 	return util.NewAddressScriptHash(redeemScript, params.Prefix)
 }
 
@@ -119,6 +121,7 @@ func p2pkAddress(params *dagconfig.Params, extendedPublicKey string, path string
 		return util.NewAddressPublicKeyECDSA(serializedECDSAPublicKey[:], params.Prefix)
 	}
 
+
 	schnorrPublicKey, err := publicKey.ToSchnorr()
 	if err != nil {
 		return nil, err
@@ -128,7 +131,6 @@ func p2pkAddress(params *dagconfig.Params, extendedPublicKey string, path string
 	if err != nil {
 		return nil, err
 	}
-
 	return util.NewAddressPublicKey(serializedSchnorrPublicKey[:], params.Prefix)
 }
 

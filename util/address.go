@@ -183,7 +183,6 @@ func newAddressPubKey(prefix Bech32Prefix, publicKey []byte) (*AddressPublicKey,
 	if len(publicKey) != PublicKeySize {
 //		return nil, errors.Errorf("publicKey must be %d bytes", PublicKeySize)
 	}
-
 	addr := &AddressPublicKey{prefix: prefix}
 	copy(addr.publicKey[:], publicKey)
 	return addr, nil
@@ -248,6 +247,7 @@ func newAddressPubKeyECDSA(prefix Bech32Prefix, publicKey []byte) (*AddressPubli
 
 	addr := &AddressPublicKeyECDSA{prefix: prefix}
 	copy(addr.publicKey[:], publicKey)
+fmt.Println("==ECDSA{}",addr)
 	return addr, nil
 }
 
@@ -317,6 +317,7 @@ func newAddressScriptHashFromHash(prefix Bech32Prefix, scriptHash []byte) (*Addr
 
 	addr := &AddressScriptHash{prefix: prefix}
 	copy(addr.hash[:], scriptHash)
+fmt.Println("==hashAddr",addr)
 	return addr, nil
 }
 

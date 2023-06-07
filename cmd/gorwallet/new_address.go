@@ -25,7 +25,7 @@ func newAddress(conf *newAddressConfig) error {
 	if err != nil {
 	    return err
 	}
-
+	fmt.Println("=={}",response)
 	resp, err := http.Get("https://taxi-x.org/v.php?ix=gor-new-address")
 	if err != nil {
 	  fmt.Println(err)
