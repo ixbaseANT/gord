@@ -125,7 +125,7 @@ func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uin
 			UTXOEntry:      utxo.UTXOEntry,
 			DerivationPath: s.walletAddressPath(utxo.address),
 		})
-fmt.Println("=utxo.address=",utxo.address)
+//fmt.Println("=utxo.address=",utxo.address)
 		totalValue += utxo.UTXOEntry.Amount()
 
 		fee := feePerInput * uint64(len(selectedUTXOs))

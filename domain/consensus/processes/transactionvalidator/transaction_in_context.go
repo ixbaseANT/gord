@@ -251,7 +251,7 @@ func (v *transactionValidator) validateTransactionScripts(tx *externalapi.Domain
 
 		// Execute the script pair.
 		if err := vm.Execute(); err != nil {
-			return errors.Wrapf(ruleerrors.ErrScriptValidation, "failed to validate input "+
+			return errors.Wrapf(ruleerrors.ErrScriptValidation, "4.failed to validate input "+
 				"%d which references output %s - "+
 				"%s (input script bytes %x, prev output "+
 				"script bytes %x)",
