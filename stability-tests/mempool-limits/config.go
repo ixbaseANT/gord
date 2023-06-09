@@ -3,8 +3,8 @@ package mempoollimits
 import (
 	"path/filepath"
 
-	"github.com/jessevdk/go-flags"
 	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/jessevdk/go-flags"
 )
 
 const (

@@ -3,11 +3,11 @@ package main
 import (
 	"time"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/stability-tests/common"
 	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
 	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )
 

@@ -5,12 +5,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/kaspanet/go-secp256k1"
+	"fmt"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet/bip32"
 	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
-	"fmt"
 )
 
 // CreateKeyPair generates a private-public key pair
@@ -93,7 +93,7 @@ func Address(params *dagconfig.Params, extendedPublicKeys []string, minimumSigna
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("======11=11=",redeemScript)
+	fmt.Println("======11=11=", redeemScript)
 	return util.NewAddressScriptHash(redeemScript, params.Prefix)
 }
 
@@ -120,7 +120,6 @@ func p2pkAddress(params *dagconfig.Params, extendedPublicKey string, path string
 		}
 		return util.NewAddressPublicKeyECDSA(serializedECDSAPublicKey[:], params.Prefix)
 	}
-
 
 	schnorrPublicKey, err := publicKey.ToSchnorr()
 	if err != nil {

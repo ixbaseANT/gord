@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/jessevdk/go-flags"
 	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/jessevdk/go-flags"
 )
 
 type configFlags struct {

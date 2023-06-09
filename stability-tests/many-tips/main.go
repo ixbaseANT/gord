@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/mining"
 	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/go-secp256k1"
 	"math/rand"
 	"os"
 	"os/exec"

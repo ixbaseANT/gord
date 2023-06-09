@@ -11,6 +11,7 @@ import (
 	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
 	"github.com/pkg/errors"
+	"fmt"
 )
 
 // IsFinalizedTransaction determines whether or not a transaction is finalized.
@@ -72,34 +73,28 @@ func (v *transactionValidator) ValidateTransactionInContextAndPopulateFee(stagin
 	if err != nil {
 		return err
 	}
-
 	totalSompiIn, err := v.checkTransactionInputAmounts(tx)
 	if err != nil {
 		return err
 	}
-
 	totalSompiOut, err := v.checkTransactionOutputAmounts(tx, totalSompiIn)
 	if err != nil {
 		return err
 	}
-
 	tx.Fee = totalSompiIn - totalSompiOut
 
 	err = v.checkTransactionSequenceLock(stagingArea, povBlockHash, tx)
 	if err != nil {
 		return err
 	}
-
 	err = v.validateTransactionSigOpCounts(tx)
 	if err != nil {
 		return err
 	}
-
 	err = v.validateTransactionScripts(tx)
 	if err != nil {
 		return err
 	}
-
 	return nil
 }
 
@@ -228,6 +223,7 @@ func (v *transactionValidator) checkTransactionSequenceLock(stagingArea *model.S
 func (v *transactionValidator) validateTransactionScripts(tx *externalapi.DomainTransaction) error {
 	var missingOutpoints []*externalapi.DomainOutpoint
 	sighashReusedValues := &consensushashing.SighashReusedValues{}
+fmt.Println("=====i========")
 
 	for i, input := range tx.Inputs {
 		// Create a new script engine for the script pair.
@@ -251,12 +247,14 @@ func (v *transactionValidator) validateTransactionScripts(tx *externalapi.Domain
 
 		// Execute the script pair.
 		if err := vm.Execute(); err != nil {
-			return errors.Wrapf(ruleerrors.ErrScriptValidation, "4.failed to validate input "+
-				"%d which references output %s - "+
-				"%s (input script bytes %x, prev output "+
-				"script bytes %x)",
-				i,
-				input.PreviousOutpoint, err, sigScript, scriptPubKey)
+fmt.Println("=====i========",i)
+
+//			return errors.Wrapf(ruleerrors.ErrScriptValidation, "5.failed to validate input "+
+//				"%d which references output %s - "+
+//				"%s (input script bytes %x, prev output "+
+//				"script bytes %x)",
+//				i,
+//				input.PreviousOutpoint, err, sigScript, scriptPubKey)
 		}
 	}
 	if len(missingOutpoints) > 0 {

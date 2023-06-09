@@ -10,7 +10,6 @@ import (
 
 	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
@@ -18,6 +17,7 @@ import (
 	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
 	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/go-secp256k1"
 )
 
 func TestTxRelay(t *testing.T) {

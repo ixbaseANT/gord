@@ -2,11 +2,11 @@ package rpccontext
 
 import (
 	"encoding/hex"
-	"math"
-	"math/big"
 	"fmt"
 	difficultyPackage "github.com/ixbaseANT/gord/util/difficulty"
 	"github.com/pkg/errors"
+	"math"
+	"math/big"
 
 	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
 
@@ -34,9 +34,9 @@ func (ctx *Context) GetDifficultyRatio(bits uint32, params *dagconfig.Params) fl
 	diff, _ := difficulty.Float64()
 
 	roundingPrecision := float64(100)
-	fmt.Println("diff=roundingPrecision======={}",diff*roundingPrecision)
+	fmt.Println("diff=roundingPrecision======={}", diff*roundingPrecision)
 	diff = math.Round(diff*roundingPrecision) / roundingPrecision
-	fmt.Println("diff========{}",diff)
+	fmt.Println("diff========{}", diff)
 	return diff
 }
 

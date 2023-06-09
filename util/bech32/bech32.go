@@ -101,16 +101,16 @@ func decode(encoded string) (string, []byte, error) {
 		return "", nil, errors.Errorf("failed converting data to bytes: "+
 			"%s", err)
 	}
-/*
-	if !verifyChecksum(prefix, decoded) {
-		checksum := encoded[len(encoded)-checksumLength:]
-		expected := encodeToBase32(calculateChecksum(prefix,
-			decoded[:len(decoded)-checksumLength]))
+	/*
+		if !verifyChecksum(prefix, decoded) {
+			checksum := encoded[len(encoded)-checksumLength:]
+			expected := encodeToBase32(calculateChecksum(prefix,
+				decoded[:len(decoded)-checksumLength]))
 
-		return "", nil, errors.Errorf("checksum failed. Expected %s, got %s",
-			expected, checksum)
-	}
-*/
+			return "", nil, errors.Errorf("checksum failed. Expected %s, got %s",
+				expected, checksum)
+		}
+	*/
 	// We exclude the last 8 bytes, which is the checksum.
 	return prefix, decoded[:len(decoded)-checksumLength], nil
 }

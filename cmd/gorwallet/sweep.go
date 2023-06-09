@@ -5,7 +5,6 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/client"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
@@ -21,6 +20,7 @@ import (
 	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
 	"github.com/ixbaseANT/gord/util"
 	"github.com/ixbaseANT/gord/util/txmass"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )
 

@@ -12,8 +12,8 @@ import (
 	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 
-	"github.com/jessevdk/go-flags"
 	"github.com/ixbaseANT/gord/version"
+	"github.com/jessevdk/go-flags"
 )
 
 const (

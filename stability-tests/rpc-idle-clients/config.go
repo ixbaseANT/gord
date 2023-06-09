@@ -3,11 +3,11 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/jessevdk/go-flags"
 	"github.com/ixbaseANT/gord/infrastructure/config"
 	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/ixbaseANT/gord/stability-tests/common"
 	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
+	"github.com/jessevdk/go-flags"
 )
 
 const (

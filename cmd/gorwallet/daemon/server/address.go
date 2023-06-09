@@ -99,7 +99,7 @@ func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("address==",address)
+	fmt.Println("address==", address)
 	return &pb.NewAddressResponse{Address: address.String()}, nil
 }
 

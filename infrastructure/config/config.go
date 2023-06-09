@@ -17,13 +17,13 @@ import (
 	"time"
 
 	"github.com/btcsuite/go-socks/socks"
-	"github.com/jessevdk/go-flags"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/ixbaseANT/gord/util"
 	"github.com/ixbaseANT/gord/util/network"
 	"github.com/ixbaseANT/gord/version"
+	"github.com/jessevdk/go-flags"
 	"github.com/pkg/errors"
 )
 

@@ -8,9 +8,9 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/blake2b"
 
+	"fmt"
 	"github.com/ixbaseANT/gord/util/bech32"
 	"github.com/zeebo/blake3"
-	"fmt"
 )
 
 var (
@@ -66,7 +66,7 @@ var stringsToBech32Prefixes = map[string]Bech32Prefix{
 func ParsePrefix(prefixString string) (Bech32Prefix, error) {
 	prefix, ok := stringsToBech32Prefixes[prefixString]
 	if !ok {
-//		return Bech32PrefixUnknown, errors.Errorf("could not parse prefix %s", prefixString)
+		//		return Bech32PrefixUnknown, errors.Errorf("could not parse prefix %s", prefixString)
 	}
 
 	return prefix, nil
@@ -153,7 +153,7 @@ func DecodeAddress(addr string, expectedPrefix Bech32Prefix) (Address, error) {
 		return newAddressScriptHashFromHash(prefix, decoded)
 	default:
 		return newAddressPubKey(prefix, decoded)
-//		return nil, ErrUnknownAddressType
+		//		return nil, ErrUnknownAddressType
 	}
 }
 
@@ -181,7 +181,7 @@ func NewAddressPublicKey(publicKey []byte, prefix Bech32Prefix) (*AddressPublicK
 func newAddressPubKey(prefix Bech32Prefix, publicKey []byte) (*AddressPublicKey, error) {
 	// Check for a valid pubkey length.
 	if len(publicKey) != PublicKeySize {
-//		return nil, errors.Errorf("publicKey must be %d bytes", PublicKeySize)
+		//		return nil, errors.Errorf("publicKey must be %d bytes", PublicKeySize)
 	}
 	addr := &AddressPublicKey{prefix: prefix}
 	copy(addr.publicKey[:], publicKey)
@@ -247,7 +247,7 @@ func newAddressPubKeyECDSA(prefix Bech32Prefix, publicKey []byte) (*AddressPubli
 
 	addr := &AddressPublicKeyECDSA{prefix: prefix}
 	copy(addr.publicKey[:], publicKey)
-fmt.Println("==ECDSA{}",addr)
+	fmt.Println("==ECDSA{}", addr)
 	return addr, nil
 }
 
@@ -290,11 +290,11 @@ type AddressScriptHash struct {
 
 // NewAddressScriptHash returns a new AddressScriptHash.
 func NewAddressScriptHash(serializedScript []byte, prefix Bech32Prefix) (*AddressScriptHash, error) {
-//	scriptHash := HashBlake2b(serializedScript)
+	//	scriptHash := HashBlake2b(serializedScript)
 	hasher := blake3.New()
 	hasher.Write(serializedScript)
 	scriptHash := hasher.Sum(nil)
-	fmt.Println("=scriptHash={}",scriptHash)
+	fmt.Println("=scriptHash={}", scriptHash)
 	return newAddressScriptHashFromHash(prefix, scriptHash)
 }
 
@@ -317,7 +317,7 @@ func newAddressScriptHashFromHash(prefix Bech32Prefix, scriptHash []byte) (*Addr
 
 	addr := &AddressScriptHash{prefix: prefix}
 	copy(addr.hash[:], scriptHash)
-fmt.Println("==hashAddr",addr)
+	fmt.Println("==hashAddr", addr)
 	return addr, nil
 }
 

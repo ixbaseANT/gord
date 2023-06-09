@@ -5,10 +5,10 @@
 package dagconfig
 
 import (
-	"math/big"
-	"time"
 	"fmt"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"math/big"
+	"time"
 
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/util/network"
@@ -198,13 +198,13 @@ func (p *Params) NormalizeRPCServerAddress(addr string) (string, error) {
 
 // FinalityDepth returns the finality duration represented in blocks
 func (p *Params) FinalityDepth() uint64 {
-	fmt.Println("=TargetTimePerBlock======={}",p.TargetTimePerBlock)
+	fmt.Println("=TargetTimePerBlock======={}", p.TargetTimePerBlock)
 	return uint64(p.FinalityDuration / p.TargetTimePerBlock)
 }
 
 // PruningDepth returns the pruning duration represented in blocks
 func (p *Params) PruningDepth() uint64 {
-	fmt.Println("=prunung======={}",uint64(2*p.FinalityDepth() + 4*p.MergeSetSizeLimit*uint64(p.K) + 2*uint64(p.K) + 2))
+	fmt.Println("=prunung======={}", uint64(2*p.FinalityDepth()+4*p.MergeSetSizeLimit*uint64(p.K)+2*uint64(p.K)+2))
 
 	return 2*p.FinalityDepth() + 4*p.MergeSetSizeLimit*uint64(p.K) + 2*uint64(p.K) + 2
 }
@@ -217,7 +217,7 @@ var MainnetParams = Params{
 	RPCPort:     "26110",
 	DefaultPort: "26111",
 	DNSSeeds: []string{
-                // This DNS seeder is run by Wolfie
+		// This DNS seeder is run by Wolfie
 		"ixbase.info",
 		"maxgor.info",
 		"crypto-pool.online",

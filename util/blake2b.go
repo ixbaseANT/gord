@@ -5,17 +5,17 @@
 package util
 
 import (
-//	"golang.org/x/crypto/blake2b"
-	"github.com/zeebo/blake3"
+	//	"golang.org/x/crypto/blake2b"
 	"fmt"
+	"github.com/zeebo/blake3"
 )
 
 // HashBlake2b calculates the hash blake2b(b).
 func HashBlake2b(buf []byte) []byte {
-//	hashedBuf := blake2b.Sum256(buf)
+	//	hashedBuf := blake2b.Sum256(buf)
 	hasher := blake3.New()
 	hasher.Write(buf)
 	hashedBuf := hasher.Sum(nil)
-	fmt.Println("=hashedBuf={}",hashedBuf)
+	fmt.Println("=hashedBuf={}", hashedBuf)
 	return hashedBuf[:]
 }
