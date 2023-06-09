@@ -92,6 +92,7 @@ func (v *transactionValidator) ValidateTransactionInContextAndPopulateFee(stagin
 		return err
 	}
 	err = v.validateTransactionScripts(tx)
+fmt.Println("????????????")
 	if err != nil {
 		return err
 	}
@@ -249,7 +250,7 @@ fmt.Println("=====i========")
 		if err := vm.Execute(); err != nil {
 fmt.Println("=====i========",i)
 
-//			return errors.Wrapf(ruleerrors.ErrScriptValidation, "5.failed to validate input "+
+//			return errors.Wrapf(ruleerrors.ErrScriptValidation, "4.failed to validate input "+
 //				"%d which references output %s - "+
 //				"%s (input script bytes %x, prev output "+
 //				"script bytes %x)",

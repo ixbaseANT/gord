@@ -30,7 +30,7 @@ func HandleSubmitTransaction(context *rpccontext.Context, _ *router.Router, requ
 		log.Debugf("2.Rejected transaction %s: %s", transactionID, err)
 		errorMessage := &appmessage.SubmitTransactionResponseMessage{}
 fmt.Println("=errorMessage=",errorMessage)
-		errorMessage.Error = appmessage.RPCErrorf("333.Rejected transaction %s: %s", transactionID, err)
+		errorMessage.Error = appmessage.RPCErrorf("-3.Rejected transaction %s: %s", transactionID, err)
 		return errorMessage, nil
 	}
 
