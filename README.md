@@ -33,7 +33,7 @@ $ go version
 ```bash
 $ git clone https://github.com/ixbaseANT/gord
 $ cd gord
-$ go install . ./cmd/...
+$ [go install . ./cmd/...]
 $ build.sh
 
 ```
@@ -43,11 +43,11 @@ $ build.sh
   you are encouraged to do so now.
 
 # postgres
-sudo apt install postgresql postgresql-contrib
-sudo -u postgres psql
-CREATE ROLE gorbaniov WITH LOGIN ENCRYPTED PASSWORD '1';
-CREATE DATABASE gor OWNER gorbaniov;
-qQuit psql with \q
+$ sudo apt install postgresql postgresql-contrib
+$ sudo -u postgres psql
+$ CREATE ROLE gorbaniov WITH LOGIN ENCRYPTED PASSWORD '1';
+$ CREATE DATABASE gor OWNER gorbaniov;
+$ qQuit psql with \q
 
 ## Web-interface
 $ git clone https://github.com/ixbaseANT/gor-www
