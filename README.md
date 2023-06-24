@@ -49,7 +49,7 @@ $ sudo apt install postgresql postgresql-contrib
 $ sudo -u postgres psql
 $ CREATE ROLE gorbaniov WITH LOGIN ENCRYPTED PASSWORD '1';
 $ CREATE DATABASE gor OWNER gorbaniov;
-$ qQuit psql with \q
+$ Quit psql with \q
 ```
 
 ## Web-interface
