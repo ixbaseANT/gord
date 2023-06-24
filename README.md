@@ -34,6 +34,8 @@ $ go version
 $ git clone https://github.com/ixbaseANT/gord
 $ cd gord
 $ go install . ./cmd/...
+$ build.sh
+
 ```
 
 - Gord (and utilities) should now be installed in `$(go env GOPATH)/bin`. If you did
@@ -47,8 +49,16 @@ Gord has several configuration options available to tweak how it runs, but all
 of the basic operations work with zero configuration.
 
 ```bash
-$ gord
+$ gord --utxoindex
 ```
+## Web-interface
+$ git clone https://github.com/ixbaseANT/gor-www
+...
+
+## Stratum server
+$ git clone https://github.com/ixbaseANT/gor-bridge
+...
+
 ## Website
 Join our website server using the following link: https://gorbaniov.com/
 
