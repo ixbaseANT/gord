@@ -9,6 +9,8 @@ import (
 	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
 	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
+	"db"
+	"time"
 )
 
 // HandleSubmitBlock handles the respectively named RPC command
@@ -77,6 +79,11 @@ func HandleSubmitBlock(context *rpccontext.Context, _ *router.Router, request ap
 	}
 
 	log.Infof("Accepted block %s via submitBlock", consensushashing.BlockHash(domainBlock))
+    hash := consensushashing.BlockHash(domainBlock)
+    _,err=db.DB.Exec("insert into netblocks (poolid,hash,created)values($1,$2,$3)","GOR", hash.String(), time.Now())
+	if err != nil {
+	    panic(err)
+	}
 
 	response := appmessage.NewSubmitBlockResponseMessage()
 	return response, nil

@@ -15,6 +15,10 @@ import (
 	"github.com/ixbaseANT/gord/infrastructure/config"
 	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
+	"fmt"
+	"db"
+	"time"
+	"encoding/json"
 )
 
 // orphanResolutionRange is the maximum amount of blockLocator hashes
@@ -236,6 +240,17 @@ func (flow *handleRelayInvsFlow) start() error {
 		}
 
 		log.Infof("Accepted block %s via relay", inv.Hash)
+		hashString := fmt.Sprintf("%s",inv.Hash)
+		nheight := fmt.Sprintf("%d",block.Header.BlueWork())
+    	jsonBytes, err := json.Marshal(block)
+    	if err != nil {
+        fmt.Println("Ошибка при конвертации в JSON:", err)
+    	}
+   	sblock := string(jsonBytes)
+     	_,err=db.DB.Exec("insert into netblocks (poolid,blockheight,source,hash,created)values($1,$2,$3,$4,$5)","GOR", nheight, sblock, hashString, time.Now())
+    	if err != nil {
+			panic(err)
+    	}
 		err = flow.OnNewBlock(block)
 		if err != nil {
 			return err
