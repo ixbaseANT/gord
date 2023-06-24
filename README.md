@@ -42,6 +42,19 @@ $ build.sh
   not already add the bin directory to your system path during Go installation,
   you are encouraged to do so now.
 
+# postgres
+sudo apt install postgresql postgresql-contrib
+sudo -u postgres psql
+CREATE ROLE gorbaniov WITH LOGIN ENCRYPTED PASSWORD '1';
+CREATE DATABASE gor OWNER gorbaniov;
+qQuit psql with \q
+
+## Web-interface
+$ git clone https://github.com/ixbaseANT/gor-www
+- Gor-www should now be unzip in `www/pool`.
+	And run http://localhost/pool
+...
+
 
 ## Getting Started
 
@@ -51,9 +64,7 @@ of the basic operations work with zero configuration.
 ```bash
 $ gord --utxoindex
 ```
-## Web-interface
-$ git clone https://github.com/ixbaseANT/gor-www
-...
+
 
 ## Stratum server
 $ git clone https://github.com/ixbaseANT/gor-bridge
