@@ -55,7 +55,7 @@ $ Quit psql with \q
 ## Web-interface
 $ git clone https://github.com/ixbaseANT/gor-www
 - Gor-www should now be unzip in `www/pool`.
-	And run http://localhost/pool
+	And for gord monitoring run http://localhost/pool/v.php?ix=gor-pgDB-logs
 ...
 
 
