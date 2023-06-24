@@ -43,11 +43,14 @@ $ build.sh
   you are encouraged to do so now.
 
 # postgres
+
+```bash
 $ sudo apt install postgresql postgresql-contrib
 $ sudo -u postgres psql
 $ CREATE ROLE gorbaniov WITH LOGIN ENCRYPTED PASSWORD '1';
 $ CREATE DATABASE gor OWNER gorbaniov;
 $ qQuit psql with \q
+```
 
 ## Web-interface
 $ git clone https://github.com/ixbaseANT/gor-www
