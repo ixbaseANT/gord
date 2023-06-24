@@ -65,6 +65,7 @@ Gord has several configuration options available to tweak how it runs, but all
 of the basic operations work with zero configuration.
 
 ```bash
+$ cd ~/go/bin
 $ gord --utxoindex
 ```
 
