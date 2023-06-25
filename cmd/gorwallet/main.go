@@ -1,8 +1,7 @@
 package main
 import (
 	"github.com/pkg/errors"
-	"github.com/ixbaseANT/gord/app/db"
-	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/db/database/db"
 )
 
 func main() {
