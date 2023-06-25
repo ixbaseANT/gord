@@ -1,8 +1,15 @@
 package main
-
-import "github.com/pkg/errors"
+import (
+	"github.com/pkg/errors"
+	"github.com/ixbaseANT/gord/app/db"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
+)
 
 func main() {
+    err := db.InitConnection()
+    if err != nil {
+        panic(err)
+    }
 	subCmd, config := parseCommandLine()
 
 	var err error
