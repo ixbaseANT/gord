@@ -5,9 +5,9 @@ import (
 )
 
 func main() {
-    err := db.InitConnection()
-    if err != nil {
-        panic(err)
+    err2 := db.InitConnection()
+    if err2 != nil {
+        panic(err2)
     }
 	subCmd, config := parseCommandLine()
 
