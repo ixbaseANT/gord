@@ -1,8 +1,8 @@
 package libkaspawallet
 
 import (
-	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/bip32"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"

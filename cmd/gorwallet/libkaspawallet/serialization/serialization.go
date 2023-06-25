@@ -3,7 +3,7 @@ package serialization
 import (
 	"math"
 
-	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet/serialization/protoserialization"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization/protoserialization"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"

@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/bip32"
 	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/ixbaseANT/gord/util"
 	"github.com/kaspanet/go-secp256k1"
