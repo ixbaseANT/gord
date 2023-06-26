@@ -39,7 +39,7 @@ import (
 	"os"
 	"runtime"
 	"sync/atomic"
-	"db"
+	"github.com/ixbaseANT/infrastructure/db/database/pg"
 )
 
 // Logger is a subsystem logger for a Backend.

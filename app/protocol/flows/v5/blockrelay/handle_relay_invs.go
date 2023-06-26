@@ -16,7 +16,7 @@ import (
 	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 	"fmt"
-	"db"
+	"github.com/ixbaseANT/infrastructure/db/database/pg"
 	"time"
 	"encoding/json"
 )

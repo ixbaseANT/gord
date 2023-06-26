@@ -9,7 +9,7 @@ import (
 	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
 	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
-	"db"
+	"github.com/ixbaseANT/infrastructure/db/database/pg"
 	"time"
 )
 
