@@ -3,7 +3,6 @@ package reachabilitymanager
 import (
 	"github.com/ixbaseANT/gord/domain/consensus/model"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"fmt"
 )
 
 // orderedTreeNodeSet is an ordered set of model.DomainHash ordered by the respectful intervals.
@@ -39,7 +38,6 @@ func (rt *reachabilityManager) findAncestorIndexOfNode(stagingArea *model.Stagin
 		return 0, false, err
 	}
 	end := blockInterval.End
-fmt.Prinln("==blockInterval==",,blockInterval)
 	low := 0
 	high := len(tns)
 	for low < high {
