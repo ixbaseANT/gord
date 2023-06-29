@@ -29,14 +29,15 @@ func (ctx *Context) GetDifficultyRatio(bits uint32, params *dagconfig.Params) fl
 	// work limit directly because the block difficulty is encoded in a block
 	// with the compact form which loses precision.
 	target := difficultyPackage.CompactToBig(bits)
-
 	difficulty := new(big.Rat).SetFrac(params.PowMax, target)
-	diff, _ := difficulty.Float64()
+fmt.Println("============================")
+fmt.Println("=1===",params.PowMax)
+fmt.Println("=2===",target)
 
+	diff, _ := difficulty.Float64()
 	roundingPrecision := float64(100)
-	fmt.Println("diff=roundingPrecision======={}", diff*roundingPrecision)
 	diff = math.Round(diff*roundingPrecision) / roundingPrecision
-	fmt.Println("diff========{}", diff)
+fmt.Println("=X===",diff)
 	return diff
 }
 

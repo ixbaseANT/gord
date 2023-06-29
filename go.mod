@@ -27,6 +27,7 @@ require (
 
 require (
 	github.com/golang/snappy v0.0.1 // indirect
+	github.com/kaspanet/kaspad v0.12.13 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.12 // indirect
 	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect

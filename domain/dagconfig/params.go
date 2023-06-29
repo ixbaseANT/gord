@@ -199,13 +199,14 @@ func (p *Params) NormalizeRPCServerAddress(addr string) (string, error) {
 // FinalityDepth returns the finality duration represented in blocks
 func (p *Params) FinalityDepth() uint64 {
 	fmt.Println("=TargetTimePerBlock======={}", p.TargetTimePerBlock)
+	fmt.Println("=========================={}", p.FinalityDuration)
+	fmt.Println("=========================={}",uint64(p.FinalityDuration / p.TargetTimePerBlock))
 	return uint64(p.FinalityDuration / p.TargetTimePerBlock)
 }
 
 // PruningDepth returns the pruning duration represented in blocks
 func (p *Params) PruningDepth() uint64 {
 	fmt.Println("=prunung======={}", uint64(2*p.FinalityDepth()+4*p.MergeSetSizeLimit*uint64(p.K)+2*uint64(p.K)+2))
-
 	return 2*p.FinalityDepth() + 4*p.MergeSetSizeLimit*uint64(p.K) + 2*uint64(p.K) + 2
 }
 

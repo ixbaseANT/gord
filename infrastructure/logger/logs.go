@@ -39,7 +39,7 @@ import (
 	"os"
 	"runtime"
 	"sync/atomic"
-	"db"
+//	"db"
 )
 
 // Logger is a subsystem logger for a Backend.
@@ -178,10 +178,10 @@ func (l *Logger) printf(lvl Level, tag string, format string, args ...interface{
 	formatHeader(&buf, t, lvl.String(), tag, file, line)
 	bytesBuf := bytes.NewBuffer(buf)
 	_, _ = fmt.Fprintf(bytesBuf, format, args...)
-	_,err:=db.DB.Exec("insert into logs (p1,p2)values($1,$2)",buf,bytesBuf.String())
-	if err != nil {
-	    panic(err)
-	}
+//	_,err:=db.DB.Exec("insert into logs (p1,p2)values($1,$2)",buf,bytesBuf.String())
+//	if err != nil {
+//	    panic(err)
+//	}
 	bytesBuf.WriteByte('\n')
 	if !l.b.IsRunning() {
 		_, _ = fmt.Fprintf(os.Stderr, bytesBuf.String())
