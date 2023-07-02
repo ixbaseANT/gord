@@ -1,6 +1,6 @@
-// db.go
+// pgdb.go
 
-package db
+package pgdb
 import (
     "database/sql"
     _ "github.com/lib/pq"
