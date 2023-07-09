@@ -6,7 +6,7 @@ import (
     "github.com/ixbaseANT/gord/cmd/gorwallet/daemon/client"
     "github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 //    "time"
-//    "db"
+//    "pgdb"
 )
 func newAddress(conf *newAddressConfig) error {
     daemonClient, tearDown, err := client.Connect(conf.DaemonAddress)

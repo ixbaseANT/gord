@@ -5,16 +5,12 @@
 package dagconfig
 
 import (
-	"fmt"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"math/big"
 	"time"
-
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/util/network"
-
 	"github.com/pkg/errors"
-
 	"github.com/ixbaseANT/gord/util"
 )
 
@@ -198,15 +194,14 @@ func (p *Params) NormalizeRPCServerAddress(addr string) (string, error) {
 
 // FinalityDepth returns the finality duration represented in blocks
 func (p *Params) FinalityDepth() uint64 {
-	fmt.Println("=TargetTimePerBlock======={}", p.TargetTimePerBlock)
-	fmt.Println("=========================={}", p.FinalityDuration)
-	fmt.Println("=========================={}",uint64(p.FinalityDuration / p.TargetTimePerBlock))
+//	fmt.Println("=TargetTimePerBlock======={}", p.TargetTimePerBlock)
+//	fmt.Println("=========================={}", p.FinalityDuration)
+//	fmt.Println("=========================={}",uint64(p.FinalityDuration / p.TargetTimePerBlock))
 	return uint64(p.FinalityDuration / p.TargetTimePerBlock)
 }
 
 // PruningDepth returns the pruning duration represented in blocks
 func (p *Params) PruningDepth() uint64 {
-	fmt.Println("=prunung======={}", uint64(2*p.FinalityDepth()+4*p.MergeSetSizeLimit*uint64(p.K)+2*uint64(p.K)+2))
 	return 2*p.FinalityDepth() + 4*p.MergeSetSizeLimit*uint64(p.K) + 2*uint64(p.K) + 2
 }
 
@@ -237,6 +232,7 @@ var MainnetParams = Params{
 	FinalityDuration:                defaultFinalityDuration,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
+//	TargetTimePerBlock:              defaultTargetTimePerBlock,
 
 	// Consensus rule change deployments.
 	//
@@ -306,7 +302,7 @@ var TestnetParams = Params{
 	FinalityDuration:                defaultFinalityDuration,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
-
+//	TargetTimePerBlock:              defaultTargetTimePerBlock,
 	// Consensus rule change deployments.
 	//
 	// The miner confirmation window is defined as:
@@ -374,6 +370,7 @@ var SimnetParams = Params{
 	FinalityDuration:                time.Minute,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
+//	TargetTimePerBlock:              time.Millisecond,
 
 	// Consensus rule change deployments.
 	//
@@ -434,6 +431,7 @@ var DevnetParams = Params{
 	FinalityDuration:                defaultFinalityDuration,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
+//	TargetTimePerBlock:              defaultTargetTimePerBlock,
 
 	// Consensus rule change deployments.
 	//

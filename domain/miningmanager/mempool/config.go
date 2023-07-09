@@ -1,13 +1,14 @@
 package mempool
 
 import (
-	"time"
+//	"time"
 
 	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 
 	"github.com/ixbaseANT/gord/util"
 
 	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"fmt"
 )
 
 const (
@@ -54,7 +55,9 @@ type Config struct {
 
 // DefaultConfig returns the default mempool configuration
 func DefaultConfig(dagParams *dagconfig.Params) *Config {
-	targetBlocksPerSecond := time.Second.Seconds() / dagParams.TargetTimePerBlock.Seconds()
+//	targetBlocksPerSecond := time.Second.Seconds() / dagParams.TargetTimePerBlock.Seconds()
+targetBlocksPerSecond := 30.0
+fmt.Println("----targetBlocksPerSecond---",targetBlocksPerSecond)
 
 	return &Config{
 		MaximumTransactionCount:               defaultMaximumTransactionCount,

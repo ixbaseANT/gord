@@ -39,7 +39,7 @@ import (
 	"os"
 	"runtime"
 	"sync/atomic"
-//	"db"
+//	"pgdb"
 )
 
 // Logger is a subsystem logger for a Backend.

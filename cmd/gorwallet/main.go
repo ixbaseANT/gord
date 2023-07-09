@@ -1,11 +1,11 @@
 package main
 import (
 	"github.com/pkg/errors"
-	"db"
+	"pgdb"
 )
 
 func main() {
-    err2 := db.InitConnection()
+    err2 := pgdb.InitConnection()
     if err2 != nil {
         panic(err2)
     }

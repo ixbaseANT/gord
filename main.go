@@ -8,7 +8,7 @@ import (
     "os"
     "fmt"
     "github.com/ixbaseANT/gord/app"
-    "github.com/ixbaseANT/gord/infrastructure/pg/pgdb"
+    "pgdb"
 )
 func main() {
     err := pgdb.InitConnection()
