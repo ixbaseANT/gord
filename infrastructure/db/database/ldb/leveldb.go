@@ -7,8 +7,6 @@ import (
 	ldbErrors "github.com/syndtr/goleveldb/leveldb/errors"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 	"github.com/syndtr/goleveldb/leveldb/util"
-//    "pgdb"
-//    "fmt"
 )
 
 // LevelDB defines a thin wrapper around leveldb.
@@ -66,10 +64,6 @@ func (db *LevelDB) Close() error {
 // any previous value for that key.
 func (db *LevelDB) Put(key *database.Key, value []byte) error {
 	err := db.ldb.Put(key.Bytes(), value, nil)
-//	_, err = pgdb.DB.Exec("INSERT INTO leveldb (p3,p4) VALUES ($1,$2)", key.Bytes(), value)
-//	if err != nil {
-//		fmt.Println(err)
-//	}
 	return errors.WithStack(err)
 }
 

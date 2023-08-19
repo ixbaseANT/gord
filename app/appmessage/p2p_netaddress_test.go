@@ -12,7 +12,7 @@ import (
 // TestNetAddress tests the NetAddress API.
 func TestNetAddress(t *testing.T) {
 	ip := net.ParseIP("127.0.0.1")
-	port := 26111
+	port := 36111
 
 	// Test NewNetAddress.
 	na := NewNetAddress(&net.TCPAddr{IP: ip, Port: port})

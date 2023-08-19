@@ -1,14 +1,9 @@
 package main
 import (
 	"github.com/pkg/errors"
-	"pgdb"
 )
 
 func main() {
-    err2 := pgdb.InitConnection()
-    if err2 != nil {
-        panic(err2)
-    }
 	subCmd, config := parseCommandLine()
 
 	var err error

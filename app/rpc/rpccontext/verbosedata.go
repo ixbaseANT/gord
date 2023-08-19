@@ -30,9 +30,9 @@ func (ctx *Context) GetDifficultyRatio(bits uint32, params *dagconfig.Params) fl
 	// with the compact form which loses precision.
 	target := difficultyPackage.CompactToBig(bits)
 	difficulty := new(big.Rat).SetFrac(params.PowMax, target)
-fmt.Println("============================")
-fmt.Println("=1===",params.PowMax)
-fmt.Println("=2===",target)
+//fmt.Println("============================")
+//fmt.Println("=1===",params.PowMax)
+//fmt.Println("=2===",target)
 
 	diff, _ := difficulty.Float64()
 	roundingPrecision := float64(100)

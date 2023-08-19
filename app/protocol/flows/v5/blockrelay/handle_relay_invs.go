@@ -15,13 +15,8 @@ import (
 	"github.com/ixbaseANT/gord/infrastructure/config"
 	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
-//	"fmt"
-//	"pgdb"
-//	"time"
-//	"encoding/json"
 )
 
-// orphanResolutionRange is the maximum amount of blockLocator hashes
 // to search for known blocks. See isBlockInOrphanResolutionRange for
 // further details
 var orphanResolutionRange uint32 = 5
@@ -230,7 +225,6 @@ func (flow *handleRelayInvsFlow) start() error {
 				return err
 			}
 		}
-
 		if virtualHasNewParents {
 			log.Debugf("Virtual %d has new parents, raising new block template event", newVirtualInfo.DAAScore)
 			err = flow.OnNewBlockTemplate()
@@ -238,19 +232,7 @@ func (flow *handleRelayInvsFlow) start() error {
 				return err
 			}
 		}
-
 		log.Infof("Accepted block %s via relay", inv.Hash)
-//		hashString := fmt.Sprintf("%s",inv.Hash)
-//		nheight := fmt.Sprintf("%d",block.Header.BlueWork())
-//	jsonBytes, err := json.Marshal(block)
-//	if err != nil {
-//	    fmt.Println("Ошибка при конвертации в JSON:", err)
-//	}
-//	sblock := string(jsonBytes)
-//	_,err=pgdb.DB.Exec("insert into netblocks (poolid,blockheight,source,hash,created)values($1,$2,$3,$4,$5)","GOR", nheight, sblock, hashString, time.Now())
-//	if err != nil {
-//	    panic(err)
-//	}
 		err = flow.OnNewBlock(block)
 		if err != nil {
 			return err

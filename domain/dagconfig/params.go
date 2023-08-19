@@ -210,8 +210,8 @@ var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "gor-mainnet",
 	Net:         appmessage.Mainnet,
-	RPCPort:     "26110",
-	DefaultPort: "26111",
+	RPCPort:     "36110",
+	DefaultPort: "36111",
 	DNSSeeds: []string{
 		// This DNS seeder is run by Wolfie
 		"ixbase.info",

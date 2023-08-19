@@ -8,13 +8,8 @@ import (
     "os"
     "fmt"
     "github.com/ixbaseANT/gord/app"
-    "pgdb"
 )
 func main() {
-    err := pgdb.InitConnection()
-    if err != nil {
-        panic(err)
-    }
     fmt.Println("Connected to the database!")
     if err := app.StartApp(); err != nil {
 	os.Exit(1)
