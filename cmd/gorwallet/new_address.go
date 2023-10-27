@@ -21,7 +21,7 @@ func newAddress(conf *newAddressConfig) error {
 	if err != nil {
 		return err
 	}
-
-	fmt.Printf("New address:\n%s\n", response.Address)
+//my-add New address:\n%s\n
+	fmt.Printf("%s", response.Address)
 	return nil
 }
