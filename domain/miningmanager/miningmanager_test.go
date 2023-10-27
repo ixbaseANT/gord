@@ -1,7 +1,7 @@
 package miningmanager_test
 
 import (
-	"github.com/ixbaseANT/gord/cmd/kaspawallet/libkaspawallet"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
 	"github.com/ixbaseANT/gord/domain/consensusreference"
 	"github.com/ixbaseANT/gord/domain/miningmanager/model"
 	"github.com/ixbaseANT/gord/util"

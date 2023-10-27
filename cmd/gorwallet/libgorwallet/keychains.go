@@ -1,4 +1,4 @@
-package libgorwallet
+package libkaspawallet
 
 const (
 	// ExternalKeychain is the key chain that is used to create receive addresses

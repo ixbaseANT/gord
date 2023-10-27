@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/client"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
@@ -20,7 +21,6 @@ import (
 	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
 	"github.com/ixbaseANT/gord/util"
 	"github.com/ixbaseANT/gord/util/txmass"
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )
 
@@ -33,7 +33,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	publicKeybytes, err := libgorwallet.PublicKeyFromPrivateKey(privateKeyBytes)
+	publicKeybytes, err := libkaspawallet.PublicKeyFromPrivateKey(privateKeyBytes)
 	if err != nil {
 		return err
 	}
@@ -64,7 +64,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	UTXOs, err := libgorwallet.KaspawalletdUTXOsTolibgorwalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
+	UTXOs, err := libkaspawallet.KaspawalletdUTXOsTolibkaspawalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
 	if err != nil {
 		return err
 	}
@@ -140,7 +140,7 @@ func newDummyTransaction() *externalapi.DomainTransaction {
 
 func createSplitTransactionsWithSchnorrPrivteKey(
 	params *dagconfig.Params,
-	selectedUTXOs []*libgorwallet.UTXO,
+	selectedUTXOs []*libkaspawallet.UTXO,
 	toAddress util.Address,
 	feePerInput int) ([]*externalapi.DomainTransaction, error) {
 

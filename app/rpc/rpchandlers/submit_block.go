@@ -24,12 +24,14 @@ func HandleSubmitBlock(context *rpccontext.Context, _ *router.Router, request ap
 			return nil, err
 		}
 	}
-
+//my-add
 	if !context.Config.AllowSubmitBlockWhenNotSynced && !isSynced {
-				return &appmessage.SubmitBlockResponseMessage{
-					Error:        appmessage.RPCErrorf("Block not submitted - node is not synced"),
-					RejectReason: appmessage.RejectReasonIsInIBD,
-				}, nil
+/*
+		return &appmessage.SubmitBlockResponseMessage{
+			Error:        appmessage.RPCErrorf("Block not submitted - node is not synced"),
+			RejectReason: appmessage.RejectReasonIsInIBD,
+		}, nil
+*/
 	}
 
 	domainBlock, err := appmessage.RPCBlockToDomainBlock(submitBlockRequest.Block)
@@ -75,7 +77,9 @@ func HandleSubmitBlock(context *rpccontext.Context, _ *router.Router, request ap
 			RejectReason: appmessage.RejectReasonBlockInvalid,
 		}, nil
 	}
+
 	log.Infof("Accepted block %s via submitBlock", consensushashing.BlockHash(domainBlock))
+
 	response := appmessage.NewSubmitBlockResponseMessage()
 	return response, nil
 }

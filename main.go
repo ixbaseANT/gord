@@ -3,15 +3,16 @@
 // license that can be found in the LICENSE file.
 
 package main
+
 import (
-    _ "net/http/pprof"
-    "os"
-    "fmt"
-    "github.com/ixbaseANT/gord/app"
+	_ "net/http/pprof"
+	"os"
+
+	"github.com/ixbaseANT/gord/app"
 )
+
 func main() {
-    fmt.Println("Connected to the database!")
-    if err := app.StartApp(); err != nil {
-	os.Exit(1)
-    }
+	if err := app.StartApp(); err != nil {
+		os.Exit(1)
+	}
 }

@@ -1,15 +1,15 @@
 
-Gord
+Kaspad
 ====
 
+[![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/ixbaseANT/gord)
 
-Gord is the reference full node Gorbaniov implementation written in Go (golang).
+Kaspad is the reference full node Kaspa implementation written in Go (golang).
 
-## What is Gorbaniov Network
+## What is kaspa
 
-GOR is decentralized cryptocurrency, that is making waves in the world of BlockChain.
-This innovative project is based on the Proof of Work consensus algorithm and uses the Blake3 hashing function to ensure the security and efficiency of its network.
+Kaspa is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
 
 ## Requirements
 
@@ -28,61 +28,42 @@ Go 1.18 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install gord including all dependencies:
+- Run the following commands to obtain and install kaspad including all dependencies:
 
 ```bash
 $ git clone https://github.com/ixbaseANT/gord
-$ cd gord
-$ [go install . ./cmd/...]
-$ build.sh
-
+$ cd kaspad
+$ go install . ./cmd/...
 ```
 
-- Gord (and utilities) should now be installed in `$(go env GOPATH)/bin`. If you did
+- Kaspad (and utilities) should now be installed in `$(go env GOPATH)/bin`. If you did
   not already add the bin directory to your system path during Go installation,
   you are encouraged to do so now.
-
-# postgres
-
-```bash
-$ sudo apt install postgresql postgresql-contrib
-$ sudo -u postgres psql
-$ CREATE ROLE gorbaniov WITH LOGIN ENCRYPTED PASSWORD '1';
-$ CREATE DATABASE gor OWNER gorbaniov;
-$ Quit psql with \q
-```
-
-## Web-interface
-$ git clone https://github.com/ixbaseANT/gor-www
-- Gor-www should now be unzip in `www/pool`.
-- For gord monitoring run http://localhost/pool/v.php?ix=gor-pgDB-logs
-- Admin pool web interface http://localhost/pool/v.php?ix=gor-adm
-- User web interface http://localhost/pool
 
 
 ## Getting Started
 
-Gord has several configuration options available to tweak how it runs, but all
+Kaspad has several configuration options available to tweak how it runs, but all
 of the basic operations work with zero configuration.
 
 ```bash
-$ cd ~/go/bin
-$ gord --utxoindex
+$ kaspad
 ```
-
-
-## Stratum server
-$ git clone https://github.com/ixbaseANT/gor-bridge
-...
-
-## Website
-Join our website server using the following link: https://gorbaniov.com/
-
-## Twitter
-Join our twitter server using the following link: https://twitter.com/GorCurrency
 
 ## Discord
 Join our discord server using the following link: https://discord.gg/YNYnNN5Pf2
 
-## Telegram
-Join our telegram server using the following link: https://t.me/gorcurrency
+## Issue Tracker
+
+The [integrated github issue tracker](https://github.com/ixbaseANT/gord/issues)
+is used for this project.
+
+Issue priorities may be seen at https://github.com/orgs/kaspanet/projects/4
+
+## Documentation
+
+The [documentation](https://github.com/kaspanet/docs) is a work-in-progress
+
+## License
+
+Kaspad is licensed under the copyfree [ISC License](https://choosealicense.com/licenses/isc/).

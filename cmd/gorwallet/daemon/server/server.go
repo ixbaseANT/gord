@@ -48,7 +48,7 @@ type server struct {
 // Currently, set to 100MB
 const MaxDaemonSendMsgSize = 100_000_000
 
-// Start starts the gorwalletd server
+// Start starts the kaspawalletd server
 func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath string, profile string, timeout uint32) error {
 	initLog(defaultLogFile, defaultErrLogFile)
 

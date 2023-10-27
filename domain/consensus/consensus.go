@@ -13,7 +13,6 @@ import (
 	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/ixbaseANT/gord/util/staging"
 	"github.com/pkg/errors"
-	"fmt"
 )
 
 type consensus struct {
@@ -354,7 +353,6 @@ func (s *consensus) ValidateTransactionAndPopulateWithConsensusData(transaction 
 	if err != nil {
 		return err
 	}
-fmt.Println("---======{}")
 	return s.transactionValidator.ValidateTransactionInContextAndPopulateFee(
 		stagingArea, transaction, model.VirtualBlockHash)
 }

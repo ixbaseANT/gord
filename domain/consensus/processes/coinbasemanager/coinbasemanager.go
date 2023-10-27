@@ -121,6 +121,7 @@ func (c *coinbaseManager) coinbaseOutputForBlueBlock(stagingArea *model.StagingA
 	if err != nil {
 		return nil, false, err
 	}
+
 	if blockReward == 0 {
 		return nil, false, nil
 	}

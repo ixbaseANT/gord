@@ -13,7 +13,8 @@ import (
 var (
 	// userAgentName is the user agent name and is used to help identify
 	// ourselves to other kaspa peers.
-	userAgentName = "kaspad"
+//my-add
+	userAgentName = "gord"
 
 	// userAgentVersion is the user agent version and is used to help
 	// identify ourselves to other kaspa peers.

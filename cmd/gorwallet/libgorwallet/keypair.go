@@ -1,15 +1,14 @@
-package libgorwallet
+package libkaspawallet
 
 import (
 	"math"
 	"sort"
 	"strings"
 
-	"fmt"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet/bip32"
 	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/ixbaseANT/gord/util"
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )
 
@@ -87,13 +86,12 @@ func Address(params *dagconfig.Params, extendedPublicKeys []string, minimumSigna
 	if len(extendedPublicKeys) == 1 {
 		return p2pkAddress(params, extendedPublicKeys[0], path, ecdsa)
 	}
-	fmt.Println("======11=11=")
 
 	redeemScript, err := multiSigRedeemScript(extendedPublicKeys, minimumSignatures, path, ecdsa)
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("======11=11=", redeemScript)
+
 	return util.NewAddressScriptHash(redeemScript, params.Prefix)
 }
 
@@ -130,6 +128,7 @@ func p2pkAddress(params *dagconfig.Params, extendedPublicKey string, path string
 	if err != nil {
 		return nil, err
 	}
+
 	return util.NewAddressPublicKey(serializedSchnorrPublicKey[:], params.Prefix)
 }
 

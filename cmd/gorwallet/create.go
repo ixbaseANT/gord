@@ -32,8 +32,8 @@ func create(conf *createConfig) error {
 	}
 
 	fmt.Printf("Notice the above is neither a secret key to your wallet " +
-		"(use \"gorwallet dump-unencrypted-data\" to see a secret seed phrase) " +
-		"nor a wallet public address (use \"gorwallet new-address\" to create and see one)\n\n")
+		"(use \"kaspawallet dump-unencrypted-data\" to see a secret seed phrase) " +
+		"nor a wallet public address (use \"kaspawallet new-address\" to create and see one)\n\n")
 
 	extendedPublicKeys := make([]string, conf.NumPrivateKeys, conf.NumPublicKeys)
 	copy(extendedPublicKeys, signerExtendedPublicKeys)
@@ -58,7 +58,7 @@ func create(conf *createConfig) error {
 	// For a read only wallet the cosigner index is 0
 	cosignerIndex := uint32(0)
 	if len(signerExtendedPublicKeys) > 0 {
-		cosignerIndex, err = libgorwallet.MinimumCosignerIndex(signerExtendedPublicKeys, extendedPublicKeys)
+		cosignerIndex, err = libkaspawallet.MinimumCosignerIndex(signerExtendedPublicKeys, extendedPublicKeys)
 		if err != nil {
 			return err
 		}

@@ -33,12 +33,12 @@ func (s *server) changeAddress(useExisting bool, fromAddresses []*walletAddress)
 		walletAddr = &walletAddress{
 			index:         internalIndex,
 			cosignerIndex: s.keysFile.CosignerIndex,
-			keyChain:      libgorwallet.InternalKeychain,
+			keyChain:      libkaspawallet.InternalKeychain,
 		}
 	}
 
 	path := s.walletAddressPath(walletAddr)
-	address, err := libgorwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+	address, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -58,10 +58,10 @@ func (s *server) ShowAddresses(_ context.Context, request *pb.ShowAddressesReque
 		walletAddr := &walletAddress{
 			index:         i,
 			cosignerIndex: s.keysFile.CosignerIndex,
-			keyChain:      libgorwallet.ExternalKeychain,
+			keyChain:      libkaspawallet.ExternalKeychain,
 		}
 		path := s.walletAddressPath(walletAddr)
-		address, err := libgorwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+		address, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 		if err != nil {
 			return nil, err
 		}
@@ -74,6 +74,7 @@ func (s *server) ShowAddresses(_ context.Context, request *pb.ShowAddressesReque
 func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*pb.NewAddressResponse, error) {
 	s.lock.Lock()
 	defer s.lock.Unlock()
+
 	if !s.isSynced() {
 		return nil, errors.Errorf("wallet daemon is not synced yet, %s", s.formatSyncStateReport())
 	}
@@ -91,21 +92,20 @@ func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*
 	walletAddr := &walletAddress{
 		index:         s.keysFile.LastUsedExternalIndex(),
 		cosignerIndex: s.keysFile.CosignerIndex,
-		keyChain:      libgorwallet.ExternalKeychain,
+		keyChain:      libkaspawallet.ExternalKeychain,
 	}
 	path := s.walletAddressPath(walletAddr)
-	fmt.Println("||||=-NewAddrss{}")
-	address, err := libgorwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+	address, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("address==", address)
+
 	return &pb.NewAddressResponse{Address: address.String()}, nil
 }
 
 func (s *server) walletAddressString(wAddr *walletAddress) (string, error) {
 	path := s.walletAddressPath(wAddr)
-	addr, err := libgorwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+	addr, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 	if err != nil {
 		return "", err
 	}

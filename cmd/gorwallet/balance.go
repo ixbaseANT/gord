@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"strings"
+
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/client"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/utils"
@@ -32,15 +32,12 @@ func balance(conf *balanceConfig) error {
 		println("Address                                                                       Available             Pending")
 		println("-----------------------------------------------------------------------------------------------------------")
 		for _, addressBalance := range response.AddressBalances {
-	p1:=strings.Trim(addressBalance.Address, " ")
-	p2:=strings.Trim(utils.FormatKas(addressBalance.Available), " ")
-	p3:=strings.Trim(utils.FormatKas(addressBalance.Pending), " ")
-			fmt.Printf("%s %s %s\n",p1,p2,p3)
+			fmt.Printf("%s %s %s\n", addressBalance.Address, utils.FormatKas(addressBalance.Available), utils.FormatKas(addressBalance.Pending))
 		}
 		println("-----------------------------------------------------------------------------------------------------------")
 		print("                                                 ")
 	}
-	fmt.Printf("Total balance, GOR %s %s%s\n", utils.FormatKas(response.Available), utils.FormatKas(response.Pending), pendingSuffix)
+	fmt.Printf("Total balance, KAS %s %s%s\n", utils.FormatKas(response.Available), utils.FormatKas(response.Pending), pendingSuffix)
 
 	return nil
 }

@@ -2,11 +2,11 @@ package rpccontext
 
 import (
 	"encoding/hex"
-	"fmt"
-	difficultyPackage "github.com/ixbaseANT/gord/util/difficulty"
-	"github.com/pkg/errors"
 	"math"
 	"math/big"
+
+	difficultyPackage "github.com/ixbaseANT/gord/util/difficulty"
+	"github.com/pkg/errors"
 
 	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
 
@@ -29,15 +29,13 @@ func (ctx *Context) GetDifficultyRatio(bits uint32, params *dagconfig.Params) fl
 	// work limit directly because the block difficulty is encoded in a block
 	// with the compact form which loses precision.
 	target := difficultyPackage.CompactToBig(bits)
-	difficulty := new(big.Rat).SetFrac(params.PowMax, target)
-//fmt.Println("============================")
-//fmt.Println("=1===",params.PowMax)
-//fmt.Println("=2===",target)
 
+	difficulty := new(big.Rat).SetFrac(params.PowMax, target)
 	diff, _ := difficulty.Float64()
+
 	roundingPrecision := float64(100)
 	diff = math.Round(diff*roundingPrecision) / roundingPrecision
-fmt.Println("=X===",diff)
+
 	return diff
 }
 

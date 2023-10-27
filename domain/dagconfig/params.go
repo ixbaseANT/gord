@@ -5,12 +5,16 @@
 package dagconfig
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"math/big"
 	"time"
+
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/util/network"
+
 	"github.com/pkg/errors"
+
 	"github.com/ixbaseANT/gord/util"
 )
 
@@ -194,9 +198,6 @@ func (p *Params) NormalizeRPCServerAddress(addr string) (string, error) {
 
 // FinalityDepth returns the finality duration represented in blocks
 func (p *Params) FinalityDepth() uint64 {
-//	fmt.Println("=TargetTimePerBlock======={}", p.TargetTimePerBlock)
-//	fmt.Println("=========================={}", p.FinalityDuration)
-//	fmt.Println("=========================={}",uint64(p.FinalityDuration / p.TargetTimePerBlock))
 	return uint64(p.FinalityDuration / p.TargetTimePerBlock)
 }
 
@@ -210,14 +211,13 @@ var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "gor-mainnet",
 	Net:         appmessage.Mainnet,
-	RPCPort:     "36110",
-	DefaultPort: "36111",
+	RPCPort:     "46110",
+	DefaultPort: "46111",
 	DNSSeeds: []string{
 		// This DNS seeder is run by Wolfie
 		"ixbase.info",
 		"maxgor.info",
-		"crypto-pool.online",
-		"euroclinic.online",
+		"176.104.53.246",
 	},
 
 	// DAG parameters
@@ -232,7 +232,6 @@ var MainnetParams = Params{
 	FinalityDuration:                defaultFinalityDuration,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
-//	TargetTimePerBlock:              defaultTargetTimePerBlock,
 
 	// Consensus rule change deployments.
 	//
@@ -282,8 +281,8 @@ var TestnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "gor-testnet-10",
 	Net:         appmessage.Testnet,
-	RPCPort:     "16210",
-	DefaultPort: "16211",
+	RPCPort:     "36210",
+	DefaultPort: "36211",
 	DNSSeeds: []string{
 		"testnet-10-dnsseed.kas.pa",
 		// This DNS seeder is run by Tiram
@@ -302,7 +301,7 @@ var TestnetParams = Params{
 	FinalityDuration:                defaultFinalityDuration,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
-//	TargetTimePerBlock:              defaultTargetTimePerBlock,
+
 	// Consensus rule change deployments.
 	//
 	// The miner confirmation window is defined as:
@@ -370,7 +369,6 @@ var SimnetParams = Params{
 	FinalityDuration:                time.Minute,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
-//	TargetTimePerBlock:              time.Millisecond,
 
 	// Consensus rule change deployments.
 	//
@@ -415,8 +413,8 @@ var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "gor-devnet",
 	Net:         appmessage.Devnet,
-	RPCPort:     "26610",
-	DefaultPort: "26611",
+	RPCPort:     "36610",
+	DefaultPort: "36611",
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters
@@ -431,7 +429,6 @@ var DevnetParams = Params{
 	FinalityDuration:                defaultFinalityDuration,
 	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
 	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
-//	TargetTimePerBlock:              defaultTargetTimePerBlock,
 
 	// Consensus rule change deployments.
 	//

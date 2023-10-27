@@ -1,4 +1,4 @@
-package libgorwallet
+package libkaspawallet
 
 import (
 	"fmt"

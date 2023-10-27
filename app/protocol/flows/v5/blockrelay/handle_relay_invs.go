@@ -17,6 +17,7 @@ import (
 	"github.com/pkg/errors"
 )
 
+// orphanResolutionRange is the maximum amount of blockLocator hashes
 // to search for known blocks. See isBlockInOrphanResolutionRange for
 // further details
 var orphanResolutionRange uint32 = 5
@@ -225,6 +226,7 @@ func (flow *handleRelayInvsFlow) start() error {
 				return err
 			}
 		}
+
 		if virtualHasNewParents {
 			log.Debugf("Virtual %d has new parents, raising new block template event", newVirtualInfo.DAAScore)
 			err = flow.OnNewBlockTemplate()
@@ -232,6 +234,7 @@ func (flow *handleRelayInvsFlow) start() error {
 				return err
 			}
 		}
+
 		log.Infof("Accepted block %s via relay", inv.Hash)
 		err = flow.OnNewBlock(block)
 		if err != nil {

@@ -1,6 +1,7 @@
 package transactionvalidator_test
 
 import (
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/domain/consensus"
 	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
@@ -8,7 +9,6 @@ import (
 	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 	"github.com/ixbaseANT/gord/util"
-	"github.com/kaspanet/go-secp256k1"
 
 	"testing"
 

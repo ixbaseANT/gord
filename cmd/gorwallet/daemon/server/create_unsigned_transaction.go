@@ -71,17 +71,17 @@ func (s *server) createUnsignedTransactions(address string, amount uint64, isSen
 		return nil, err
 	}
 
-	payments := []*libgorwallet.Payment{{
+	payments := []*libkaspawallet.Payment{{
 		Address: toAddress,
 		Amount:  spendValue,
 	}}
 	if changeSompi > 0 {
-		payments = append(payments, &libgorwallet.Payment{
+		payments = append(payments, &libkaspawallet.Payment{
 			Address: changeAddress,
 			Amount:  changeSompi,
 		})
 	}
-	unsignedTransaction, err := libgorwallet.CreateUnsignedTransaction(s.keysFile.ExtendedPublicKeys,
+	unsignedTransaction, err := libkaspawallet.CreateUnsignedTransaction(s.keysFile.ExtendedPublicKeys,
 		s.keysFile.MinimumSignatures,
 		payments, selectedUTXOs)
 	if err != nil {
@@ -96,9 +96,9 @@ func (s *server) createUnsignedTransactions(address string, amount uint64, isSen
 }
 
 func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uint64, fromAddresses []*walletAddress) (
-	selectedUTXOs []*libgorwallet.UTXO, totalReceived uint64, changeSompi uint64, err error) {
+	selectedUTXOs []*libkaspawallet.UTXO, totalReceived uint64, changeSompi uint64, err error) {
 
-	selectedUTXOs = []*libgorwallet.UTXO{}
+	selectedUTXOs = []*libkaspawallet.UTXO{}
 	totalValue := uint64(0)
 
 	dagInfo, err := s.rpcClient.GetBlockDAGInfo()
@@ -120,14 +120,13 @@ func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uin
 			}
 		}
 
-		selectedUTXOs = append(selectedUTXOs, &libgorwallet.UTXO{
+		selectedUTXOs = append(selectedUTXOs, &libkaspawallet.UTXO{
 			Outpoint:       utxo.Outpoint,
 			UTXOEntry:      utxo.UTXOEntry,
 			DerivationPath: s.walletAddressPath(utxo.address),
 		})
-fmt.Println("=utxo.address=",utxo.address)
+
 		totalValue += utxo.UTXOEntry.Amount()
-fmt.Println("=utxo.address=",totalValue)
 
 		fee := feePerInput * uint64(len(selectedUTXOs))
 		totalSpend := spendAmount + fee
@@ -139,18 +138,14 @@ fmt.Println("=utxo.address=",totalValue)
 	fee := feePerInput * uint64(len(selectedUTXOs))
 	var totalSpend uint64
 	if isSendAll {
+		totalSpend = totalValue
 		totalReceived = totalValue - fee
 	} else {
 		totalSpend = spendAmount + fee
 		totalReceived = spendAmount
 	}
-fmt.Println("=utxo.address=totalValue=",totalValue)
-fmt.Println("=utxo.address=totalSpend=",totalSpend)
-fmt.Println("=utxo.address=spendAmount=",spendAmount)
-fmt.Println("=utxo.address=fee=",fee)
-
 	if totalValue < totalSpend {
-		return nil, 0, 0, errors.Errorf("7.Insufficient funds for1 send: %f required, while only %f available",
+		return nil, 0, 0, errors.Errorf("Insufficient funds for send: %f required, while only %f available",
 			float64(totalSpend)/constants.SompiPerKaspa, float64(totalValue)/constants.SompiPerKaspa)
 	}
 

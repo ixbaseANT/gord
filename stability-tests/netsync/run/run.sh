@@ -20,7 +20,7 @@ done
 for dagArchive in "${DAGS[@]}"
 do
   JSON_FILE=$FAST_DAGS_DIR/$dagArchive
-  ./netsync --simnet --dag-file $JSON_FILE --profile=7000
+  netsync --simnet --dag-file $JSON_FILE --profile=7000
   TEST_EXIT_CODE=$?
   echo "$dagArchive processed"
   if [ $TEST_EXIT_CODE -ne 0 ]; then

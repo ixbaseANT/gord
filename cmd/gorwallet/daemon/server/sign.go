@@ -26,7 +26,7 @@ func (s *server) signTransactions(unsignedTransactions [][]byte, password string
 	}
 	signedTransactions := make([][]byte, len(unsignedTransactions))
 	for i, unsignedTransaction := range unsignedTransactions {
-		signedTransaction, err := libgorwallet.Sign(s.params, mnemonics, unsignedTransaction, s.keysFile.ECDSA)
+		signedTransaction, err := libkaspawallet.Sign(s.params, mnemonics, unsignedTransaction, s.keysFile.ECDSA)
 		if err != nil {
 			return nil, err
 		}

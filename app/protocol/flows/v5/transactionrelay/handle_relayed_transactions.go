@@ -202,7 +202,7 @@ func (flow *handleRelayedTransactionsFlow) receiveTransactions(requestedTransact
 				continue
 			}
 
-			return protocolerrors.Errorf(true, "1.rejected transaction %s: %s", txID, ruleErr)
+			return protocolerrors.Errorf(true, "rejected transaction %s: %s", txID, ruleErr)
 		}
 		err = flow.broadcastAcceptedTransactions(consensushashing.TransactionIDs(acceptedTransactions))
 		if err != nil {

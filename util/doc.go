@@ -1,5 +1,5 @@
 /*
-Package util provides kaspa-specific convenience functions and types.
+Package util provides gor-specific convenience functions and types.
 
 # Block Overview
 

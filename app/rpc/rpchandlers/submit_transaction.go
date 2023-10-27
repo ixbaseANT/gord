@@ -7,7 +7,6 @@ import (
 	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
 	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
-	"fmt"
 )
 
 // HandleSubmitTransaction handles the respectively named RPC command
@@ -27,10 +26,10 @@ func HandleSubmitTransaction(context *rpccontext.Context, _ *router.Router, requ
 		if !errors.As(err, &mempool.RuleError{}) {
 			return nil, err
 		}
-		log.Debugf("2.Rejected transaction %s: %s", transactionID, err)
+
+		log.Debugf("Rejected transaction %s: %s", transactionID, err)
 		errorMessage := &appmessage.SubmitTransactionResponseMessage{}
-fmt.Println("=errorMessage=",errorMessage)
-		errorMessage.Error = appmessage.RPCErrorf("-3.Rejected transaction %s: %s", transactionID, err)
+		errorMessage.Error = appmessage.RPCErrorf("Rejected transaction %s: %s", transactionID, err)
 		return errorMessage, nil
 	}
 

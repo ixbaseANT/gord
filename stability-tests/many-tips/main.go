@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/mining"
 	"github.com/ixbaseANT/gord/util"
-	"github.com/kaspanet/go-secp256k1"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -240,7 +240,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	startMiningTime := time.Now()
 	shutdown := uint64(0)
 
-	spawn("kaspa-miner-Cmd.Wait", func() {
+	spawn("gor-miner-Cmd.Wait", func() {
 		err := kaspaMinerCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {

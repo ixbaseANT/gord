@@ -39,7 +39,6 @@ import (
 	"os"
 	"runtime"
 	"sync/atomic"
-//	"pgdb"
 )
 
 // Logger is a subsystem logger for a Backend.
@@ -169,20 +168,17 @@ func (l *Logger) printf(lvl Level, tag string, format string, args ...interface{
 
 	var file string
 	var line int
-//	if l.b.flag&(LogFlagShortFile|LogFlagLongFile) != 0 {
-//		file, line = callsite(l.b.flag)
-//	}
+	if l.b.flag&(LogFlagShortFile|LogFlagLongFile) != 0 {
+		file, line = callsite(l.b.flag)
+	}
 
 	buf := make([]byte, 0, normalLogSize)
 
 	formatHeader(&buf, t, lvl.String(), tag, file, line)
 	bytesBuf := bytes.NewBuffer(buf)
 	_, _ = fmt.Fprintf(bytesBuf, format, args...)
-//	_,err:=db.DB.Exec("insert into logs (p1,p2)values($1,$2)",buf,bytesBuf.String())
-//	if err != nil {
-//	    panic(err)
-//	}
 	bytesBuf.WriteByte('\n')
+
 	if !l.b.IsRunning() {
 		_, _ = fmt.Fprintf(os.Stderr, bytesBuf.String())
 		panic("Writing to the logger when it's not running")
@@ -209,7 +205,6 @@ func (l *Logger) print(lvl Level, tag string, args ...interface{}) {
 	buf := make([]byte, 0, normalLogSize)
 	formatHeader(&buf, t, lvl.String(), tag, file, line)
 	bytesBuf := bytes.NewBuffer(buf)
-	fmt.Println("==========2============")
 	_, _ = fmt.Fprintln(bytesBuf, args...)
 
 	if !l.b.IsRunning() {

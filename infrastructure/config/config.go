@@ -17,13 +17,13 @@ import (
 	"time"
 
 	"github.com/btcsuite/go-socks/socks"
+	"github.com/jessevdk/go-flags"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/ixbaseANT/gord/util"
 	"github.com/ixbaseANT/gord/util/network"
 	"github.com/ixbaseANT/gord/version"
-	"github.com/jessevdk/go-flags"
 	"github.com/pkg/errors"
 )
 
@@ -51,13 +51,14 @@ const (
 	//DefaultMaxOrphanTxSize is the default maximum size for an orphan transaction
 	DefaultMaxOrphanTxSize  = 100_000
 	defaultSigCacheMaxSize  = 100_000
-	sampleConfigFilename    = "sample-kaspad.conf"
+	sampleConfigFilename    = "sample-gord.conf"
 	defaultMaxUTXOCacheSize = 5_000_000_000
 	defaultProtocolVersion  = 5
 )
 
 var (
 	// DefaultAppDir is the default home directory for kaspad.
+//my-add
 	DefaultAppDir = util.AppDir("gord", false)
 
 	defaultConfigFile  = filepath.Join(DefaultAppDir, defaultConfigFilename)
@@ -84,14 +85,14 @@ type Flags struct {
 	AddPeers                        []string      `short:"a" long:"addpeer" description:"Add a peer to connect with at startup"`
 	ConnectPeers                    []string      `long:"connect" description:"Connect only to the specified peers at startup"`
 	DisableListen                   bool          `long:"nolisten" description:"Disable listening for incoming connections -- NOTE: Listening is automatically disabled if the --connect or --proxy options are used without also specifying listen interfaces via --listen"`
-	Listeners                       []string      `long:"listen" description:"Add an interface/port to listen for connections (default all interfaces port: 36111, testnet: 16211)"`
+	Listeners                       []string      `long:"listen" description:"Add an interface/port to listen for connections (default all interfaces port: 46111, testnet: 16211)"`
 	TargetOutboundPeers             int           `long:"outpeers" description:"Target number of outbound peers"`
 	MaxInboundPeers                 int           `long:"maxinpeers" description:"Max number of inbound peers"`
 	EnableBanning                   bool          `long:"enablebanning" description:"Enable banning of misbehaving peers"`
 	BanDuration                     time.Duration `long:"banduration" description:"How long to ban misbehaving peers. Valid time units are {s, m, h}. Minimum 1 second"`
 	BanThreshold                    uint32        `long:"banthreshold" description:"Maximum allowed ban score before disconnecting and banning misbehaving peers."`
 	Whitelists                      []string      `long:"whitelist" description:"Add an IP network or IP that will not be banned. (eg. 192.168.1.0/24 or ::1)"`
-	RPCListeners                    []string      `long:"rpclisten" description:"Add an interface/port to listen for RPC connections (default port: 36110, testnet: 16210)"`
+	RPCListeners                    []string      `long:"rpclisten" description:"Add an interface/port to listen for RPC connections (default port: 46110, testnet: 16210)"`
 	RPCCert                         string        `long:"rpccert" description:"File containing the certificate file"`
 	RPCKey                          string        `long:"rpckey" description:"File containing the certificate key"`
 	RPCMaxClients                   int           `long:"rpcmaxclients" description:"Max number of RPC clients for standard connections"`
@@ -130,7 +131,7 @@ type Flags struct {
 	ServiceOptions *ServiceOptions
 }
 
-// Config defines the configuration options for kaspad.
+// Config defines the configuration options for gordd.
 //
 // See loadConfig for details on the configuration load process.
 type Config struct {

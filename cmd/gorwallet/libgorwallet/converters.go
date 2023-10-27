@@ -1,4 +1,4 @@
-package libgorwallet
+package libkaspawallet
 
 import (
 	"encoding/hex"
@@ -10,10 +10,10 @@ import (
 	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 )
 
-// KaspawalletdUTXOsTolibgorwalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libgorwallet.UTXO
-func KaspawalletdUTXOsTolibgorwalletUTXOs(gorwalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
-	UTXOs := make([]*UTXO, len(gorwalletdUtxoEntires))
-	for i, entry := range gorwalletdUtxoEntires {
+// KaspawalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libkaspawallet.UTXO
+func KaspawalletdUTXOsTolibkaspawalletUTXOs(kaspawalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
+	UTXOs := make([]*UTXO, len(kaspawalletdUtxoEntires))
+	for i, entry := range kaspawalletdUtxoEntires {
 		script, err := hex.DecodeString(entry.UtxoEntry.ScriptPublicKey.ScriptPublicKey)
 		if err != nil {
 			return nil, err

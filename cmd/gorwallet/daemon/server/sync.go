@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-var keyChains = []uint8{libgorwallet.ExternalKeychain, libgorwallet.InternalKeychain}
+var keyChains = []uint8{libkaspawallet.ExternalKeychain, libkaspawallet.InternalKeychain}
 
 type walletAddressSet map[string]*walletAddress
 
@@ -188,7 +188,7 @@ func (s *server) updateAddressesAndLastUsedIndexes(requestedAddressSet walletAdd
 
 		s.addressSet[entry.Address] = walletAddress
 
-		if walletAddress.keyChain == libgorwallet.ExternalKeychain {
+		if walletAddress.keyChain == libkaspawallet.ExternalKeychain {
 			if walletAddress.index > lastUsedExternalIndex {
 				lastUsedExternalIndex = walletAddress.index
 			}

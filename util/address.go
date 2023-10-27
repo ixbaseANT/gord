@@ -8,9 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/blake2b"
 
-	"fmt"
 	"github.com/ixbaseANT/gord/util/bech32"
-	"github.com/zeebo/blake3"
 )
 
 var (
@@ -66,7 +64,7 @@ var stringsToBech32Prefixes = map[string]Bech32Prefix{
 func ParsePrefix(prefixString string) (Bech32Prefix, error) {
 	prefix, ok := stringsToBech32Prefixes[prefixString]
 	if !ok {
-		//		return Bech32PrefixUnknown, errors.Errorf("could not parse prefix %s", prefixString)
+		return Bech32PrefixUnknown, errors.Errorf("could not parse prefix %s", prefixString)
 	}
 
 	return prefix, nil
@@ -84,7 +82,7 @@ func (prefix Bech32Prefix) String() string {
 }
 
 // encodeAddress returns a human-readable payment address given a network prefix
-// and a payload which encodes the gor network and address type. It is used
+// and a payload which encodes the kaspa network and address type. It is used
 // in both pay-to-pubkey (P2PK) and pay-to-script-hash (P2SH) address
 // encoding.
 func encodeAddress(prefix Bech32Prefix, payload []byte, version byte) string {
@@ -120,7 +118,7 @@ type Address interface {
 	Prefix() Bech32Prefix
 
 	// IsForPrefix returns whether or not the address is associated with the
-	// passed gor network.
+	// passed kaspa network.
 	IsForPrefix(prefix Bech32Prefix) bool
 }
 
@@ -152,8 +150,7 @@ func DecodeAddress(addr string, expectedPrefix Bech32Prefix) (Address, error) {
 	case scriptHashAddrID:
 		return newAddressScriptHashFromHash(prefix, decoded)
 	default:
-		return newAddressPubKey(prefix, decoded)
-		//		return nil, ErrUnknownAddressType
+		return nil, ErrUnknownAddressType
 	}
 }
 
@@ -181,8 +178,9 @@ func NewAddressPublicKey(publicKey []byte, prefix Bech32Prefix) (*AddressPublicK
 func newAddressPubKey(prefix Bech32Prefix, publicKey []byte) (*AddressPublicKey, error) {
 	// Check for a valid pubkey length.
 	if len(publicKey) != PublicKeySize {
-		//		return nil, errors.Errorf("publicKey must be %d bytes", PublicKeySize)
+		return nil, errors.Errorf("publicKey must be %d bytes", PublicKeySize)
 	}
+
 	addr := &AddressPublicKey{prefix: prefix}
 	copy(addr.publicKey[:], publicKey)
 	return addr, nil
@@ -201,7 +199,7 @@ func (a *AddressPublicKey) ScriptAddress() []byte {
 }
 
 // IsForPrefix returns whether or not the pay-to-pubkey address is associated
-// with the passed gor network.
+// with the passed kaspa network.
 func (a *AddressPublicKey) IsForPrefix(prefix Bech32Prefix) bool {
 	return a.prefix == prefix
 }
@@ -247,7 +245,6 @@ func newAddressPubKeyECDSA(prefix Bech32Prefix, publicKey []byte) (*AddressPubli
 
 	addr := &AddressPublicKeyECDSA{prefix: prefix}
 	copy(addr.publicKey[:], publicKey)
-	fmt.Println("==ECDSA{}", addr)
 	return addr, nil
 }
 
@@ -264,7 +261,7 @@ func (a *AddressPublicKeyECDSA) ScriptAddress() []byte {
 }
 
 // IsForPrefix returns whether or not the pay-to-pubkey address is associated
-// with the passed gor network.
+// with the passed kaspa network.
 func (a *AddressPublicKeyECDSA) IsForPrefix(prefix Bech32Prefix) bool {
 	return a.prefix == prefix
 }
@@ -290,11 +287,7 @@ type AddressScriptHash struct {
 
 // NewAddressScriptHash returns a new AddressScriptHash.
 func NewAddressScriptHash(serializedScript []byte, prefix Bech32Prefix) (*AddressScriptHash, error) {
-	//	scriptHash := HashBlake2b(serializedScript)
-	hasher := blake3.New()
-	hasher.Write(serializedScript)
-	scriptHash := hasher.Sum(nil)
-	fmt.Println("=scriptHash={}", scriptHash)
+	scriptHash := HashBlake2b(serializedScript)
 	return newAddressScriptHashFromHash(prefix, scriptHash)
 }
 
@@ -317,7 +310,6 @@ func newAddressScriptHashFromHash(prefix Bech32Prefix, scriptHash []byte) (*Addr
 
 	addr := &AddressScriptHash{prefix: prefix}
 	copy(addr.hash[:], scriptHash)
-	fmt.Println("==hashAddr", addr)
 	return addr, nil
 }
 
@@ -334,7 +326,7 @@ func (a *AddressScriptHash) ScriptAddress() []byte {
 }
 
 // IsForPrefix returns whether or not the pay-to-script-hash address is associated
-// with the passed gor network.
+// with the passed kaspa network.
 func (a *AddressScriptHash) IsForPrefix(prefix Bech32Prefix) bool {
 	return a.prefix == prefix
 }
@@ -355,6 +347,5 @@ func (a *AddressScriptHash) String() string {
 // when an array is more appropiate than a slice (for example, when used as map
 // keys).
 func (a *AddressScriptHash) HashBlake2b() *[blake2b.Size256]byte {
-	fmt.Println("=HashBlake2b{}=")
 	return &a.hash
 }

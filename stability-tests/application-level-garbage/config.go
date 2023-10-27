@@ -7,8 +7,8 @@ import (
 	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/ixbaseANT/gord/stability-tests/common"
 
-	"github.com/ixbaseANT/gord/infrastructure/config"
 	"github.com/jessevdk/go-flags"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 )
 
 const (

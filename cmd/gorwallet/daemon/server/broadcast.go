@@ -38,7 +38,7 @@ func (s *server) broadcast(transactions [][]byte, isDomain bool) ([]string, erro
 				return nil, err
 			}
 		} else if !isDomain { //default in proto3 is false
-			tx, err = libgorwallet.ExtractTransaction(transaction, s.keysFile.ECDSA)
+			tx, err = libkaspawallet.ExtractTransaction(transaction, s.keysFile.ECDSA)
 			if err != nil {
 				return nil, err
 			}

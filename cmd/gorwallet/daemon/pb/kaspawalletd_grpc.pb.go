@@ -4,7 +4,6 @@ package pb
 
 import (
 	context "context"
-	"fmt"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -78,13 +77,10 @@ func (c *gorwalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesR
 
 func (c *gorwalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
 	out := new(NewAddressResponse)
-	fmt.Println("========NewAddr{}", ctx)
 	err := c.cc.Invoke(ctx, "/gorwalletd.gorwalletd/NewAddress", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("========NewAddr{}", in)
-	fmt.Println("========NewAddr{}", out)
 	return out, nil
 }
 

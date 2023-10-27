@@ -15,7 +15,7 @@ RUN go mod download
 COPY . .
 
 WORKDIR /go/src/github.com/ixbaseANT/gord/cmd/gorwallet
-RUN GOOS=linux go build -a -installsuffix cgo -o gorwallet .
+RUN GOOS=linux go build -a -installsuffix cgo -o kaspawallet .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine

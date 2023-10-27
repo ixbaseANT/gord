@@ -5,6 +5,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
@@ -17,7 +18,6 @@ import (
 	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
 	"github.com/ixbaseANT/gord/stability-tests/common/mine"
 	"github.com/ixbaseANT/gord/util"
-	"github.com/kaspanet/go-secp256k1"
 )
 
 const (

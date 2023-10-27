@@ -28,9 +28,9 @@ const (
 
 func startNode(name string, rpcAddress, listen, connect, profilePort, dataDir string) (*exec.Cmd, func(), error) {
 	log.Infof("Data directory for %s is %s", name, dataDir)
-
+//my-add
 	args := []string{
-		"kaspad",
+		"gord",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"--appdir", dataDir,
 		"--logdir", dataDir,

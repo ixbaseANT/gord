@@ -38,6 +38,7 @@ func (rt *reachabilityManager) findAncestorIndexOfNode(stagingArea *model.Stagin
 		return 0, false, err
 	}
 	end := blockInterval.End
+
 	low := 0
 	high := len(tns)
 	for low < high {
