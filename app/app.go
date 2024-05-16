@@ -125,7 +125,7 @@ func (app *kaspadApp) main(startedChan chan<- struct{}) error {
 	// Create componentManager and start it.
 	componentManager, err := NewComponentManager(app.cfg, databaseContext, interrupt)
 	if err != nil {
-		log.Errorf("Unable to start kaspad: %+v", err)
+		log.Errorf("Unable to start gord: %+v", err)
 		return err
 	}
 

@@ -21,7 +21,7 @@ import (
 )
 
 const (
-	payAddress                       = "kaspasim:qzuax2jhawd354e54thhpd9m9wg03pdzwjlpr4vtq3k7xrpumhhtwa2hkr3ep"
+	payAddress                       = "gor:qrglg8g9mzczx92zu3ajdgfjpxs26xqzl6c732mf83pdlks7dh9dq6cflh7hd"
 	payAddressPrivateKey             = "05d8f681e954a550395ee2297fc1a14f6e801f554c0b9d48cd7165a7ea72ff77"
 	fundingCoinbaseTransactionAmount = 1000
 	outputsPerTransaction            = 3
