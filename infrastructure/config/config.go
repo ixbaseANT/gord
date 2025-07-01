@@ -28,11 +28,11 @@ import (
 )
 
 const (
-	defaultConfigFilename      = "kaspad.conf"
+	defaultConfigFilename      = "gord.conf"
 	defaultLogLevel            = "info"
 	defaultLogDirname          = "logs"
-	defaultLogFilename         = "kaspad.log"
-	defaultErrLogFilename      = "kaspad_err.log"
+	defaultLogFilename         = "gord.log"
+	defaultErrLogFilename      = "gord_err.log"
 	defaultTargetOutboundPeers = 8
 	defaultMaxInboundPeers     = 117
 	defaultBanDuration         = time.Hour * 24
@@ -51,7 +51,7 @@ const (
 	//DefaultMaxOrphanTxSize is the default maximum size for an orphan transaction
 	DefaultMaxOrphanTxSize  = 100_000
 	defaultSigCacheMaxSize  = 100_000
-	sampleConfigFilename    = "sample-kaspad.conf"
+	sampleConfigFilename    = "sample-gord.conf"
 	defaultMaxUTXOCacheSize = 5_000_000_000
 	defaultProtocolVersion  = 5
 )
@@ -66,7 +66,7 @@ var (
 	defaultRPCCertFile = filepath.Join(DefaultAppDir, "rpc.cert")
 )
 
-//go:embed sample-kaspad.conf
+//go:embed sample-gord.conf
 var sampleConfig string
 
 // RunServiceCommand is only set to a real function on Windows. It is used

@@ -41,7 +41,7 @@ func (a *ComponentManager) Start() {
 		return
 	}
 
-	log.Trace("Starting kaspad")
+	log.Trace("Starting gord")
 
 	err := a.netAdapter.Start()
 	if err != nil {
@@ -55,11 +55,11 @@ func (a *ComponentManager) Start() {
 func (a *ComponentManager) Stop() {
 	// Make sure this only happens once.
 	if atomic.AddInt32(&a.shutdown, 1) != 1 {
-		log.Infof("Kaspad is already in the process of shutting down")
+		log.Infof("Gord is already in the process of shutting down")
 		return
 	}
 
-	log.Warnf("Kaspad shutting down")
+	log.Warnf("Gord shutting down")
 
 	a.connectionManager.Stop()
 

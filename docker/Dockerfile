@@ -11,12 +11,12 @@ COPY go.mod .
 COPY go.sum .
 
 
-# Cache kaspad dependencies
+# Cache gord dependencies
 RUN go mod download
 
 COPY . .
 
-RUN go build $FLAGS -o kaspad .
+RUN go build $FLAGS -o gord .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
@@ -24,8 +24,8 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/ixbaseANT/gord/kaspad /app/
-COPY --from=build /go/src/github.com/ixbaseANT/gord/infrastructure/config/sample-kaspad.conf /app/
+COPY --from=build /go/src/github.com/ixbaseANT/gord/gord /app/
+COPY --from=build /go/src/github.com/ixbaseANT/gord/infrastructure/config/sample-gord.conf /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

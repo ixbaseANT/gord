@@ -14,16 +14,16 @@ can be used to control it.
 
 Usage:
 
-	gordd [OPTIONS]
+	gord [OPTIONS]
 
 For an up-to-date help message:
 
-	gordd --help
+	gord --help
 
 The long form of all option flags (except -C) can be specified in a configuration
-file that is automatically parsed when kaspad starts up. By default, the
-configuration file is located at ~/.kaspad/kaspad.conf on POSIX-style operating
-systems and %LOCALAPPDATA%\kaspad\kaspad.conf on Windows. The -C (--configfile)
+file that is automatically parsed when gordd starts up. By default, the
+configuration file is located at ~/.gord/gord.conf on POSIX-style operating
+systems and %LOCALAPPDATA%\gord\gord.conf on Windows. The -C (--configfile)
 flag can be used to override this location.
 */
 package main
