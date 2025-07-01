@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+import "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 
 // HeaderSelectedTipStore represents a store of the headers selected tip
 type HeaderSelectedTipStore interface {

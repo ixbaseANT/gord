@@ -4,13 +4,13 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/util/math"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/util/math"
 
-	"github.com/ixbaseANT/gord/util/difficulty"
+	"github.com/kaspanet/kaspad/util/difficulty"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 )
 
 // DifficultyManager provides a method to resolve the

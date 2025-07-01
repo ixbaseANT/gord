@@ -1,8 +1,8 @@
 package staging
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
 	"sync/atomic"
 )
 

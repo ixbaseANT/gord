@@ -3,9 +3,9 @@ package rpchandlers
 import (
 	"time"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
 )
 
 const pauseBeforeShutDown = time.Second

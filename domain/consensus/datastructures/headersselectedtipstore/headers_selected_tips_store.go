@@ -2,10 +2,10 @@ package headersselectedtipstore
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/ixbaseANT/gord/domain/consensus/database/serialization"
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/util/staging"
+	"github.com/kaspanet/kaspad/domain/consensus/database/serialization"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/util/staging"
 )
 
 var keyName = []byte("headers-selected-tip")

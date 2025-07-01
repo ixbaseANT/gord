@@ -1,10 +1,10 @@
 package fast_pruning_ibd_test
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/kaspanet/kaspad/domain/consensus"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
 	"io/ioutil"
 	"os"
 	"path"

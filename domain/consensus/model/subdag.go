@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+import "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 
 // SubDAG represents a context-free representation of a partial DAG
 type SubDAG struct {

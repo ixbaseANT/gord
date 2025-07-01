@@ -2,24 +2,24 @@ package transactionrelay_test
 
 import (
 	"errors"
-	"github.com/ixbaseANT/gord/app/protocol/flowcontext"
-	"github.com/ixbaseANT/gord/app/protocol/flows/v5/transactionrelay"
+	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
+	"github.com/kaspanet/kaspad/app/protocol/flows/v5/transactionrelay"
 	"strings"
 	"testing"
 
-	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
-	"github.com/ixbaseANT/gord/domain"
-	"github.com/ixbaseANT/gord/domain/consensus"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
+	"github.com/kaspanet/kaspad/domain"
+	"github.com/kaspanet/kaspad/domain/consensus"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/util/panics"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/infrastructure/config"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
 )
 
 type mocTransactionsRelayContext struct {

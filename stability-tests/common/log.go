@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/stability-tests/common/mine"
-	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
-	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/stability-tests/common/mine"
+	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
+	"github.com/kaspanet/kaspad/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

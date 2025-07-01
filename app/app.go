@@ -7,17 +7,17 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/ixbaseANT/gord/infrastructure/config"
-	"github.com/ixbaseANT/gord/infrastructure/db/database"
-	"github.com/ixbaseANT/gord/infrastructure/db/database/ldb"
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/infrastructure/os/execenv"
-	"github.com/ixbaseANT/gord/infrastructure/os/limits"
-	"github.com/ixbaseANT/gord/infrastructure/os/signal"
-	"github.com/ixbaseANT/gord/infrastructure/os/winservice"
-	"github.com/ixbaseANT/gord/util/panics"
-	"github.com/ixbaseANT/gord/util/profiling"
-	"github.com/ixbaseANT/gord/version"
+	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/kaspanet/kaspad/infrastructure/db/database/ldb"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/infrastructure/os/execenv"
+	"github.com/kaspanet/kaspad/infrastructure/os/limits"
+	"github.com/kaspanet/kaspad/infrastructure/os/signal"
+	"github.com/kaspanet/kaspad/infrastructure/os/winservice"
+	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/kaspanet/kaspad/version"
 )
 
 const (
@@ -125,7 +125,7 @@ func (app *kaspadApp) main(startedChan chan<- struct{}) error {
 	// Create componentManager and start it.
 	componentManager, err := NewComponentManager(app.cfg, databaseContext, interrupt)
 	if err != nil {
-		log.Errorf("Unable to start gord: %+v", err)
+		log.Errorf("Unable to start kaspad: %+v", err)
 		return err
 	}
 

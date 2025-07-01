@@ -1,8 +1,8 @@
 package syncmanager
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 )
 
 func (sm *syncManager) syncInfo(stagingArea *model.StagingArea) (*externalapi.SyncInfo, error) {

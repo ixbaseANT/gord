@@ -2,11 +2,11 @@ package util_test
 
 import (
 	"fmt"
-	"github.com/ixbaseANT/gord/util/difficulty"
+	"github.com/kaspanet/kaspad/util/difficulty"
 	"math"
 	"math/big"
 
-	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/kaspad/util"
 )
 
 func ExampleAmount() {

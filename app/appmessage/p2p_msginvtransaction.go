@@ -1,7 +1,7 @@
 package appmessage
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 )
 
 // MaxInvPerTxInvMsg is the maximum number of hashes that can

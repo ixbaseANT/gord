@@ -6,22 +6,22 @@ import (
 	"testing"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
-	utxopkg "github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
-	"github.com/ixbaseANT/gord/domain/dagconfig"
-	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
-	"github.com/ixbaseANT/gord/stability-tests/common/mine"
-	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	utxopkg "github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/kaspanet/kaspad/stability-tests/common/mine"
+	"github.com/kaspanet/kaspad/util"
 )
 
 const (
-	payAddress                       = "gor:qrglg8g9mzczx92zu3ajdgfjpxs26xqzl6c732mf83pdlks7dh9dq6cflh7hd"
+	payAddress                       = "kaspasim:qzuax2jhawd354e54thhpd9m9wg03pdzwjlpr4vtq3k7xrpumhhtwa2hkr3ep"
 	payAddressPrivateKey             = "05d8f681e954a550395ee2297fc1a14f6e801f554c0b9d48cd7165a7ea72ff77"
 	fundingCoinbaseTransactionAmount = 1000
 	outputsPerTransaction            = 3
@@ -86,7 +86,7 @@ func submitAnAmountOfTransactionsToTheMempool(t *testing.T, rpcClient *rpcclient
 
 	for i, transaction := range transactions {
 		rpcTransaction := appmessage.DomainTransactionToRPCTransaction(transaction)
-		_, err := rpcClient.SubmitTransaction(rpcTransaction, false)
+		_, err := rpcClient.SubmitTransaction(rpcTransaction, consensushashing.TransactionID(transaction).String(), false)
 		if err != nil {
 			if ignoreOrphanRejects && strings.Contains(err.Error(), "orphan") {
 				continue

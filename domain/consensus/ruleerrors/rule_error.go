@@ -3,8 +3,8 @@ package ruleerrors
 import (
 	"fmt"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"
 )
 
@@ -315,7 +315,7 @@ func NewErrMissingParents(missingParentHashes []*externalapi.DomainHash) error {
 // InvalidTransaction is a struct containing an invalid transaction, and the error explaining why it's invalid.
 type InvalidTransaction struct {
 	Transaction *externalapi.DomainTransaction
-	Error       error
+	Error       *RuleError
 }
 
 func (invalid InvalidTransaction) String() string {

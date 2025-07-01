@@ -1,20 +1,20 @@
 package blocktemplatebuilder
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/processes/coinbasemanager"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/merkle"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
-	"github.com/ixbaseANT/gord/domain/consensusreference"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/kaspanet/kaspad/domain/consensus/processes/coinbasemanager"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/merkle"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/kaspanet/kaspad/domain/consensusreference"
+	"github.com/kaspanet/kaspad/util/mstime"
 	"math"
 	"sort"
 
-	"github.com/ixbaseANT/gord/util/difficulty"
+	"github.com/kaspanet/kaspad/util/difficulty"
 
-	consensusexternalapi "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
-	miningmanagerapi "github.com/ixbaseANT/gord/domain/miningmanager/model"
+	consensusexternalapi "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	miningmanagerapi "github.com/kaspanet/kaspad/domain/miningmanager/model"
 	"github.com/pkg/errors"
 )
 
@@ -147,16 +147,12 @@ func (btb *blockTemplateBuilder) BuildBlockTemplate(
 	invalidTxsErr := ruleerrors.ErrInvalidTransactionsInNewBlock{}
 	if errors.As(err, &invalidTxsErr) {
 		log.Criticalf("consensusReference.Consensus().BuildBlock returned invalid txs in BuildBlockTemplate")
-		invalidTxs := make([]*consensusexternalapi.DomainTransaction, 0, len(invalidTxsErr.InvalidTransactions))
-		for _, tx := range invalidTxsErr.InvalidTransactions {
-			invalidTxs = append(invalidTxs, tx.Transaction)
-		}
-		err = btb.mempool.RemoveTransactions(invalidTxs, true)
+		err = btb.mempool.RemoveInvalidTransactions(&invalidTxsErr)
 		if err != nil {
-			// mempool.RemoveTransactions might return errors in situations that are perfectly fine in this context.
+			// mempool.RemoveInvalidTransactions might return errors in situations that are perfectly fine in this context.
 			// TODO: Once the mempool invariants are clear, this should be converted back `return nil, err`:
-			// https://github.com/ixbaseANT/gord/issues/1553
-			log.Criticalf("Error from mempool.RemoveTransactions: %+v", err)
+			// https://github.com/kaspanet/kaspad/issues/1553
+			log.Criticalf("Error from mempool.RemoveInvalidTransactions: %+v", err)
 		}
 		// We can call this recursively without worry because this should almost never happen
 		return btb.BuildBlockTemplate(coinbaseData)

@@ -3,16 +3,16 @@ package consensus
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/hashset"
-	"github.com/ixbaseANT/gord/util/staging"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/hashset"
+	"github.com/kaspanet/kaspad/util/staging"
 	"io"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/model/testapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbaseANT/gord/domain/dagconfig"
-	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/kaspanet/kaspad/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 
@@ -67,6 +67,17 @@ func (tc *testConsensus) AddBlock(parentHashes []*externalapi.DomainHash, coinba
 	}
 
 	return consensushashing.BlockHash(block), virtualChangeSet, nil
+}
+
+func (tc *testConsensus) AddBlockOnTips(coinbaseData *externalapi.DomainCoinbaseData,
+	transactions []*externalapi.DomainTransaction) (*externalapi.DomainHash, *externalapi.VirtualChangeSet, error) {
+
+	tips, err := tc.Tips()
+	if err != nil {
+		return nil, nil, err
+	}
+
+	return tc.AddBlock(tips, coinbaseData, transactions)
 }
 
 func (tc *testConsensus) AddUTXOInvalidHeader(parentHashes []*externalapi.DomainHash) (*externalapi.DomainHash,

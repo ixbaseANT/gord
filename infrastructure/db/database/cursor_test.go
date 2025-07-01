@@ -8,7 +8,7 @@ package database_test
 import (
 	"bytes"
 	"fmt"
-	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/kaspanet/kaspad/infrastructure/db/database"
 	"reflect"
 	"strings"
 	"testing"

@@ -8,14 +8,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/util/network"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/util/network"
 
 	"github.com/pkg/errors"
 
-	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/kaspad/util"
 )
 
 // These variables are the DAG proof-of-work limit parameters for each default
@@ -215,9 +215,10 @@ var MainnetParams = Params{
 	DefaultPort: "46111",
 	DNSSeeds: []string{
 		// This DNS seeder is run by Wolfie
-		"ixbase.info",
-		"maxgor.info",
-		"176.104.53.246",
+		"forks.club",
+		"forks.life",
+		"forkex.lif",
+		"forksweb.online",
 	},
 
 	// DAG parameters
@@ -279,10 +280,10 @@ var MainnetParams = Params{
 // TestnetParams defines the network parameters for the test Kaspa network.
 var TestnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "gor-testnet-10",
+	Name:        "kaspa-testnet-10",
 	Net:         appmessage.Testnet,
-	RPCPort:     "36210",
-	DefaultPort: "36211",
+	RPCPort:     "16210",
+	DefaultPort: "16211",
 	DNSSeeds: []string{
 		"testnet-10-dnsseed.kas.pa",
 		// This DNS seeder is run by Tiram
@@ -351,7 +352,7 @@ var TestnetParams = Params{
 // just turn into another public testnet.
 var SimnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "gor-simnet",
+	Name:        "kaspa-simnet",
 	Net:         appmessage.Simnet,
 	RPCPort:     "16510",
 	DefaultPort: "16511",
@@ -411,10 +412,10 @@ var SimnetParams = Params{
 // DevnetParams defines the network parameters for the development Kaspa network.
 var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "gor-devnet",
+	Name:        "kaspa-devnet",
 	Net:         appmessage.Devnet,
-	RPCPort:     "36610",
-	DefaultPort: "36611",
+	RPCPort:     "16610",
+	DefaultPort: "16611",
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters
@@ -473,7 +474,7 @@ var DevnetParams = Params{
 // ErrDuplicateNet describes an error where the parameters for a Kaspa
 // network could not be set due to the network already being a standard
 // network or previously-registered into this package.
-var ErrDuplicateNet = errors.New("duplicate Kaspa network")
+var ErrDuplicateNet = errors.New("duplicate Gor network")
 
 var registeredNets = make(map[appmessage.KaspaNet]struct{})
 

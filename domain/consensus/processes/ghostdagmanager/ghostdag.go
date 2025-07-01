@@ -3,9 +3,9 @@ package ghostdagmanager
 import (
 	"math/big"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/util/difficulty"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/util/difficulty"
 	"github.com/pkg/errors"
 )
 

@@ -1,10 +1,10 @@
 package consensushashing
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/serialization"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/serialization"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"
 )
 
@@ -210,7 +210,7 @@ func getOutputsHash(tx *externalapi.DomainTransaction, inputIndex int, hashType 
 }
 
 func getPayloadHash(tx *externalapi.DomainTransaction, reusedValues *SighashReusedValues) *externalapi.DomainHash {
-	if tx.SubnetworkID.Equal(&subnetworks.SubnetworkIDNative) {
+	if tx.SubnetworkID.Equal(&subnetworks.SubnetworkIDNative) && len(tx.Payload) == 0 {
 		return externalapi.NewZeroHash()
 	}
 

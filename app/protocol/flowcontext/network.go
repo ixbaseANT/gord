@@ -1,11 +1,11 @@
 package flowcontext
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/protocol/common"
-	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
-	"github.com/ixbaseANT/gord/infrastructure/network/connmanager"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/app/protocol/common"
+	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
+	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

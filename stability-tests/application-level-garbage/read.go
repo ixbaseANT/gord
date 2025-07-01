@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/stability-tests/common"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/stability-tests/common"
 	"github.com/pkg/errors"
 )
 

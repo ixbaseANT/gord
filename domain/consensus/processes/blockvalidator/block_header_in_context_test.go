@@ -2,18 +2,18 @@ package blockvalidator_test
 
 import (
 	"errors"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
 	"math/big"
 	"testing"
 
-	"github.com/ixbaseANT/gord/domain/consensus/utils/blockheader"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
 
-	"github.com/ixbaseANT/gord/domain/consensus"
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/kaspanet/kaspad/domain/consensus"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
 )
 
 func TestValidateMedianTime(t *testing.T) {

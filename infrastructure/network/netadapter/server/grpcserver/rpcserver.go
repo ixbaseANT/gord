@@ -1,9 +1,9 @@
 package grpcserver
 
 import (
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
-	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/kaspanet/kaspad/util/panics"
 )
 
 type rpcServer struct {

@@ -5,8 +5,8 @@
 package grpcserver
 
 import (
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/util/panics"
 )
 
 var log = logger.RegisterSubSystem("TXMP")

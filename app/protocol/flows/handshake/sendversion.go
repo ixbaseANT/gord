@@ -1,20 +1,19 @@
 package handshake
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/protocol/common"
-	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
-	"github.com/ixbaseANT/gord/version"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/app/protocol/common"
+	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/kaspanet/kaspad/version"
 	"github.com/pkg/errors"
 )
 
 var (
 	// userAgentName is the user agent name and is used to help identify
 	// ourselves to other kaspa peers.
-//my-add
-	userAgentName = "gord"
+	userAgentName = "kaspad"
 
 	// userAgentVersion is the user agent version and is used to help
 	// identify ourselves to other kaspa peers.

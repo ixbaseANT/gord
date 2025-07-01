@@ -1,7 +1,7 @@
 package reachabilitymanager
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
 	"github.com/pkg/errors"
 	"math"
 )

@@ -3,9 +3,9 @@ package consensus_test
 import (
 	"testing"
 
-	"github.com/ixbaseANT/gord/domain/consensus"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/kaspanet/kaspad/domain/consensus"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
 )
 
 func TestPruningDepth(t *testing.T) {

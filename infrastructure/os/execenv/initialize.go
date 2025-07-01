@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/ixbaseANT/gord/infrastructure/os/limits"
+	"github.com/kaspanet/kaspad/infrastructure/os/limits"
 )
 
 // Initialize initializes the execution environment required to run kaspad

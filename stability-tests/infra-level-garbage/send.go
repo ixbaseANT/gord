@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/kaspanet/kaspad/app/protocol/common"
 	"github.com/pkg/errors"
 )
 

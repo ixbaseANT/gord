@@ -1,7 +1,7 @@
 package connmanager
 
 import (
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
 )
 
 type connectionSet map[string]*netadapter.NetConnection

@@ -2,19 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/kaspanet/kaspad/domain/consensus"
 	"os/exec"
 	"strings"
 	"sync/atomic"
 	"syscall"
 	"time"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/stability-tests/common"
-	"github.com/ixbaseANT/gord/stability-tests/common/mine"
-	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
-	"github.com/ixbaseANT/gord/util"
-	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/stability-tests/common"
+	"github.com/kaspanet/kaspad/stability-tests/common/mine"
+	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
+	"github.com/kaspanet/kaspad/util"
+	"github.com/kaspanet/kaspad/util/panics"
 	"github.com/pkg/errors"
 )
 
@@ -28,9 +28,9 @@ const (
 
 func startNode(name string, rpcAddress, listen, connect, profilePort, dataDir string) (*exec.Cmd, func(), error) {
 	log.Infof("Data directory for %s is %s", name, dataDir)
-//my-add
+
 	args := []string{
-		"gord",
+		"kaspad",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"--appdir", dataDir,
 		"--logdir", dataDir,

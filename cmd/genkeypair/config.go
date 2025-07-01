@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/jessevdk/go-flags"
-	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/kaspanet/kaspad/infrastructure/config"
 )
 
 type configFlags struct {

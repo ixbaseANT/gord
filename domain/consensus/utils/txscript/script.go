@@ -8,9 +8,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 )
 
 // These are the constants specified for maximums in individual scripts.

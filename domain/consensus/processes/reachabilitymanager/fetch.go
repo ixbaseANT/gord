@@ -1,10 +1,10 @@
 package reachabilitymanager
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/database"
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/reachabilitydata"
+	"github.com/kaspanet/kaspad/domain/consensus/database"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/reachabilitydata"
 	"github.com/pkg/errors"
 )
 

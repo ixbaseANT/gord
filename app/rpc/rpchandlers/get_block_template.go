@@ -1,14 +1,14 @@
 package rpchandlers
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
-	"github.com/ixbaseANT/gord/util"
-	"github.com/ixbaseANT/gord/version"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/kaspanet/kaspad/util"
+	"github.com/kaspanet/kaspad/version"
 )
 
 // HandleGetBlockTemplate handles the respectively named RPC command

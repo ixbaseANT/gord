@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+import "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 
 // AcceptanceDataStore represents a store of AcceptanceData
 type AcceptanceDataStore interface {

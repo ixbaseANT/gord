@@ -4,17 +4,17 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/blockheader"
+	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
 	"github.com/pkg/errors"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/merkle"
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/merkle"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/util/mstime"
 )
 
 type blockBuilder struct {
@@ -131,11 +131,12 @@ func (bb *blockBuilder) validateTransactions(stagingArea *model.StagingArea,
 	for _, transaction := range transactions {
 		err := bb.validateTransaction(stagingArea, transaction)
 		if err != nil {
-			if !errors.As(err, &ruleerrors.RuleError{}) {
+			ruleError := ruleerrors.RuleError{}
+			if !errors.As(err, &ruleError) {
 				return err
 			}
 			invalidTransactions = append(invalidTransactions,
-				ruleerrors.InvalidTransaction{Transaction: transaction, Error: err})
+				ruleerrors.InvalidTransaction{Transaction: transaction, Error: &ruleError})
 		}
 	}
 

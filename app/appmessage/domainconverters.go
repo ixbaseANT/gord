@@ -2,17 +2,18 @@ package appmessage
 
 import (
 	"encoding/hex"
-	"github.com/pkg/errors"
 	"math/big"
 
-	"github.com/ixbaseANT/gord/domain/consensus/utils/blockheader"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
+	"github.com/pkg/errors"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionid"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionid"
+	"github.com/kaspanet/kaspad/util/mstime"
 )
 
 // DomainBlockToMsgBlock converts an externalapi.DomainBlock to MsgBlock
@@ -213,13 +214,14 @@ func RPCTransactionToDomainTransaction(rpcTransaction *RPCTransaction) (*externa
 	}
 
 	return &externalapi.DomainTransaction{
-		Version:      rpcTransaction.Version,
-		Inputs:       inputs,
-		Outputs:      outputs,
-		LockTime:     rpcTransaction.LockTime,
-		SubnetworkID: *subnetworkID,
-		Gas:          rpcTransaction.LockTime,
-		Payload:      payload,
+		Version:        rpcTransaction.Version,
+		Inputs:         inputs,
+		Outputs:        outputs,
+		LockTime:       rpcTransaction.LockTime,
+		SubnetworkID:   *subnetworkID,
+		Gas:            rpcTransaction.Gas,
+		MassCommitment: rpcTransaction.Mass,
+		Payload:        payload,
 	}, nil
 }
 
@@ -286,7 +288,8 @@ func DomainTransactionToRPCTransaction(transaction *externalapi.DomainTransactio
 		Outputs:      outputs,
 		LockTime:     transaction.LockTime,
 		SubnetworkID: subnetworkID,
-		Gas:          transaction.LockTime,
+		Gas:          transaction.Gas,
+		Mass:         transaction.MassCommitment,
 		Payload:      payload,
 	}
 }

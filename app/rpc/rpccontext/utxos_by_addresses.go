@@ -2,12 +2,12 @@ package rpccontext
 
 import (
 	"encoding/hex"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
-	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	"github.com/kaspanet/kaspad/util"
 	"github.com/pkg/errors"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/domain/utxoindex"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/domain/utxoindex"
 )
 
 // ConvertUTXOOutpointEntryPairsToUTXOsByAddressesEntries converts

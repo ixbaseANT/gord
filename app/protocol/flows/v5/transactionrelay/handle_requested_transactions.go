@@ -1,8 +1,8 @@
 package transactionrelay
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
 )
 
 type handleRequestedTransactionsFlow struct {

@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/mining"
-	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/mining"
+	"github.com/kaspanet/kaspad/util"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -15,10 +15,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ixbaseANT/gord/stability-tests/common"
-	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
-	"github.com/ixbaseANT/gord/util/panics"
-	"github.com/ixbaseANT/gord/util/profiling"
+	"github.com/kaspanet/kaspad/stability-tests/common"
+	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
+	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/kaspanet/kaspad/util/profiling"
 	"github.com/pkg/errors"
 )
 
@@ -240,7 +240,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	startMiningTime := time.Now()
 	shutdown := uint64(0)
 
-	spawn("gor-miner-Cmd.Wait", func() {
+	spawn("kaspa-miner-Cmd.Wait", func() {
 		err := kaspaMinerCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {

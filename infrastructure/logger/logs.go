@@ -35,7 +35,7 @@ package logger
 import (
 	"bytes"
 	"fmt"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/kaspanet/kaspad/util/mstime"
 	"os"
 	"runtime"
 	"sync/atomic"

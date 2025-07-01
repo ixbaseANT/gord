@@ -1,7 +1,7 @@
 package protowire
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/kaspanet/kaspad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
@@ -17,7 +17,7 @@ func (x *KaspadMessage_GetCurrentNetworkResponse) toAppMessage() (appmessage.Mes
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetCurrentNetworkResponse is nil")
 	}
-	return x.toAppMessage()
+	return x.GetCurrentNetworkResponse.toAppMessage()
 }
 
 func (x *KaspadMessage_GetCurrentNetworkResponse) fromAppMessage(message *appmessage.GetCurrentNetworkResponseMessage) error {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ixbaseANT/gord/infrastructure/config"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/standalone"
+	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/standalone"
 )
 
 func connectToNode() *standalone.Routes {

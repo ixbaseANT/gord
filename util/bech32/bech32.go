@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const charset = "qpzry9x8gf2tvdw0s3jn54khce6mua7lgor1b"
+const charset = "qpzry9x8gf2tvdw0s3jn54khce6mua7l"
 const checksumLength = 8
 
 // For use in convertBits. Represents a number of bits to convert to or from and whether
@@ -101,7 +101,7 @@ func decode(encoded string) (string, []byte, error) {
 		return "", nil, errors.Errorf("failed converting data to bytes: "+
 			"%s", err)
 	}
-//my-add
+
 	if !verifyChecksum(prefix, decoded) {
 		checksum := encoded[len(encoded)-checksumLength:]
 		expected := encodeToBase32(calculateChecksum(prefix,

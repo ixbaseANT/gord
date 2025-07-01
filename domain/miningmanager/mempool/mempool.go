@@ -3,10 +3,15 @@ package mempool
 import (
 	"sync"
 
-	"github.com/ixbaseANT/gord/domain/consensusreference"
+	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/pkg/errors"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	miningmanagermodel "github.com/ixbaseANT/gord/domain/miningmanager/model"
+	"github.com/kaspanet/kaspad/domain/consensusreference"
+
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	miningmanagermodel "github.com/kaspanet/kaspad/domain/miningmanager/model"
 )
 
 type mempool struct {
@@ -141,7 +146,57 @@ func (mp *mempool) BlockCandidateTransactions() []*externalapi.DomainTransaction
 	mp.mtx.RLock()
 	defer mp.mtx.RUnlock()
 
-	return mp.transactionsPool.allReadyTransactions()
+	readyTxs := mp.transactionsPool.allReadyTransactions()
+	var candidateTxs []*externalapi.DomainTransaction
+	var spamTx *externalapi.DomainTransaction
+	var spamTxNewestUTXODaaScore uint64
+	for _, tx := range readyTxs {
+		if len(tx.Outputs) > len(tx.Inputs) {
+			hasCoinbaseInput := false
+			for _, input := range tx.Inputs {
+				if input.UTXOEntry.IsCoinbase() {
+					hasCoinbaseInput = true
+					break
+				}
+			}
+
+			numExtraOuts := len(tx.Outputs) - len(tx.Inputs)
+			if !hasCoinbaseInput && numExtraOuts > 2 && tx.Fee < uint64(numExtraOuts)*constants.SompiPerKaspa {
+				log.Debugf("Filtered spam tx %s", consensushashing.TransactionID(tx))
+				continue
+			}
+
+			if hasCoinbaseInput || tx.Fee > uint64(numExtraOuts)*constants.SompiPerKaspa {
+				candidateTxs = append(candidateTxs, tx)
+			} else {
+				txNewestUTXODaaScore := tx.Inputs[0].UTXOEntry.BlockDAAScore()
+				for _, input := range tx.Inputs {
+					if input.UTXOEntry.BlockDAAScore() > txNewestUTXODaaScore {
+						txNewestUTXODaaScore = input.UTXOEntry.BlockDAAScore()
+					}
+				}
+
+				if spamTx != nil {
+					if txNewestUTXODaaScore < spamTxNewestUTXODaaScore {
+						spamTx = tx
+						spamTxNewestUTXODaaScore = txNewestUTXODaaScore
+					}
+				} else {
+					spamTx = tx
+					spamTxNewestUTXODaaScore = txNewestUTXODaaScore
+				}
+			}
+		} else {
+			candidateTxs = append(candidateTxs, tx)
+		}
+	}
+
+	if spamTx != nil {
+		log.Debugf("Adding spam tx candidate %s", consensushashing.TransactionID(spamTx))
+		candidateTxs = append(candidateTxs, spamTx)
+	}
+
+	return candidateTxs
 }
 
 func (mp *mempool) RevalidateHighPriorityTransactions() (validTransactions []*externalapi.DomainTransaction, err error) {
@@ -151,11 +206,19 @@ func (mp *mempool) RevalidateHighPriorityTransactions() (validTransactions []*ex
 	return mp.revalidateHighPriorityTransactions()
 }
 
-func (mp *mempool) RemoveTransactions(transactions []*externalapi.DomainTransaction, removeRedeemers bool) error {
+func (mp *mempool) RemoveInvalidTransactions(err *ruleerrors.ErrInvalidTransactionsInNewBlock) error {
 	mp.mtx.Lock()
 	defer mp.mtx.Unlock()
 
-	return mp.removeTransactions(transactions, removeRedeemers)
+	for _, tx := range err.InvalidTransactions {
+		removeRedeemers := !errors.As(tx.Error, &ruleerrors.ErrMissingTxOut{})
+		err := mp.removeTransaction(consensushashing.TransactionID(tx.Transaction), removeRedeemers)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 func (mp *mempool) RemoveTransaction(transactionID *externalapi.DomainTransactionID, removeRedeemers bool) error {

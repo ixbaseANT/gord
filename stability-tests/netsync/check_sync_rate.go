@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/ixbaseANT/gord/stability-tests/common/rpc"
+	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
 
 	"github.com/pkg/errors"
 )

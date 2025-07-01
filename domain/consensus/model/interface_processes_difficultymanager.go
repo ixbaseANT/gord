@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 )
 
 // DifficultyManager provides a method to resolve the

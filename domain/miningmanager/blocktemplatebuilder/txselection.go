@@ -5,9 +5,9 @@ import (
 	"math/rand"
 	"sort"
 
-	consensusexternalapi "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	consensusexternalapi "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
 )
 
 const (

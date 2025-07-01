@@ -1,6 +1,6 @@
 package lrucacheuint64tohash
 
-import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+import "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 
 // LRUCache is a least-recently-used cache from
 // uint64 to DomainHash

@@ -3,10 +3,10 @@ package testapi
 import (
 	"io"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/dagconfig"
-	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/kaspanet/kaspad/infrastructure/db/database"
 )
 
 // MineJSONBlockType indicates which type of blocks MineJSON mines
@@ -41,6 +41,9 @@ type TestConsensus interface {
 	// AddBlock builds a block with given information, solves it, and adds to the DAG.
 	// Returns the hash of the added block
 	AddBlock(parentHashes []*externalapi.DomainHash, coinbaseData *externalapi.DomainCoinbaseData,
+		transactions []*externalapi.DomainTransaction) (*externalapi.DomainHash, *externalapi.VirtualChangeSet, error)
+
+	AddBlockOnTips(coinbaseData *externalapi.DomainCoinbaseData,
 		transactions []*externalapi.DomainTransaction) (*externalapi.DomainHash, *externalapi.VirtualChangeSet, error)
 
 	AddUTXOInvalidHeader(parentHashes []*externalapi.DomainHash) (*externalapi.DomainHash, *externalapi.VirtualChangeSet, error)

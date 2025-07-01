@@ -1,11 +1,11 @@
 package rpchandlers
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 
@@ -28,7 +28,8 @@ func HandleSubmitTransaction(context *rpccontext.Context, _ *router.Router, requ
 		}
 
 		log.Debugf("Rejected transaction %s: %s", transactionID, err)
-		errorMessage := &appmessage.SubmitTransactionResponseMessage{}
+		// Return the ID also in the case of error, so that clients can match the response to the correct transaction submit request
+		errorMessage := appmessage.NewSubmitTransactionResponseMessage(transactionID.String())
 		errorMessage.Error = appmessage.RPCErrorf("Rejected transaction %s: %s", transactionID, err)
 		return errorMessage, nil
 	}

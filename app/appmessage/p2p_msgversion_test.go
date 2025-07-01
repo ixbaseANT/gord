@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/id"
+	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
 )
 
 // TestVersion tests the MsgVersion API.
@@ -18,7 +18,7 @@ func TestVersion(t *testing.T) {
 	pver := uint32(4)
 
 	// Create version message data.
-	tcpAddrMe := &net.TCPAddr{IP: net.ParseIP("127.0.0.1"), Port: 46111}
+	tcpAddrMe := &net.TCPAddr{IP: net.ParseIP("127.0.0.1"), Port: 16111}
 	me := NewNetAddress(tcpAddrMe)
 	generatedID, err := id.GenerateID()
 	if err != nil {

@@ -8,7 +8,7 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/ixbaseANT/gord/app"
+        "github.com/kaspanet/kaspad/app"
 )
 
 func main() {

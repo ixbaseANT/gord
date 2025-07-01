@@ -3,15 +3,15 @@ package consensusstatemanager
 import (
 	"sort"
 
-	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionhelper"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
 
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
 
-	"github.com/ixbaseANT/gord/domain/consensus/utils/merkle"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/merkle"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
 	"github.com/pkg/errors"
 )
 

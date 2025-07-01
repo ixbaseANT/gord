@@ -1,9 +1,9 @@
 package headersselectedchainstore
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/database/binaryserialization"
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/database/binaryserialization"
+	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 )
 
 type headersSelectedChainStagingShard struct {

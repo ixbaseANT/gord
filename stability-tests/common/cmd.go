@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/ixbaseANT/gord/domain/dagconfig"
-	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 
@@ -28,5 +28,5 @@ func StartCmd(name string, args ...string) (*exec.Cmd, error) {
 
 // NetworkCliArgumentFromNetParams returns the kaspad command line argument that starts the given network.
 func NetworkCliArgumentFromNetParams(params *dagconfig.Params) string {
-	return fmt.Sprintf("--%s", strings.TrimPrefix(params.Name, "gor-"))
+	return fmt.Sprintf("--%s", strings.TrimPrefix(params.Name, "kaspa-"))
 }

@@ -1,8 +1,8 @@
 package rpcclient
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 )
 
 func (c *RPCClient) submitBlock(block *externalapi.DomainBlock, allowNonDAABlocks bool) (appmessage.RejectReason, error) {

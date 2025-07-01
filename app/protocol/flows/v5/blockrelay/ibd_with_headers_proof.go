@@ -2,12 +2,12 @@ package blockrelay
 
 import (
 	"fmt"
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/protocol/common"
-	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/kaspanet/kaspad/app/protocol/common"
+	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"
 	"time"
 )
