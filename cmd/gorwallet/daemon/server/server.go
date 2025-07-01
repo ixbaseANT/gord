@@ -5,20 +5,23 @@ import (
 	"net"
 	"os"
 	"sync"
+	"sync/atomic"
 	"time"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/version"
 
-	"github.com/ixbaseANT/gord/util/txmass"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 
-	"github.com/ixbaseANT/gord/util/profiling"
+	"github.com/kaspanet/kaspad/util/txmass"
+
+	"github.com/kaspanet/kaspad/util/profiling"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/keys"
-	"github.com/ixbaseANT/gord/domain/dagconfig"
-	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
-	"github.com/ixbaseANT/gord/infrastructure/os/signal"
-	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/kaspanet/kaspad/infrastructure/os/signal"
+	"github.com/kaspanet/kaspad/util/panics"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc"
@@ -27,17 +30,23 @@ import (
 type server struct {
 	pb.UnimplementedKaspawalletdServer
 
-	rpcClient *rpcclient.RPCClient
-	params    *dagconfig.Params
+	rpcClient           *rpcclient.RPCClient // RPC client for ongoing user requests
+	backgroundRPCClient *rpcclient.RPCClient // RPC client dedicated for address and UTXO background fetching
+	params              *dagconfig.Params
+	coinbaseMaturity    uint64 // Different from go-kaspad default following Crescendo
 
-	lock                sync.RWMutex
-	utxosSortedByAmount []*walletUTXO
-	nextSyncStartIndex  uint32
-	keysFile            *keys.File
-	shutdown            chan struct{}
-	addressSet          walletAddressSet
-	txMassCalculator    *txmass.Calculator
-	usedOutpoints       map[externalapi.DomainOutpoint]time.Time
+	lock                            sync.RWMutex
+	utxosSortedByAmount             []*walletUTXO
+	mempoolExcludedUTXOs            map[externalapi.DomainOutpoint]*walletUTXO
+	nextSyncStartIndex              uint32
+	keysFile                        *keys.File
+	shutdown                        chan struct{}
+	forceSyncChan                   chan struct{}
+	startTimeOfLastCompletedRefresh time.Time
+	addressSet                      walletAddressSet
+	txMassCalculator                *txmass.Calculator
+	usedOutpoints                   map[externalapi.DomainOutpoint]time.Time
+	firstSyncDone                   atomic.Bool
 
 	isLogFinalProgressLineShown bool
 	maxUsedAddressesForLog      uint32
@@ -59,6 +68,7 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 		profiling.Start(profile, log)
 	}
 
+	log.Infof("Version %s", version.Version())
 	listener, err := net.Listen("tcp", listen)
 	if err != nil {
 		return (errors.Wrapf(err, "Error listening to TCP on %s", listen))
@@ -69,6 +79,10 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 	rpcClient, err := connectToRPC(params, rpcServer, timeout)
 	if err != nil {
 		return (errors.Wrapf(err, "Error connecting to RPC server %s", rpcServer))
+	}
+	backgroundRPCClient, err := connectToRPC(params, rpcServer, timeout)
+	if err != nil {
+		return (errors.Wrapf(err, "Error making a second connection to RPC server %s", rpcServer))
 	}
 
 	log.Infof("Connected, reading keys file %s...", keysFilePath)
@@ -82,13 +96,20 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 		return err
 	}
 
+	// Post-Crescendo coinbase maturity
+	coinbaseMaturity := uint64(1000)
+
 	serverInstance := &server{
 		rpcClient:                   rpcClient,
+		backgroundRPCClient:         backgroundRPCClient,
 		params:                      params,
+		coinbaseMaturity:            coinbaseMaturity,
 		utxosSortedByAmount:         []*walletUTXO{},
+		mempoolExcludedUTXOs:        map[externalapi.DomainOutpoint]*walletUTXO{},
 		nextSyncStartIndex:          0,
 		keysFile:                    keysFile,
 		shutdown:                    make(chan struct{}),
+		forceSyncChan:               make(chan struct{}),
 		addressSet:                  make(walletAddressSet),
 		txMassCalculator:            txmass.NewCalculator(params.MassPerTxByte, params.MassPerScriptPubKeyByte, params.MassPerSigOp),
 		usedOutpoints:               map[externalapi.DomainOutpoint]time.Time{},
@@ -98,8 +119,8 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 	}
 
 	log.Infof("Read, syncing the wallet...")
-	spawn("serverInstance.sync", func() {
-		err := serverInstance.sync()
+	spawn("serverInstance.syncLoop", func() {
+		err := serverInstance.syncLoop()
 		if err != nil {
 			printErrorAndExit(errors.Wrap(err, "error syncing the wallet"))
 		}

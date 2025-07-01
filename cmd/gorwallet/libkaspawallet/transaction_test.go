@@ -2,18 +2,19 @@ package libkaspawallet_test
 
 import (
 	"fmt"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
 	"strings"
 	"testing"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
-	"github.com/ixbaseANT/gord/domain/consensus"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
-	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/kaspad/domain/consensus"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/kaspanet/kaspad/util"
 )
 
 func forSchnorrAndECDSA(t *testing.T, testFunc func(t *testing.T, ecdsa bool)) {
@@ -24,6 +25,20 @@ func forSchnorrAndECDSA(t *testing.T, testFunc func(t *testing.T, ecdsa bool)) {
 	t.Run("ecdsa", func(t *testing.T) {
 		testFunc(t, true)
 	})
+}
+
+func createUnsignedTransactionSerialized(
+	extendedPublicKeys []string,
+	minimumSignatures uint32,
+	payments []*libkaspawallet.Payment,
+	selectedUTXOs []*libkaspawallet.UTXO) ([]byte, error) {
+
+	tx, err := libkaspawallet.CreateUnsignedTransaction(extendedPublicKeys, minimumSignatures, payments, selectedUTXOs)
+	if err != nil {
+		return nil, err
+	}
+
+	return serialization.SerializePartiallySignedTransaction(tx)
 }
 
 func TestMultisig(t *testing.T) {
@@ -102,7 +117,7 @@ func TestMultisig(t *testing.T) {
 				},
 			}
 
-			unsignedTransaction, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+			unsignedTransaction, err := createUnsignedTransactionSerialized(publicKeys, minimumSignatures,
 				[]*libkaspawallet.Payment{{
 					Address: address,
 					Amount:  10,
@@ -263,7 +278,7 @@ func TestP2PK(t *testing.T) {
 				},
 			}
 
-			unsignedTransaction, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+			unsignedTransaction, err := createUnsignedTransactionSerialized(publicKeys, minimumSignatures,
 				[]*libkaspawallet.Payment{{
 					Address: address,
 					Amount:  10,
@@ -425,7 +440,7 @@ func TestMaxSompi(t *testing.T) {
 			},
 		}
 
-		unsignedTxWithLargeInputAmount, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+		unsignedTxWithLargeInputAmount, err := createUnsignedTransactionSerialized(publicKeys, minimumSignatures,
 			[]*libkaspawallet.Payment{{
 				Address: address,
 				Amount:  10,
@@ -476,7 +491,7 @@ func TestMaxSompi(t *testing.T) {
 			},
 		}
 
-		unsignedTxWithLargeInputAndOutputAmount, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+		unsignedTxWithLargeInputAndOutputAmount, err := createUnsignedTransactionSerialized(publicKeys, minimumSignatures,
 			[]*libkaspawallet.Payment{{
 				Address: address,
 				Amount:  22e6 * constants.SompiPerKaspa,

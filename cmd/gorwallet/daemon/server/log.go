@@ -5,10 +5,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ixbaseANT/gord/util"
+	"github.com/kaspanet/kaspad/util"
 
-	"github.com/ixbaseANT/gord/infrastructure/logger"
-	"github.com/ixbaseANT/gord/util/panics"
+	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/kaspanet/kaspad/util/panics"
 )
 
 var (
@@ -16,7 +16,7 @@ var (
 	log        = backendLog.Logger("KSWD")
 	spawn      = panics.GoroutineWrapperFunc(log)
 
-	defaultAppDir     = util.AppDir("gorwallet", false)
+	defaultAppDir     = util.AppDir("gorallet", false)
 	defaultLogFile    = filepath.Join(defaultAppDir, "daemon.log")
 	defaultErrLogFile = filepath.Join(defaultAppDir, "daemon_err.log")
 )

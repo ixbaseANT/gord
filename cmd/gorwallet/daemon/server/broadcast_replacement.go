@@ -14,11 +14,11 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (s *server) Broadcast(_ context.Context, request *pb.BroadcastRequest) (*pb.BroadcastResponse, error) {
+func (s *server) BroadcastReplacement(_ context.Context, request *pb.BroadcastRequest) (*pb.BroadcastResponse, error) {
 	s.lock.Lock()
 	defer s.lock.Unlock()
 
-	txIDs, err := s.broadcast(request.Transactions, request.IsDomain)
+	txIDs, err := s.broadcastReplacement(request.Transactions, request.IsDomain)
 	if err != nil {
 		return nil, err
 	}
@@ -26,7 +26,8 @@ func (s *server) Broadcast(_ context.Context, request *pb.BroadcastRequest) (*pb
 	return &pb.BroadcastResponse{TxIDs: txIDs}, nil
 }
 
-func (s *server) broadcast(transactions [][]byte, isDomain bool) ([]string, error) {
+// broadcastReplacement assumes that all transactions depend on the first one
+func (s *server) broadcastReplacement(transactions [][]byte, isDomain bool) ([]string, error) {
 
 	txIDs := make([]string, len(transactions))
 	var tx *externalapi.DomainTransaction
@@ -46,9 +47,20 @@ func (s *server) broadcast(transactions [][]byte, isDomain bool) ([]string, erro
 			}
 		}
 
-		txIDs[i], err = sendTransaction(s.rpcClient, tx)
-		if err != nil {
-			return nil, err
+		// Once the first transaction is added to the mempool, the transactions that depend
+		// on the replaced transaction will be removed, so there's no need to submit them
+		// as RBF transactions.
+		if i == 0 {
+			txIDs[i], err = sendTransactionRBF(s.rpcClient, tx)
+			if err != nil {
+				return nil, err
+			}
+		} else {
+			txIDs[i], err = sendTransaction(s.rpcClient, tx)
+			if err != nil {
+				return nil, err
+			}
+
 		}
 
 		for _, input := range tx.Inputs {
@@ -60,10 +72,10 @@ func (s *server) broadcast(transactions [][]byte, isDomain bool) ([]string, erro
 	return txIDs, nil
 }
 
-func sendTransaction(client *rpcclient.RPCClient, tx *externalapi.DomainTransaction) (string, error) {
-	submitTransactionResponse, err := client.SubmitTransaction(appmessage.DomainTransactionToRPCTransaction(tx), consensushashing.TransactionID(tx).String(), false)
+func sendTransactionRBF(client *rpcclient.RPCClient, tx *externalapi.DomainTransaction) (string, error) {
+	submitTransactionResponse, err := client.SubmitTransactionReplacement(appmessage.DomainTransactionToRPCTransaction(tx), consensushashing.TransactionID(tx).String())
 	if err != nil {
-		return "", errors.Wrapf(err, "error submitting transaction")
+		return "", errors.Wrapf(err, "error submitting transaction replacement")
 	}
 	return submitTransactionResponse.TransactionID, nil
 }

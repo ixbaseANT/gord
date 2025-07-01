@@ -7,7 +7,7 @@ import (
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 )
 
-func newAddress(conf *newAddressConfig) error {
+func getDaemonVersion(conf *getDaemonVersionConfig) error {
 	daemonClient, tearDown, err := client.Connect(conf.DaemonAddress)
 	if err != nil {
 		return err
@@ -16,12 +16,11 @@ func newAddress(conf *newAddressConfig) error {
 
 	ctx, cancel := context.WithTimeout(context.Background(), daemonTimeout)
 	defer cancel()
-
-	response, err := daemonClient.NewAddress(ctx, &pb.NewAddressRequest{})
+	response, err := daemonClient.GetVersion(ctx, &pb.GetVersionRequest{})
 	if err != nil {
 		return err
 	}
+	fmt.Println(response.Version)
 
-	fmt.Printf("New address:\n%s\n", response.Address)
 	return nil
 }

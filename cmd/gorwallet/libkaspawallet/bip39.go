@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/bip32"
-	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

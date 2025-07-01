@@ -3,8 +3,8 @@ package server
 import (
 	"time"
 
-	"github.com/ixbaseANT/gord/domain/dagconfig"
-	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
+	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
 )
 
 func connectToRPC(params *dagconfig.Params, rpcServer string, timeout uint32) (*rpcclient.RPCClient, error) {

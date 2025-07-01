@@ -3,11 +3,11 @@ package libkaspawallet
 import (
 	"encoding/hex"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/kaspanet/kaspad/app/appmessage"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionid"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionid"
+	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
 )
 
 // KaspawalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libkaspawallet.UTXO

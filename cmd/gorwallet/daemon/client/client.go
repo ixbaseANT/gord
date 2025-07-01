@@ -2,8 +2,9 @@ package client
 
 import (
 	"context"
-	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/server"
 	"time"
+
+	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/server"
 
 	"github.com/pkg/errors"
 
@@ -20,7 +21,7 @@ func Connect(address string) (pb.KaspawalletdClient, func(), error) {
 	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure(), grpc.WithBlock(), grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(server.MaxDaemonSendMsgSize)))
 	if err != nil {
 		if errors.Is(err, context.DeadlineExceeded) {
-			return nil, nil, errors.New("gorwallet daemon is not running, start it with `gorwallet start-daemon`")
+			return nil, nil, errors.New("kaspawallet daemon is not running, start it with `kaspawallet start-daemon`")
 		}
 		return nil, nil, err
 	}

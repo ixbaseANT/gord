@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	"github.com/ixbaseANT/gord/cmd/gorwallet/libgorwallet"
+	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 )

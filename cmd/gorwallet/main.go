@@ -1,10 +1,11 @@
 package main
 
-import "github.com/pkg/errors"
+import (
+	"github.com/pkg/errors"
+)
 
 func main() {
 	subCmd, config := parseCommandLine()
-
 	var err error
 	switch subCmd {
 	case createSubCmd:
@@ -19,6 +20,8 @@ func main() {
 		err = sign(config.(*signConfig))
 	case broadcastSubCmd:
 		err = broadcast(config.(*broadcastConfig))
+	case broadcastReplacementSubCmd:
+		err = broadcastReplacement(config.(*broadcastConfig))
 	case parseSubCmd:
 		err = parse(config.(*parseConfig))
 	case showAddressesSubCmd:
@@ -31,6 +34,14 @@ func main() {
 		err = startDaemon(config.(*startDaemonConfig))
 	case sweepSubCmd:
 		err = sweep(config.(*sweepConfig))
+	case versionSubCmd:
+		showVersion()
+	case getDaemonVersionSubCmd:
+		err = getDaemonVersion(config.(*getDaemonVersionConfig))
+	case bumpFeeSubCmd:
+		err = bumpFee(config.(*bumpFeeConfig))
+	case bumpFeeUnsignedSubCmd:
+		err = bumpFeeUnsigned(config.(*bumpFeeUnsignedConfig))
 	default:
 		err = errors.Errorf("Unknown sub-command '%s'\n", subCmd)
 	}
