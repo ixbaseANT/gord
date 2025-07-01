@@ -9,7 +9,7 @@ import (
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/utils"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

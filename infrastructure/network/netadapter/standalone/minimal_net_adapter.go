@@ -3,16 +3,16 @@ package standalone
 import (
 	"sync"
 
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/util/mstime"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/id"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
 
 	"github.com/pkg/errors"
 )

@@ -1,12 +1,12 @@
 package addressexchange
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 )
 
 // ReceiveAddressesContext is the interface for the context needed for the ReceiveAddresses flow.

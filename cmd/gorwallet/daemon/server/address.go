@@ -6,7 +6,7 @@ import (
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 )
 

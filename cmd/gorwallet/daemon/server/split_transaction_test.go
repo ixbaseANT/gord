@@ -6,18 +6,18 @@ import (
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/keys"
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbaseANT/gord/util/txmass"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
 )
 
 func TestEstimateComputeMassAfterSignatures(t *testing.T) {

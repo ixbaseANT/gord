@@ -6,13 +6,13 @@ import (
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
-	"github.com/kaspanet/kaspad/util"
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
+	"github.com/ixbaseANT/gord/util"
+	"github.com/ixbaseANT/gord/util/txmass"
 )
 
 // maybeAutoCompoundTransaction checks if a transaction's mass is higher that what is allowed for a standard

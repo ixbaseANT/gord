@@ -1,16 +1,16 @@
 package testing
 
 import (
-	"github.com/kaspanet/kaspad/app/protocol/flows/v5/addressexchange"
+	"github.com/ixbaseANT/gord/app/protocol/flows/v5/addressexchange"
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 )
 
 type fakeReceiveAddressesContext struct{}

@@ -2,11 +2,11 @@ package blockvalidator
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

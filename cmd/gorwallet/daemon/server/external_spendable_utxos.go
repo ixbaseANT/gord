@@ -3,10 +3,10 @@ package server
 import (
 	"context"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbaseANT/gord/util"
 )
 
 func (s *server) GetExternalSpendableUTXOs(_ context.Context, request *pb.GetExternalSpendableUTXOsRequest) (*pb.GetExternalSpendableUTXOsResponse, error) {

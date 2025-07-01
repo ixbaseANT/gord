@@ -4,11 +4,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

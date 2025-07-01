@@ -1,17 +1,17 @@
 package rpc
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/utxoindex"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol"
+	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
+	"github.com/ixbaseANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/utxoindex"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/connmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

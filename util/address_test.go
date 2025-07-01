@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbaseANT/gord/util"
 )
 
 func TestAddresses(t *testing.T) {

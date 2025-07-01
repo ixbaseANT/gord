@@ -4,14 +4,14 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/ixbaseANT/gord/util/mstime"
 
-	"github.com/kaspanet/kaspad/domain/consensus/database"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util/staging"
+	"github.com/ixbaseANT/gord/domain/consensus/database"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
+	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/ixbaseANT/gord/util/staging"
 	"github.com/pkg/errors"
 )
 

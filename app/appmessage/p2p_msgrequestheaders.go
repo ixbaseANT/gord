@@ -5,7 +5,7 @@
 package appmessage
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 // MsgRequestHeaders implements the Message interface and represents a kaspa

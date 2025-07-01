@@ -8,20 +8,20 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/kaspanet/kaspad/version"
+	"github.com/ixbaseANT/gord/version"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbaseANT/gord/util/txmass"
 
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/ixbaseANT/gord/util/profiling"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/keys"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
+	"github.com/ixbaseANT/gord/infrastructure/os/signal"
+	"github.com/ixbaseANT/gord/util/panics"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc"

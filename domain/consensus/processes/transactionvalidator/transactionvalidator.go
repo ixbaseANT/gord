@@ -1,10 +1,10 @@
 package transactionvalidator
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/util/txmass"
 )
 
 const sigCacheSize = 10_000

@@ -14,8 +14,8 @@ import (
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/utils"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/argon2"
 	"golang.org/x/crypto/chacha20poly1305"

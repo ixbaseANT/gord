@@ -5,15 +5,15 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/kaspanet/kaspad/domain/consensusreference"
+	"github.com/ixbaseANT/gord/domain/consensusreference"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/miningmanager"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
-	"github.com/kaspanet/kaspad/domain/prefixmanager"
-	"github.com/kaspanet/kaspad/domain/prefixmanager/prefix"
-	infrastructuredatabase "github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/miningmanager"
+	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
+	"github.com/ixbaseANT/gord/domain/prefixmanager"
+	"github.com/ixbaseANT/gord/domain/prefixmanager/prefix"
+	infrastructuredatabase "github.com/ixbaseANT/gord/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

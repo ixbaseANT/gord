@@ -1,4 +1,5 @@
-module github.com/kaspanet/kaspad
+module github.com/ixbaseANT/gord
+
 go 1.23
 
 require (
@@ -23,6 +24,7 @@ require (
 
 require (
 	github.com/golang/snappy v0.0.1 // indirect
+	github.com/ixbaseANT/gord v0.12.22 // indirect
 	golang.org/x/net v0.30.0 // indirect
 	golang.org/x/sys v0.26.0 // indirect
 	golang.org/x/text v0.19.0 // indirect

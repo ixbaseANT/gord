@@ -4,22 +4,22 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
+	"github.com/ixbaseANT/gord/domain/miningmanager/mempool"
 
-	"github.com/kaspanet/kaspad/app/protocol"
-	"github.com/kaspanet/kaspad/app/rpc"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/utxoindex"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	infrastructuredatabase "github.com/kaspanet/kaspad/infrastructure/db/database"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/ixbaseANT/gord/app/protocol"
+	"github.com/ixbaseANT/gord/app/rpc"
+	"github.com/ixbaseANT/gord/domain"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/utxoindex"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	infrastructuredatabase "github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/connmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/id"
+	"github.com/ixbaseANT/gord/util/panics"
 )
 
 // ComponentManager is a wrapper for all the kaspad services

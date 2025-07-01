@@ -3,18 +3,18 @@ package libkaspawallet_test
 import (
 	"fmt"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
 	"strings"
 	"testing"
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbaseANT/gord/domain/consensus"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/util"
 )
 
 func forSchnorrAndECDSA(t *testing.T, testFunc func(t *testing.T, ecdsa bool)) {

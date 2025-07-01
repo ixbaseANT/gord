@@ -3,16 +3,16 @@ package consensus
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashset"
-	"github.com/kaspanet/kaspad/util/staging"
+	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/hashset"
+	"github.com/ixbaseANT/gord/util/staging"
 	"io"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/testapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/dagconfig"
+	"github.com/ixbaseANT/gord/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

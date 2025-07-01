@@ -1,7 +1,7 @@
 package blockrelay
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"testing"
 )
 

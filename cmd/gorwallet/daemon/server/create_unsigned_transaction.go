@@ -7,10 +7,10 @@ import (
 
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 )
 

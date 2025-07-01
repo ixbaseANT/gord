@@ -6,14 +6,14 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/blockheader"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/hashes"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionid"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/transactionid"
+	"github.com/ixbaseANT/gord/util/mstime"
 )
 
 // DomainBlockToMsgBlock converts an externalapi.DomainBlock to MsgBlock

@@ -1,8 +1,8 @@
 package transactionhelper
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/subnetworks"
 )
 
 // NewSubnetworkTransaction returns a new trsnactions in the specified subnetwork with specified gas and payload

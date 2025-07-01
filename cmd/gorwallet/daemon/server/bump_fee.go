@@ -3,11 +3,11 @@ package server
 import (
 	"context"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
 	"github.com/pkg/errors"
 )
 

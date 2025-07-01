@@ -7,7 +7,7 @@ PLEASE NOTE: Any pull requests or issues that will be opened in this repository 
 # Kaspad
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/kaspanet/kaspad)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/ixbaseANT/gord)
 
 Kaspad was the reference full node Kaspa implementation written in Go (golang).
 
@@ -35,7 +35,7 @@ $ go version
 - Run the following commands to obtain and install kaspad including all dependencies:
 
 ```bash
-$ git clone https://github.com/kaspanet/kaspad
+$ git clone https://github.com/ixbaseANT/gord
 $ cd kaspad
 $ go install . ./cmd/...
 ```
@@ -59,7 +59,7 @@ Join our discord server using the following link: https://discord.gg/YNYnNN5Pf2
 
 ## Issue Tracker
 
-The [integrated github issue tracker](https://github.com/kaspanet/kaspad/issues)
+The [integrated github issue tracker](https://github.com/ixbaseANT/gord/issues)
 is used for this project.
 
 Issue priorities may be seen at https://github.com/orgs/kaspanet/projects/4

@@ -5,20 +5,20 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/app/protocol/common"
+	"github.com/ixbaseANT/gord/app/protocol/common"
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/domain"
+	"github.com/ixbaseANT/gord/domain"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/ixbaseANT/gord/app/protocol/flowcontext"
+	peerpkg "github.com/ixbaseANT/gord/app/protocol/peer"
+	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/connmanager"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
 )
 
 // Manager manages the p2p protocol

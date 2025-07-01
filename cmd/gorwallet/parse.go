@@ -9,10 +9,10 @@ import (
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/server"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/keys"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/constants"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/txscript"
+	"github.com/ixbaseANT/gord/util/txmass"
 	"github.com/pkg/errors"
 )
 

@@ -2,12 +2,12 @@ package rpchandlers
 
 import (
 	"encoding/json"
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
+	"github.com/ixbaseANT/gord/domain/consensus/ruleerrors"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

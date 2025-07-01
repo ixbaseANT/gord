@@ -4,13 +4,13 @@ import (
 	"context"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/daemon/pb"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet"
 	"github.com/ixbaseANT/gord/cmd/gorwallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+	"github.com/ixbaseANT/gord/infrastructure/network/rpcclient"
 	"github.com/pkg/errors"
 )
 

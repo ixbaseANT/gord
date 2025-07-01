@@ -1,5 +1,5 @@
 package pruningmanager
 
-import "github.com/kaspanet/kaspad/infrastructure/logger"
+import "github.com/ixbaseANT/gord/infrastructure/logger"
 
 var log = logger.RegisterSubSystem("PRNM")

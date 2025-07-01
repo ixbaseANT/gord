@@ -1,6 +1,6 @@
 package model
 
-import "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+import "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 
 // BlockStore represents a store of blocks
 type BlockStore interface {

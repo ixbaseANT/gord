@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/ixbaseANT/gord/app/appmessage"
 	"github.com/pkg/errors"
 )
 

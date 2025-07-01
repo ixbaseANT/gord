@@ -1,10 +1,10 @@
 package blockrelay
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/ixbaseANT/gord/app/protocol/common"
+	"github.com/ixbaseANT/gord/app/protocol/protocolerrors"
+	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
 )
 
 func (flow *handleRelayInvsFlow) sendGetBlockLocator(highHash *externalapi.DomainHash, limit uint32) error {
