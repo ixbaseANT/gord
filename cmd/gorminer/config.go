@@ -7,24 +7,24 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/ixbaseANT/gord/infrastructure/config"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/ixbaseANT/gord/util"
 	"github.com/pkg/errors"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/ixbaseANT/gord/version"
 )
 
 const (
-	defaultLogFilename          = "kaspaminer.log"
-	defaultErrLogFilename       = "kaspaminer_err.log"
+	defaultLogFilename          = "gorminer.log"
+	defaultErrLogFilename       = "gorminer_err.log"
 	defaultTargetBlockRateRatio = 2.0
 )
 
 var (
 	// Default configuration options
-	defaultAppDir     = util.AppDir("kaspaminer", false)
+	defaultAppDir     = util.AppDir("gorminer", false)
 	defaultLogFile    = filepath.Join(defaultAppDir, defaultLogFilename)
 	defaultErrLogFile = filepath.Join(defaultAppDir, defaultErrLogFilename)
 	defaultRPCServer  = "localhost"

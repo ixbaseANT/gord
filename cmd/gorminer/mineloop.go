@@ -1,20 +1,21 @@
 package main
 
 import (
-	nativeerrors "errors"
-	"github.com/kaspanet/kaspad/version"
-	"math/rand"
-	"sync/atomic"
-	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/cmd/kaspaminer/templatemanager"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/pow"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util"
-	"github.com/pkg/errors"
+    nativeerrors "errors"
+    "github.com/ixbaseANT/gord/version"
+    "math/rand"
+    "sync/atomic"
+    "time"
+
+    "github.com/ixbaseANT/gord/app/appmessage"
+    "github.com/ixbaseANT/gord/cmd/gorminer/templatemanager"
+    "github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+    "github.com/ixbaseANT/gord/domain/consensus/utils/consensushashing"
+    "github.com/ixbaseANT/gord/domain/consensus/utils/pow"
+    "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+    "github.com/ixbaseANT/gord/util"
+    "github.com/pkg/errors"
 )
 
 var hashesTried uint64
